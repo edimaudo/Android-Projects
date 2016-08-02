@@ -1,0 +1,7 @@
+Build steps
+
+Set up android studio
+Update the relativelayout or create your own layout in activity_main.xml
+Design Button based on the layout
+Add the code for color change in MainActivity.java
+
