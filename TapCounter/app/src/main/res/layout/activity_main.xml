@@ -10,8 +10,53 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.edimaudo.tapcounter.MainActivity">
 
+
     <TextView
+        android:layout_marginTop="100dp"
+        android:textAlignment="center"
+        android:id="@+id/counterText"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="80sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:text="@string/begin"
+        android:padding="20dp"
+        />
+
+    <Button
+        android:id="@+id/tap"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="25sp"
+        android:layout_below="@id/counterText"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:text="@string/tap"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:theme="@style/clicktheme"
+        android:elevation="0dp"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+    <Button
+
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:text="@string/reset"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:theme="@style/clicktheme"
+        android:id="@+id/reset"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:elevation="0dp"
+        android:layout_below="@+id/tap"/>
 </RelativeLayout>
