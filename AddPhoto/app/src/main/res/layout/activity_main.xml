@@ -20,11 +20,5 @@
         android:layout_height="wrap_content"
         android:text="@string/random_text"/>
 
-    <ImageView
-        android:layout_marginTop="10dp"
-        android:id="@+id/pictureData"
-        android:layout_below="@id/random_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="picture"/>
+
 </RelativeLayout>
