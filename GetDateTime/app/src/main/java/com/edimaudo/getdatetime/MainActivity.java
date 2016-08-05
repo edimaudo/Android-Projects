@@ -12,7 +12,7 @@ import java.util.Date;
 public class MainActivity extends AppCompatActivity {
   private TextView currentDateTime;
   private Button refreshDateTime;
-  
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);

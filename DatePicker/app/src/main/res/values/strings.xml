@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DatePicker</string>
+    <string name="set_date">Set Date</string>
+</resources>
