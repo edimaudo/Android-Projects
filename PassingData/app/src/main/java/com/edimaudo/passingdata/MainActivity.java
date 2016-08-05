@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
+
     userInput = (EditText) findViewById(R.id.userInput);
     userInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
       @Override
@@ -29,20 +31,23 @@ public class MainActivity extends AppCompatActivity {
         return false;
       }
     });
+
+
   }
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
     MenuInflater inflater = getMenuInflater();
-    //getMenuInflater().inflate(R.menu.main_menu, menu);
     inflater.inflate(R.menu.main_menu, menu);
-    return true;
+    return super.onCreateOptionsMenu(menu);
+
   }
 
   public boolean onOptionsItemSelected(MenuItem item) {
     switch (item.getItemId()) {
-
-
+      case R.id.action_favorite:
+        showActivity();
+        break;
       default:
         break;
     }

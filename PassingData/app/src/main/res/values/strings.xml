@@ -2,4 +2,6 @@
     <string name="app_name">PassingData</string>
     <string name="hint">Please enter some text</string>
     <string name="new_header">Done</string>
+    <string name="header_name">header Info</string>
+    <string name="back">Back</string>
 </resources>
