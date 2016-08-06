@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     setDate.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-
+        //getSupportActionBar().setTitle("Whatever title");
       }
     });
   }
