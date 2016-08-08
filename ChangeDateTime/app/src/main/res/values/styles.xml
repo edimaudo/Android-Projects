@@ -14,4 +14,8 @@
         <item name="colorButtonNormal">@color/colorPrimary</item>
     </style>
 
+    <style name="pickerStyle">
+        <item name="colorPrimary">@color/colorPrimary</item>
+    </style>
+
 </resources>

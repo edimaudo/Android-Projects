@@ -6,6 +6,7 @@ android:layout_width="match_parent"
 android:layout_height="match_parent">
 
 <DatePicker
+    android:theme="@style/pickerStyle"
     android:id="@+id/date_picker"
     android:layout_width="match_parent"
     android:datePickerMode="spinner"
@@ -14,12 +15,13 @@ android:layout_height="match_parent">
     />
 
 <TimePicker
-    android:theme="@style/buttonInfo"
+    android:theme="@style/pickerStyle"
     android:id="@+id/time_picker"
     android:layout_weight="4"
     android:timePickerMode="spinner"
     android:layout_width="match_parent"
-    android:layout_height="0dp" />
+    android:layout_height="0dp"
+    />
 
     <Button
         android:id="@+id/date_time_set"
