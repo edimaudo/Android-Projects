@@ -1,7 +1,6 @@
 package com.edimaudo.changedatetime;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -73,13 +72,7 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();
       }
     });
-
-    alertDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
-      @Override
-      public void onDismiss(DialogInterface dialogInterface) {
-       showDateTime();
-      }
-    });
+    
   }
 
   public void showDateTime(){
