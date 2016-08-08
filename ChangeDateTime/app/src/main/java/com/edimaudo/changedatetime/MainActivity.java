@@ -1,6 +1,7 @@
 package com.edimaudo.changedatetime;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -11,18 +12,18 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 
 public class MainActivity extends AppCompatActivity {
   private TextView textView;
-  private Button changeDate;
+  private Button changeDate, dateTimeSet;
   private LinearLayout pickerInfo;
   private DatePicker datePicker;
   private TimePicker timePicker;
   private int day,month, year, hour,min;
-
-  private final int DATE_DIALOG_ID = 0;
   private View dialogView;
   private AlertDialog alertDialog;
   @Override
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     pickerInfo = (LinearLayout) findViewById(R.id.pickerInfo);
     datePicker = (DatePicker) findViewById(R.id.date_picker);
     timePicker = (TimePicker) findViewById(R.id.time_picker);
+    dateTimeSet = (Button) findViewById(R.id.date_time_set);
 
 
     Date dNow = new Date();
@@ -54,20 +56,28 @@ public class MainActivity extends AppCompatActivity {
             DatePicker datePicker = (DatePicker) dialogView.findViewById(R.id.date_picker);
             TimePicker timePicker = (TimePicker) dialogView.findViewById(R.id.time_picker);
 
-            //Calendar calendar = new GregorianCalendar(
-                    //datePicker.getYear(),
-                    //datePicker.getMonth(),
-                    //datePicker.getDayOfMonth(),
-                    //timePicker.getCurrentHour(),
-                    //timePicker.getCurrentMinute());
+            Calendar calendar = new GregorianCalendar(datePicker.getYear(),
+                    datePicker.getMonth(),
+                    datePicker.getDayOfMonth(),
+                    timePicker.getCurrentHour(),
+                    timePicker.getCurrentMinute());
 
-
+            year = datePicker.getYear();
+            month = datePicker.getMonth();
+            day = datePicker.getDayOfMonth();
+            hour = timePicker.getCurrentHour();
+            min = timePicker.getCurrentMinute();
             alertDialog.dismiss();
           }});
         alertDialog.setView(dialogView);
         alertDialog.show();
-        showDateTime();
+      }
+    });
 
+    alertDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+      @Override
+      public void onDismiss(DialogInterface dialogInterface) {
+       showDateTime();
       }
     });
   }
@@ -83,7 +93,38 @@ public class MainActivity extends AppCompatActivity {
             .append(getHourMin(hour,min)));
   }
   private String getHourMin(int hourInfo, int minInfo){
+    String minString = String.valueOf(minInfo);
+    String hourString = String.valueOf(hourInfo);
+    String format = "AM";
     StringBuilder stringInfo = new StringBuilder();
+
+    if (hourInfo == 0) {
+      hourInfo += 12;
+      format = "AM";
+    }
+    else if (hourInfo == 12) {
+      format = "PM";
+    } else if (hourInfo > 12) {
+      hourInfo -= 12;
+      format = "PM";
+    } else {
+      format = "AM";
+    }
+
+
+
+    if (hourInfo < 10){
+      hourString = "0" + String.valueOf(hourInfo);
+    }
+
+    if (minInfo < 10){
+      minString = "0" + String.valueOf(minInfo);
+    }
+
+    stringInfo.append(String.valueOf(hourString));
+    stringInfo.append(String.valueOf(":"));
+    stringInfo.append(String.valueOf(minString));
+    stringInfo.append(" " + format);
 
     return stringInfo.toString();
   }
@@ -129,7 +170,6 @@ public class MainActivity extends AppCompatActivity {
     }
     return stringInfo.toString();
   }
-
 
 
 
