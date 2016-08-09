@@ -1,5 +1,6 @@
 package com.edimaudo.stopwatch;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -17,14 +18,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   long timeSwapBuff = 0L;
   long updatedTime = 0L;
 
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    Typeface font = Typeface.createFromAsset(getAssets(), "fonts/digital-7.ttf");
     stopWatchText = (TextView) findViewById(R.id.stopWatchText);
     startButton = (Button) findViewById(R.id.startButton);
     pauseButton = (Button) findViewById(R.id.pauseButton);
     resetButton = (Button) findViewById(R.id.resetButton);
+
+    stopWatchText.setTypeface(font);
+    startButton.setTypeface(font);
+    resetButton.setTypeface(font);
+    pauseButton.setTypeface(font);
 
     startButton.setOnClickListener(this);
     pauseButton.setOnClickListener(this);
