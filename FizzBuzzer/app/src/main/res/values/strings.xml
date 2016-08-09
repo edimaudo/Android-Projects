@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FizzBuzzer</string>
+    <string name="header_name">Fizz Buzzer</string>
+</resources>
