@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ColorClock</string>
+    <string name="main_header">The current time is</string>
+</resources>
