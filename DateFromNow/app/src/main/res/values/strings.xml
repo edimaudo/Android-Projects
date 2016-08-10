@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DateFromNow</string>
+    <string name="date_blurb">from now</string>
+    <string name="default_value">0</string>
+</resources>

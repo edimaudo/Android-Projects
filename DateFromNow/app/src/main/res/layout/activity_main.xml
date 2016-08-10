@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.edimaudo.datefromnow.MainActivity">
+
+    <LinearLayout
+        android:background="@color/colorGreen"
+        android:id="@+id/topLayer"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <EditText
+            android:layout_marginTop="50dp"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/userInput"
+            android:inputType="number"
+            android:textSize="25dp"
+            android:textColor="@color/colorBlack"
+            android:text="@string/default_value"
+            android:textAlignment="textEnd"
+            android:layout_weight="1"/>
+
+        <Spinner
+            android:layout_marginTop="50dp"
+            android:id="@+id/dateTimeInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_weight="0.7"
+            android:spinnerMode="dropdown"
+
+            ></Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/topLayer"
+        android:id="@+id/bottomLayer"
+        android:orientation="vertical"
+        android:background="@color/colorYellow"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        
+        <TextView
+            android:layout_marginTop="150dp"
+            android:id="@+id/timeOutput"
+            android:textColor="@color/colorBlack"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+        
+    </LinearLayout>
+</RelativeLayout>
