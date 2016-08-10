@@ -14,33 +14,150 @@
         android:id="@+id/intro"
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:visibility="visible">
 
         <TextView
-
+            android:id="@+id/headerText"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="35sp"
+            android:text="@string/header_name"
+            android:textColor="@color/colorBlue"
+            android:layout_marginTop="25dp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"/>
 
         <TextView
+            android:id="@+id/textBlurb"
+            android:textColor="@color/colorBlue"
+            android:textSize="20sp"
+            android:text="@string/text_blurb"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_marginTop="30dp"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"/>
 
         <TextView
+            android:id="@+id/textRemain"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginTop="30dp"
+            android:textSize="30sp"
+            android:text="@string/text_remainder"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"/>
 
         <Button
+
+            android:id="@+id/startButton"
+            android:textColor="#fff"
+            android:theme="@style/buttonStyle"
+            android:layout_marginTop="25dp"
+            android:text="@string/start"
+            android:textSize="25sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/game"
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        <LinearLayout
+            android:id="@+id/game"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_marginTop="35dp"
+                android:id="@+id/gameHeaderInfo"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:id="@+id/gameMiss"
+                    android:text="@string/miss"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:id="@+id/gameScore"
+                    android:text="@string/game_score"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:id="@+id/gameGoal"
+                    android:text="@string/game_goal"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="80dp"
+                android:id="@+id/fizzBuzzNum"
+                android:textStyle="bold"
+                android:textSize="60sp"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:text="@string/fizzBuzz"
+                android:layout_marginBottom="80dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <LinearLayout
+                android:id="@+id/userInteraction"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="50dp"
+                android:paddingLeft="50dp"
+                >
+
+                <EditText
+                    android:id="@+id/userInput"
+                    android:inputType="text"
+                    android:layout_width="150dp"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="25sp"
+
+                    android:textCursorDrawable="@color/colorBlue"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/enterButton"
+                    android:theme="@style/buttonStyle"
+                    android:text="@string/enter"
+                    android:textColor="#fff"
+                    android:textSize="25sp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
 
 
-
-    </LinearLayout>
 </RelativeLayout>
