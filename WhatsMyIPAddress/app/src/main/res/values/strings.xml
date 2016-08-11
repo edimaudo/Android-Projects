@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">WhatsMyIPAddress</string>
+    <string name="ip_info">What is my IP Address</string>
+</resources>
