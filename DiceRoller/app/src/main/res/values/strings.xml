@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DiceRoller</string>
+    <string name="inital_header">Hey you! Give us a roll</string>
+    <string name="shake">Shake \'em\'</string>
+</resources>
