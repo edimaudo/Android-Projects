@@ -68,7 +68,9 @@ public class MainActivity extends AppCompatActivity {
 
     t.start();
 
+
   }
+
 
   public int getRandomRoll(){
     int output = 1;
