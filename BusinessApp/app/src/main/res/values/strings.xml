@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">BusinessApp</string>
+    <string name="salon_name">Super Awesome Salon</string>
+    <string name="salon_type">Beauty and nail care</string>
+    <string name="telephone_num">Telephone: +1 647 987 2222</string>
+    <string name="salon_location">35 Anywhere lane, Toronto, Ontario, Canada</string>
+    <string name="salon_hours">Hours</string>
+    <string name="day_closed"></string>
+    <string name="monday">Monday - Closed</string>
+    <string name="tuesday">Tuesday - 10.00-17.00</string>
+    <string name="wednesday">Wednesday - 10.00-17.00</string>
+    <string name="thursday">Thursday - 10.00-17.00</string>
+    <string name="friday">Friday - 10.00-17.00</string>
+    <string name="saturday">Saturday - 09.00-14.00</string>
+    <string name="sunday">Sunday - Closed</string>
+
+</resources>
