@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SimpleSpinner</string>
+    <string name="spinner_title">Select Category</string>
+    <string name="spinner_label">Category</string>
+</resources>
