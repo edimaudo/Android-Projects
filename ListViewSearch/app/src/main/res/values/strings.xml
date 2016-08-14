@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ListViewSearch</string>
+    <string name="hint_info">Search products...</string>
+</resources>
