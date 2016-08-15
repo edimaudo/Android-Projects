@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">PresentValueCalculator</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="interest_rate">Interest Rate (Hint: Enter 2% as 0.02)</string>
+    <string name="num_of_years">Number of Years</string>
+    <string name="yearly_revenue">Yearly Revenue</string>
+    <string name="revenue">Revenue</string>
+    <string name="growth_rate">Growth Rate (Hint: Enter 2% as 0.02)</string>
+    <string name="tot_num_years">Total Number Of Years</string>
+    <string name="year_without_revenue">Years without revenue</string>
+    <string name="basic_header">Basic present value calculation \n summing a set of cash flows discounted by interest rate.</string>
+    <string name="hint">Enter 2% as 0.02</string>
+    <string name="constant_growth_header">Present value calculation for a growing revenue stream \n
+    lasting for a fixed number of years.</string>
+    <string name="offset_growth_header">Present value calculation for a growing revenue stream
+lasting for a fixed number of years with a specified offset.</string>
+    <string name="submit">Submit</string>
+    <string name="err_msg_name">Enter interest</string>
+    <string name="err_msg_email">Enter valid email address</string>
+    <string name="err_msg_password">Enter the password</string>
+
+
+</resources>
