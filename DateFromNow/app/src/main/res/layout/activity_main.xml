@@ -53,7 +53,7 @@
             android:id="@+id/timeOutput"
             android:textColor="@color/colorBlack"
             android:textAlignment="center"
-            android:textSize="25dp"
+            android:textSize="30sp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"/>
         

@@ -12,12 +12,16 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class MainActivity extends AppCompatActivity {
   private EditText userInput;
   private Spinner dateTimeInfo;
   private TextView userOutput;
   StringBuilder itemInfo = new StringBuilder();
-  String item;
+  String item = "days";
+  String output;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     int spinnerPosition = adapter.getPosition("days");
     dateTimeInfo.setSelection(spinnerPosition);
+    showOutput();
 
     userInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
       @Override
@@ -60,33 +65,48 @@ public class MainActivity extends AppCompatActivity {
    }
 
   public void showOutput(){
+    SimpleDateFormat ft = new SimpleDateFormat ("MM/dd/yyyy");
+    Calendar cal = Calendar.getInstance();
     if (userInput.getText().toString().isEmpty()){
       Toast.makeText(MainActivity.this, "Please enter a number", Toast.LENGTH_SHORT).show();
+      userOutput.setText(ft.format(cal.getTime()));
     } else {
-      switch (item){
+
+
+
+      String choice = item;
+      int timeValue = Integer.parseInt(userInput.getText().toString());
+
+      switch (choice){
         case "days":
+          cal.add(Calendar.DAY_OF_MONTH, timeValue);
         break;
         case "years":
+          cal.add(Calendar.YEAR,timeValue);
           break;
         case "months":
+          cal.add(Calendar.MONTH,timeValue);
           break;
         case "weeks":
+          cal.add(Calendar.WEEK_OF_YEAR,timeValue);
           break;
         case "hours":
+          ft = new SimpleDateFormat ("MM/dd/yyyy hh:mm:ss a");
+          cal.add(Calendar.HOUR_OF_DAY,timeValue);
           break;
         case "minutes":
+          ft = new SimpleDateFormat ("MM/dd/yyyy hh:mm:ss a");
+          cal.add(Calendar.MINUTE,timeValue);
           break;
         case "seconds":
+          ft = new SimpleDateFormat ("MM/dd/yyyy hh:mm:ss a");
+          cal.add(Calendar.SECOND,timeValue);
           break;
-
       }
-
+      output = ft.format(cal.getTime());
+      userOutput.setText(output);
     }
-    //DateFormat dateFormat= new SimpleDateFormat("dd/MM/yyyy");
-    //Date dNow = new Date();
-    //SimpleDateFormat ft = new SimpleDateFormat ("MMMM d',' yyyy',' hh:mm:ss a");
-    //currentDateTime.setText(ft.format(dNow));
 
-    userOutput.setText("");
+
   }
 }
