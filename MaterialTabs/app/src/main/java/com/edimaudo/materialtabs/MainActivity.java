@@ -2,15 +2,16 @@ package com.edimaudo.materialtabs;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,15 +36,12 @@ public class MainActivity extends AppCompatActivity {
     tabLayout.setupWithViewPager(viewPager);
   }
 
-  private void setupViewPager(ViewPager viewpager){
+  private void setupViewPager(ViewPager viewPager){
     ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-    adapter.addFragment(new OneFragment(), "One");
-    //adapter.addFragment(OneFragment, "ONE");
-    //adapter.addFragment(new TwoFragment(), "TWO");
-    //adapter.addFragment(new ThreeFragment(), "THREE");
-
+    adapter.addFragment(new OneFragment(), "ONE");
+    adapter.addFragment(new TwoFragment(), "TWO");
+    adapter.addFragment(new ThreeFragment(), "THREE");
     viewPager.setAdapter(adapter);
-
   }
 
   class ViewPagerAdapter extends FragmentPagerAdapter {
@@ -74,4 +72,5 @@ public class MainActivity extends AppCompatActivity {
       return mFragmentTitleList.get(position);
     }
   }
+
 }
