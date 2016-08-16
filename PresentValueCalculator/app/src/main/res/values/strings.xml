@@ -15,9 +15,13 @@
     <string name="offset_growth_header">Present value calculation for a growing revenue stream
 lasting for a fixed number of years with a specified offset.</string>
     <string name="submit">Submit</string>
-    <string name="err_msg_name">Enter interest</string>
-    <string name="err_msg_email">Enter valid email address</string>
-    <string name="err_msg_password">Enter the password</string>
+    <string name="err_msg_interest">Enter interest</string>
+    <string name="err_msg_num_years">Enter number of years</string>
+    <string name="err_msg_yearly_revenue">Enter yearly revenue</string>
+    <string name="err_growth_rate">Enter growth rate</string>
+    <string name="err_msg_revenue">Enter revenue</string>
+    <string name="err_msg_total_num_years">Enter total number of years</string>
+    <string name="err_msg_year_no_revenue">Enter years without revenue</string>
 
 
 </resources>

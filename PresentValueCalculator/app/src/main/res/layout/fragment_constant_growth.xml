@@ -81,7 +81,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number|numberDecimal"
-                    android:hint="@string/yearly_revenue" />
+                    android:hint="@string/num_of_years" />
             </android.support.design.widget.TextInputLayout>
 
             <Button android:id="@+id/constant_growth_submit"
