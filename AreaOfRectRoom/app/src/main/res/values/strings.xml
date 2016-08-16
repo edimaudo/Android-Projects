@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AreaOfRectRoom</string>
+    <string name="lengthInfo">Enter the room length</string>
+    <string name="widthInfo">Enter the room width</string>
+    <string name="metre">Metres</string>
+    <string name="feet">Feet</string>
+</resources>

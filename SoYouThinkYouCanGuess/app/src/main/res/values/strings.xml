@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SoYouThinkYouCanGuess</string>
+    <string name="Guess_info">Guess the Number</string>
+    <string name="easy">Guess a number between 1 and 10</string>
+    <string name="medium">Guess as number between 1 and 100</string>
+    <string name="hard">Guess a number between 1 and 1000</string>
+    <string name="guess_number"># of Guesses Left: </string>
+    <string name="hint">Enter a number</string>
+    <string name="guess_button">Guess</string>
+    <string name="play_again_button">play Again</string>
+    <string name="home_button">Home</string>
+</resources>

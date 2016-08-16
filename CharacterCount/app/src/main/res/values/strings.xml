@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CharacterCount</string>
+    <string name="text_view_info">What is the input string?</string>
+</resources>

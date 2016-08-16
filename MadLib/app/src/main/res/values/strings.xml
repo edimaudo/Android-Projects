@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MadLib</string>
+    <string name="noun">Enter a noun:</string>
+    <string name="verb">Enter a verb:</string>
+    <string name="adjective">Enter an adjective:</string>
+    <string name="adverb"> Enter an adverb:</string>
+</resources>

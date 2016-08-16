@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PasswordCreator</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="password">Enter a password</string>
+    <string name="passwordChecker">Password Checker</string>
+    <string name="passwordGenerator">Password Generator</string>
+    <string name="specialCharacters">How many special characters?</string>
+    <string name="number">How many numbers?</string>
+
+</resources>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SayingHello</string>
+    <string name="hint_name">What is your name?</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+android:id="@+id/firstView"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:visibility="visible">
+
+<TextView
+    android:layout_marginTop="50dp"
+    android:text="@string/passwordChecker"
+    android:id="@+id/section_label"
+    android:layout_width="fill_parent"
+    android:textSize="30sp"
+    android:textStyle="bold"
+    android:textAlignment="center"
+    android:layout_height="wrap_content" />
+
+<EditText
+    android:layout_below="@id/section_label"
+    android:layout_marginTop="90dp"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/userInput"
+    android:hint="@string/password"
+    android:textAlignment="center"
+    android:textSize="30sp"
+    android:inputType="text"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"/>
+
+<TextView
+    android:layout_marginTop="30dp"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textAlignment="center"
+    android:textSize="30sp"
+    android:textStyle="bold"
+    android:id="@+id/validationOutput"
+    android:layout_below="@+id/userInput"
+    android:layout_centerHorizontal="true"/>
+
+</LinearLayout>
+

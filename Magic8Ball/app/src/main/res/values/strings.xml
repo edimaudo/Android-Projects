@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Magic8Ball</string>
+    <string name="Enter_question">Enter your question</string>
+</resources>

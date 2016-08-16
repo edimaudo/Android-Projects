@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RetirementCalculator</string>
+    <string name="age_info">What is your current age?</string>
+    <string name="retire_info">What is your retirement age?</string>
+    <string name="label_header">Retirement Data</string>
+    <string name="calculate">Calculate</string>
+</resources>

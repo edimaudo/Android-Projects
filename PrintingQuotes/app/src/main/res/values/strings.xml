@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PrintingQuotes</string>
+    <string name="quoteInfo">What is the quote?</string>
+    <string name="quoter">Who said it?</string>
+</resources>

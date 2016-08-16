@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.edimaudo.facts.MainActivity"
+    android:background="@android:color/holo_green_dark"
+    android:screenOrientation="portrait"
+    android:id="@+id/body">
+
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Nigerian Facts"
+        android:id="@+id/startButton"
+        android:background="@android:color/background_light"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="225dp"
+        android:layout_alignParentEnd="true"
+        android:theme="@android:style/Theme.Material"
+        android:onClick="createFact"
+        android:visibility="visible" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nextButtonName"
+        android:id="@+id/newFactButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="40dp"
+        android:layout_alignEnd="@+id/startButton"
+        android:textSize="25sp"
+        android:background="@android:color/background_light"
+        android:textColor="@android:color/holo_green_dark"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Did you know?"
+        android:id="@+id/didYouKnowTextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp"
+        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/factText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:layout_alignTop="@+id/startButton"
+        android:layout_alignStart="@+id/didYouKnowTextView"
+        android:textStyle="bold" />
+
+</RelativeLayout>

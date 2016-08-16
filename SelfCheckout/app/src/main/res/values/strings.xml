@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SelfCheckout</string>
+    <string name="action_settings">Settings</string>
+    <string name="Price">Enter a price</string>
+    <string name="Quantity">Enter a quantity</string>
+    <string name="headerData">Self Checkout</string>
+    <string name="save">Save</string>
+</resources>

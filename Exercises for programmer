@@ -1,0 +1,27 @@
+Exercises for programmer
+Exercise 1
+
+Goal
+create a program that prompts for your name and prints a greeting using your name.
+
+
+new thing I learned
+
+How to get keyboard input
+
+editText = (EditText) findViewById(R.id.edit_text);
+
+editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+    @Override
+    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+        if (actionId == EditorInfo.IME_ACTION_DONE) {
+            // do your stuff here
+        }
+        return false;
+    }
+});
+
+from stackoverflow(http://stackoverflow.com/questions/5077425/android-detect-done-key-press-for-onscreen-keyboard)
+
+
+
