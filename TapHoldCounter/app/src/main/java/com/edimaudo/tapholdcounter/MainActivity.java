@@ -2,7 +2,6 @@ package com.edimaudo.tapholdcounter;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -11,9 +10,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   private Button reset, tapHold;
   private TextView counter;
   int count = 0;
-  boolean isTouch = false;
-  boolean isLongPress = false;
-  int testcount = 0;
+  boolean longCheck = false;
+
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +25,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     reset.setOnClickListener(this);
     tapHold.setOnClickListener(this);
     tapHold.setOnLongClickListener(this);
-    //tapHold.setOnTouchListener(this);
 
   }
 
@@ -51,10 +48,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int choice = view.getId();
     switch (choice){
       case R.id.reset:
+        longCheck = true;
         reset();
         break;
       case R.id.tapHold:
         addCount();
+        longCheck = true;
         break;
     }
     showOutput();
@@ -63,21 +62,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
   @Override
   public boolean onLongClick(View view) {
-    new Thread() {
+    Thread t = new Thread() {
+
+      @Override
       public void run() {
-        int tempCount = 0;
-        boolean isPressed = true;
-        while (isPressed) {
-          tempCount++;
-          counter.setText(String.valueOf(tempCount + count));
+        try {
+          while (!longCheck) {
+            Thread.sleep(100);
+            runOnUiThread(new Runnable() {
+              @Override
+              public void run() {
+                addCount();
+                showOutput();
+
+              }
+            });
+          }
+        } catch (InterruptedException e) {
         }
       }
     };
-    testcount++;
-    Log.i("count",String.valueOf(count));
-    Log.i("testcount",String.valueOf(testcount));
+    longCheck = false;
+    t.start();
 
-
-    return true;
+    return false;
   }
 }
