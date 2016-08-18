@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LoveIs</string>
+    <string name="begin_Text">Love is ...</string>
+    <string name="next">More Love</string>
+    <string name="loveimage">loveImage</string>
+    <string name="share">Share</string>
+</resources>
