@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:compat="http://schemas.android.com/apk/res-auto"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="Done"
+        android:id="@+id/action_add_item"
+        app:showAsAction="always"/>
+</menu>
