@@ -12,6 +12,7 @@
     tools:context="com.edimaudo.addphoto.MainActivity">
 
     <TextView
+        android:layout_marginTop="20dp"
         android:id="@+id/random_text"
         android:textAlignment="textStart"
         android:textColor="@color/colorPrimary"
@@ -21,5 +22,13 @@
         android:layout_height="wrap_content"
         android:text="@string/random_text"/>
 
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:id="@+id/photo"
+        android:layout_below="@id/random_text"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
 
 </RelativeLayout>
