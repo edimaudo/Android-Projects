@@ -13,4 +13,13 @@
         <item name="colorButtonNormal">@color/colorPurplePrimary</item>
     </style>
 
+    <style name="alertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!--buttons color-->
+        <item name="colorAccent">@color/colorWhite</item>
+        <!--title and message color-->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!--dialog background-->
+        <item name="android:windowBackground">@drawable/background</item>
+    </style>
+
 </resources>

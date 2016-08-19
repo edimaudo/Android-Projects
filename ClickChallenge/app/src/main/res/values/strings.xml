@@ -3,4 +3,6 @@
     <string name="game_header">Click Challenge</string>
     <string name="game_blurb">How many taps can you do in 30 seconds?</string>
     <string name="start">Start</string>
+    <string name="begin_text">0</string>
+    <style name="dialog_title">The Click Challenge</style>
 </resources>
