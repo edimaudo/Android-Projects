@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BottomSheet</string>
+    <string name="show_bottom">Show Bottom</string>
+    <string name="vertical_ellipsis">&#8942;</string>
+    <string name="report">Report</string>
+    <string name="cancel">Cancel</string>
+    <string name="share">Share</string>
+    <string name="copy_image">Copy Image</string>
+    <string name="save_image">Save Image</string>
+</resources>
