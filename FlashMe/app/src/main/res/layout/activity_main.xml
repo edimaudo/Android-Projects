@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.edimaudo.flashme.MainActivity"
+    android:weightSum="5">
+
+    <TextView
+        android:id="@+id/firstColor"
+        android:background="@color/colorFirst"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/secondColor"
+        android:background="@color/colorSecond"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/thirdColor"
+        android:background="@color/colorThird"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/fourthColor"
+        android:background="@color/colorFourth"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/fifthColor"
+        android:background="@color/colorFifth"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>
