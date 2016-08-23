@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/colorPrimaryText"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.edimaudo.simon.MainActivity">
+    
+    <TextView
+        android:layout_marginTop="30dp"
+        android:id="@+id/introBlurb"
+        android:textColor="@color/colorWhite"
+        android:text="@string/game_intro"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    
+    <LinearLayout
+        android:layout_marginTop="200dp"
+        android:id="@+id/topLayer"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_width="200dp"
+        android:layout_height="100dp">
+
+        <TextView
+            android:id="@+id/greenColor"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/colorGreen"/>
+        <TextView
+            android:id="@+id/redColor"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/colorRed"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomLayer"
+        android:layout_below="@id/topLayer"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:layout_width="200dp"
+        android:layout_height="100dp">
+        <TextView
+            android:id="@+id/blueColor"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/colorBlue"/>
+        <TextView
+            android:id="@+id/yellowColor"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/colorYellow"/>
+    </LinearLayout>
+</RelativeLayout>
