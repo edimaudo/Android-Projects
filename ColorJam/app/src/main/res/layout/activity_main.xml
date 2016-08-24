@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:background="@color/colorBlack"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,8 +14,82 @@
     tools:context="com.edimaudo.colorjam.MainActivity">
 
     <LinearLayout
+        android:weightSum="4"
+        android:layout_weight="1"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></LinearLayout>
+        android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/redColor"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:src="@drawable/circle"
+            android:backgroundTint="@color/colorRed"/>
+
+        <ImageView
+            android:id="@+id/blueColor"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:src="@drawable/circle"
+            android:backgroundTint="@color/colorBlue"/>
+
+        <ImageView
+            android:id="@+id/orangeColor"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:src="@drawable/circle"
+            android:backgroundTint="@color/colorOrange"/>
+
+        <ImageView
+            android:id="@+id/greenColor"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:src="@drawable/circle"
+            android:backgroundTint="@color/colorGreen"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:weightSum="4"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/grayColor"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:src="@drawable/circle"
+            android:backgroundTint="@color/colorGray"/>
+
+        <ImageView
+            android:id="@+id/pinkColor"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:src="@drawable/circle"
+            android:backgroundTint="@color/colorPink"/>
+
+        <ImageView
+            android:id="@+id/purpleColor"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:src="@drawable/circle"
+            android:backgroundTint="@color/colorPurple"/>
+
+        <ImageView
+            android:id="@+id/yellowColor"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:src="@drawable/circle"
+            android:backgroundTint="@color/colorYellow"/>
+    </LinearLayout>
 </LinearLayout>
