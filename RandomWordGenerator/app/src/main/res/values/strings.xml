@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RandomWordGenerator</string>
+    <string name="stop">Stop</string>
+</resources>
