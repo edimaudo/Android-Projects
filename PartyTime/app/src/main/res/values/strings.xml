@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PartyTime</string>
+    <string name="intro_text">Enter a birthdate and time to see if it\'s party time</string>
+    <string name="get_date_time">Get party time</string>
+</resources>
