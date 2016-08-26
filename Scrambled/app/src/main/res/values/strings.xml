@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Scrambled</string>
+    <string name="game_intro_blurb">You have three chances to unscramble the word.
+        \n If you succeed, you get a point.\n If you fail, you lose a point.</string>
+    <string name="game_begin_button">Let\'s play!</string>
+    <string name="score_info">Score: 0</string>
+    <string name="game_blurb">Here is your word to unscramble, goo luck!</string>
+    <string name="guess_hint">Enter your guess</string>
+    <string name="guess">Guess</string>
+</resources>

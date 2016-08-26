@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.edimaudo.scrambled.MainActivity">
+
+    <TextView
+        android:id="@+id/beginText"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/game_intro_blurb"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_above="@+id/gameBeginButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="64dp"/>
+
+    <Button
+        android:gravity="center"
+        android:id="@+id/gameBeginButton"
+        android:theme="@style/buttonStyle"
+        android:text="@string/game_begin_button"
+
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textSize="25sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="186dp"/>
+</RelativeLayout>
