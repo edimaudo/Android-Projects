@@ -67,11 +67,14 @@ public class MainActivity extends AppCompatActivity {
             hour = timePicker.getCurrentHour();
             min = timePicker.getCurrentMinute();
             alertDialog.dismiss();
+            showDateTime();
           }});
         alertDialog.setView(dialogView);
         alertDialog.show();
+
       }
     });
+
 
   }
 
