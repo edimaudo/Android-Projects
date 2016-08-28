@@ -3,18 +3,18 @@ package com.edimaudo.text2speech;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.SeekBar;
+import android.widget.Toast;
 
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements TextToSpeech.OnInitListener {
 
   private ImageView speechButton;
-  private TextToSpeech engine;
+  private TextToSpeech tts;
   private EditText editText;
   private SeekBar seekPitch, seekSpeed;
   private double pitch=1.0;
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
 
     speechButton = (ImageView) findViewById(R.id.speechImg);
     editText = (EditText) findViewById(R.id.sentence);
-    engine = new TextToSpeech(this, this);
+    tts = new TextToSpeech(this, this);
 
     speechButton.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -77,17 +77,29 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
 
   @Override
   public void onInit(int status) {
-    Log.d("Speech", "OnInit - Status ["+status+"]");
-
     if (status == TextToSpeech.SUCCESS) {
-      Log.d("Speech", "Success!");
-      engine.setLanguage(Locale.UK);
+      tts.setLanguage(Locale.CANADA);
     }
   }
 
+  @Override
+  public void onDestroy() {
+    // Don't forget to shutdown tts!
+    if (tts != null) {
+      tts.stop();
+      tts.shutdown();
+    }
+    super.onDestroy();
+  }
+
   private void speech() {
-    engine.setPitch((float) pitch);
-    engine.setSpeechRate((float) speed);
-    engine.speak(editText.getText().toString(), TextToSpeech.QUEUE_FLUSH, null, null);
+    tts.setPitch((float) pitch);
+    tts.setSpeechRate((float) speed);
+    if (editText.getText().toString().isEmpty()){
+      Toast.makeText(MainActivity.this, "Please enter some text", Toast.LENGTH_SHORT).show();
+    } else {
+      tts.speak(editText.getText().toString(), TextToSpeech.QUEUE_FLUSH, null, null);
+    }
+
   }
 }
