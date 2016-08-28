@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
   private ImageView eightBall;
   private EditText userInput;
   private TextView userOutput;
+  boolean isInterrupted = false;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +32,34 @@ public class MainActivity extends AppCompatActivity {
       @Override
       public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
         if (actionId == EditorInfo.IME_ACTION_DONE) {
-          Animation shake = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.shake);
-          eightBall.startAnimation(shake);
-          getResult();
+          userOutput.setText("");
+          if (userInput.getText().toString().equals("")){
+            Toast.makeText(getApplicationContext(), "Please enter a question", Toast.LENGTH_SHORT).show();
+
+          } else {
+            Animation shake = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.shake);
+            eightBall.startAnimation(shake);
+            Thread t = new Thread() {
+              @Override
+              public void run() {
+                try {
+                  while (!isInterrupted) {
+                    Thread.sleep(1000);
+                    runOnUiThread(new Runnable() {
+                      @Override
+                      public void run() {
+                        getResult();
+                      }
+                    });
+                    isInterrupted = true;
+                  }
+                } catch (InterruptedException e) {
+                }
+              }
+            };
+
+            t.start();
+          }
         }
         return false;
       }
@@ -45,10 +71,6 @@ public class MainActivity extends AppCompatActivity {
     String outcome = "";
     Random rand = new Random();
     int choice = rand.nextInt(3);
-    if (userInput.getText().toString().equals("")){
-      Toast.makeText(getApplicationContext(), "Please enter a question", Toast.LENGTH_SHORT).show();
-      userOutput.setText("");
-    } else {
       switch(choice){
         case 0:
           outcome = "Yes";
@@ -62,12 +84,11 @@ public class MainActivity extends AppCompatActivity {
         case 3:
           outcome = "Ask again later";
           break;
-        default:
-          outcome = "Maybe";
       }
       userOutput.setText(outcome);
+      isInterrupted = false;
     }
 
 
-  }
+
 }
