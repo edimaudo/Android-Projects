@@ -5,6 +5,9 @@ Goals is to create 200 Android projects using
 - book: exercises for programmers
 - Games from Corona SDK community
 - http://inventwithpython.com/blog/2012/02/20/i-need-practice-programming-49-ideas-for-game-clones-to-code/
- as inspiration
+- vintage basic
+
+
+as inspiration
 
 
