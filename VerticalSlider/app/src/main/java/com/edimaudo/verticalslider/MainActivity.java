@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
   int score = 0;
   private Animation animUp;
   private Animation animDown;
-  private float startY = 0.0f;
+  private float startY = 290.0f;
   private float endY;
 
   @Override
@@ -38,30 +38,34 @@ public class MainActivity extends AppCompatActivity {
   public boolean onTouchEvent(MotionEvent event) {
     switch (event.getAction()) {
       case MotionEvent.ACTION_DOWN:
-        startY = event.getY();
+        endY = event.getY();
+        if(startY > endY)
+          score--;
+        updateScreen(score);
+        //Log.i("value",String.valueOf(endY));
         break;
 
       case MotionEvent.ACTION_UP:
         endY = event.getY();
-
+        if(endY > startY)
+        score++;
+        updateScreen(score);
         break;
     }
     return true;
   }
 
   public void updateScreen(int value){
-    switch(value){
-      case 0:
-        relativeLayout.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorBrown));
-        content.setText("First");
-        break;
-      case 1:
-        relativeLayout.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorBlack));
-        content.setText("Second");
-        break;
-      case 2:
-        relativeLayout.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorRed));
-        content.setText("Third");
+    if(value % 2 == 0) {
+      relativeLayout.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorBrown));
+      content.setText("Reddish Brownish");
+    } else if (value % 3 == 0) {
+      relativeLayout.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorBlack));
+      content.setText("Black");
+    } else {
+      relativeLayout.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorRed));
+      content.setText("Red");
     }
+
   }
 }
