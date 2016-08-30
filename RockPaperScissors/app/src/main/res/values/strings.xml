@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RockPaperScissors</string>
+    <string name="intro_blurb">Choose your weapom</string>
+    <string name="player1">Computer</string>
+    <string name="player2">You</string>
+    <string name="rock_text">Rock</string>
+    <string name="paper_text">Paper</string>
+    <string name="scissors_text">Scissors</string>
+</resources>

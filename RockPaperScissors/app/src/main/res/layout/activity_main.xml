@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.edimaudo.rockpaperscissors.MainActivity">
+
+    <TextView
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player1"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/computerImage"/>
+
+    <TextView
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/player2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignEnd="@+id/playerImage"
+        android:layout_marginEnd="32dp"/>
+
+    <ImageView
+        android:src="@drawable/left_fist"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/computerImage"
+        android:layout_alignTop="@+id/playerImage"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/gameBlurb"
+        android:text="@string/intro_blurb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:src="@drawable/right_fist"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/playerImage"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/linearLayout"/>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/playerImage"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/rockButton"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:theme="@style/buttonStyle"
+            android:text="@string/rock_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/paperButton"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:theme="@style/buttonStyle"
+            android:text="@string/paper_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/scissorsButton"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:theme="@style/buttonStyle"
+            android:text="@string/scissors_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
