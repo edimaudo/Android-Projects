@@ -1,7 +1,6 @@
 package com.edimaudo.rockpaperscissors;
 
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
@@ -21,7 +20,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   String computerSelection = "";
   String chosenOutcome = "";
   boolean isInterrupted = false;
-  private Thread thread;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +36,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     rockButton.setOnClickListener(this);
     scissorsButton.setOnClickListener(this);
     paperButton.setOnClickListener(this);
+
+    anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.move_up_down);
+
 
 
 
@@ -59,29 +60,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     playGame();
   }
 
-  public void playGame(){
+  public void playGame() {
+    gameBlurb.setText("");
     computerImage.setImageDrawable(getResources().getDrawable(R.drawable.left_fist, getApplicationContext().getTheme()));
     playerImage.setImageDrawable(getResources().getDrawable(R.drawable.right_fist, getApplicationContext().getTheme()));
-    anim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move_up_down);
-    computerImage.setAnimation(anim);
+
+    computerImage.startAnimation(anim);
     playerImage.setAnimation(anim);
 
     Random rand = new Random();
-    String [] gameItems = {"rock","paper","scissors"};
+    String[] gameItems = {"rock", "paper", "scissors"};
     computerSelection = gameItems[rand.nextInt(gameItems.length)];
-    chosenOutcome = gameOutcome(userSelection,computerSelection);
+    chosenOutcome = gameOutcome(userSelection, computerSelection);
 
-    new CountDownTimer(100,1000){
+    anim.setAnimationListener(new Animation.AnimationListener() {
+      @Override
+      public void onAnimationStart(Animation animation) {
+
+      }
 
       @Override
-      public void onTick(long miliseconds){}
-
-      @Override
-      public void onFinish(){
+      public void onAnimationEnd(Animation animation) {
         showOutcome();
       }
-    }.start();
 
+      @Override
+      public void onAnimationRepeat(Animation animation) {
+
+      }
+    });
 
   }
 
@@ -89,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     showImage(userSelection,playerImage);
     showImage(computerSelection,computerImage);
     gameBlurb.setText(chosenOutcome);
-
+    isInterrupted = false;
   }
 
   public String gameOutcome(String userOption, String computerOption){
@@ -106,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     return outcome;
   }
 
-  public void showImage(String option,ImageView view){
+  public void showImage(String option, ImageView view){
     switch(option){
       case "rock":
         view.setImageDrawable(getResources().getDrawable(R.drawable.rock, getApplicationContext().getTheme()));
