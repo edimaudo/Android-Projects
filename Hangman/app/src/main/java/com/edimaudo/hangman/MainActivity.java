@@ -5,14 +5,16 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar.LayoutParams;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.support.v7.app.AlertDialog;
+
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,9 +24,14 @@ public class MainActivity extends AppCompatActivity {
   private LetterAdapter ltrAdapt;
   String currWord;
   private TextView[] charViews;
-  private Integer[] bodyParts = {R.drawable.head,R.drawable.body,R.drawable.left_arm,
-          R.drawable.right_arm, R.drawable.left_leg, R.drawable.right_leg};
-  final int numParts = 6;
+  Integer[] bodyParts = {R.drawable.head,
+          R.drawable.body,
+          R.drawable.left_arm,
+          R.drawable.right_arm,
+          R.drawable.right_leg,
+          R.drawable.left_leg
+          };
+  final int numParts = 5;
   int currPart;
   int numChars;
   int numCorrect;
@@ -40,15 +47,14 @@ public class MainActivity extends AppCompatActivity {
     letters = (GridView)findViewById(R.id.letters);
     ltrAdapt = new LetterAdapter(this);
     letters.setAdapter(ltrAdapt);
-
     playGame();
-
-
 
   }
 
   private void playGame(){
     enableBtns();
+    imageView.setImageDrawable(getResources().getDrawable(R.drawable.tower, getApplicationContext().getTheme()));
+
     currWord = generateWord();
     charViews = new TextView[currWord.length()];
     wordLayout.removeAllViews();
@@ -74,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
     String[] word = { "abacus", "abalone", "wunderkind", "xenophobe",  "vantage", "vapid",
             "unwillingness", "unwind",  "colony", "colossal",  "commerce",
             "commercial", "composer","condenser", "feeble", "feebleminded","freshwater"};
-    return word[rand.nextInt(word.length)];
+    return word[rand.nextInt(word.length)].toUpperCase();
   }
 
   public void letterPressed(View view) {
@@ -100,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         winBuild.setPositiveButton("Play Again",
                 new DialogInterface.OnClickListener() {
                   public void onClick(DialogInterface dialog, int id) {
-                    MainActivity.this.playGame();
+                    playGame();
                   }
                 });
 
@@ -114,8 +120,10 @@ public class MainActivity extends AppCompatActivity {
         winBuild.show();
       }
     } else if (currPart < numParts){
+      Log.i("part bf",String.valueOf(currPart));
       imageView.setImageDrawable(getResources().getDrawable(bodyParts[currPart], getApplicationContext().getTheme()));
       currPart++;
+
     } else {
       disableBtns();
       AlertDialog.Builder loseBuild = new AlertDialog.Builder(this);
@@ -124,7 +132,8 @@ public class MainActivity extends AppCompatActivity {
       loseBuild.setPositiveButton("Play Again",
               new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
-                  MainActivity.this.playGame();
+                  enableBtns();
+                  playGame();
                 }
               });
 
@@ -137,10 +146,6 @@ public class MainActivity extends AppCompatActivity {
 
       loseBuild.show();
     }
-
-
-
-
   }
 
   public void disableBtns() {
@@ -154,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
     int numLetters = letters.getChildCount();
     for (int l = 0; l < numLetters; l++) {
       letters.getChildAt(l).setEnabled(true);
+      letters.getChildAt(l).setBackgroundResource(R.drawable.letter_up);
     }
   }
 
