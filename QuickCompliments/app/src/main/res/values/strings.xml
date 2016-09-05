@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">QuickCompliments</string>
+    <string name="hint_text">Say something nice!</string>
+    <string name="submit_button">Submit</string>
+    <string name="other_blurb">DOESN\'T THIS COMPLIMENT MAKE YOU FEEL BETTER? RETURN THE FAVOR AND GIVE A COMPLIMENT!</string>
+    <string name="submission_blurb">THANKS FOR ADDING A COMPLIMENT! HERE IS ANOTHER COMPLIMENT FOR YOU!</string>
+</resources>
