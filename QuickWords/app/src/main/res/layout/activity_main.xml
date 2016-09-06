@@ -11,8 +11,8 @@
     tools:context="com.edimaudo.quickwords.MainActivity">
 
     <TextView
+        android:id="@+id/scoreUpdate"
         android:textSize="20sp"
-        
         android:textAlignment="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -33,7 +33,6 @@
 
             <Button
                 android:id="@+id/button1"
-
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorText"
@@ -43,7 +42,6 @@
                 android:layout_height="80dp"/>
             <Button
                 android:id="@+id/button2"
-
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorText"
@@ -53,7 +51,6 @@
                 android:layout_height="80dp"/>
             <Button
                 android:id="@+id/button3"
-
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorText"
@@ -71,7 +68,6 @@
 
             <Button
                 android:id="@+id/button4"
-
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorText"
@@ -138,6 +134,7 @@
     <TextView
         android:textColor="@color/colorPrimary"
         android:textSize="25sp"
+        android:textStyle="bold"
         android:layout_marginTop="25dp"
         android:id="@+id/wordSelected"
         android:textAlignment="center"
@@ -155,6 +152,7 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/cancelButton"
             android:textAllCaps="false"
             android:text="@string/clear_button"
             android:theme="@style/buttonStyle"
@@ -162,6 +160,7 @@
             android:layout_height="wrap_content"/>
 
         <Button
+            android:id="@+id/submitButton"
             android:textAllCaps="false"
             android:text="@string/submit_button"
             android:theme="@style/buttonStyle"
@@ -170,6 +169,7 @@
     </LinearLayout>
 
     <TextView
+        android:text="@string/score"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
         android:textSize="25sp"
