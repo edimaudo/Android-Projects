@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
           case MotionEvent.ACTION_DOWN:
             circleBall.clearAnimation();
 
+
         }
 
 
@@ -47,8 +48,9 @@ public class MainActivity extends AppCompatActivity {
     downAnimation.setDuration(duration);  // animation duration
     downAnimation.setRepeatCount(repeatCount);  // animation repeat count
     downAnimation.setRepeatMode(2);   // repeat animation (left to right, right to left )
-    downAnimation.setFillBefore(true);
-    //downAnimation.setFillAfter(true);
+    downAnimation.setFillEnabled(true);
+    //downAnimation.setFillBefore(true);
+    downAnimation.setFillAfter(true);
     //downAnimation.setInterpolator(BounceInterpolator());
 
 
