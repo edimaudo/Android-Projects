@@ -2,5 +2,5 @@
     <string name="app_name">QuickWords</string>
     <string name="clear_button">Clear</string>
     <string name="submit_button">Submit</string>
-    <string name="score">Score: </string>
+    <string name="score">Score: 0</string>
 </resources>
