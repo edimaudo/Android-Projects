@@ -71,6 +71,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
   }
 
+  public void changeColor(View view){
+
+  }
+
   @Override
   public void onClick(View view) {
     switch(view.getId()){
