@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">JustJava</string>
+    <string name="topping">Topping</string>
+    <string name="topping1">Whipped cream</string>
+    <string name="topping2">Chocolate</string>
+    <string name="quantity">Quantity</string>
+    <string name="initialAmount">0</string>
+    <string name="add">+</string>
+    <string name="subtract">-</string>
+    <string name="order">Order</string>
 </resources>
