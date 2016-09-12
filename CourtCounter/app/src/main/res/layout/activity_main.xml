@@ -10,8 +10,120 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.edimaudo.courtcounter.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/teamLayout"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:textAlignment="center"
+            android:layout_gravity="center|center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:theme="@style/teamNameStyle"
+                android:text="@string/first_team"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/teamAText"
+                android:text="@string/intro_number"
+                style="@style/counterStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/teamA3PointButton"
+                android:theme="@style/buttonStyle"
+                android:text="@string/three_points"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/teamA2PointButton"
+                android:theme="@style/buttonStyle"
+                android:text="@string/two_points"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/teamA1PointButton"
+                android:theme="@style/buttonStyle"
+                android:text="@string/one_point"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:theme="@style/teamNameStyle"
+                android:text="@string/second_team"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/teamBText"
+                android:text="@string/intro_number"
+                style="@style/counterStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:layout_marginBottom="20dp"
+                android:id="@+id/teamB3PointButton"
+                android:theme="@style/buttonStyle"
+                android:text="@string/three_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/teamB2PointButton"
+                android:theme="@style/buttonStyle"
+                android:text="@string/two_points"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+
+            <Button
+
+                android:id="@+id/teamB1PointButton"
+                android:theme="@style/buttonStyle"
+                android:text="@string/one_point"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/teamLayout"
+        android:theme="@style/buttonStyle"
+        android:text="@string/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>
