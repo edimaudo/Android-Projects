@@ -10,5 +10,145 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.edimaudo.justjava.MainActivity">
 
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginTop="50dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto/android"
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true">
 
+        <EditText
+            android:hint="@string/hint"
+            android:textColor="@color/colorPriamryText"
+            android:textSize="25sp"
+            android:inputType="text"
+            android:id="@+id/userInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inputLayout"
+            android:layout_alignParentEnd="true"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/coffee"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/inputLayout"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/coffee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+
+        android:id="@+id/toppingHeader"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/coffee"
+        android:textSize="20sp"
+        android:text="@string/topping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <CheckBox
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/toppingCheckBox1"
+        android:layout_below="@+id/toppingHeader"
+        android:theme="@style/MyCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="@string/topping1"/>
+
+    <CheckBox
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/toppingCheckBox2"
+        android:layout_below="@+id/toppingCheckBox1"
+        android:theme="@style/MyCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="@string/topping2"/>
+
+    <TextView
+        android:id="@+id/quantity"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/toppingCheckBox2"
+        android:text="@string/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/buttonHolder"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/quantity"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:gravity="center_vertical|clip_horizontal"
+            android:textAlignment="center"
+            android:id="@+id/subtractButton"
+            android:theme="@style/buttonStyle"
+
+            android:text="@string/subtract"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="55dp"
+            android:layout_height="60dp"/>
+
+        <TextView
+            android:id="@+id/quantityText"
+            android:gravity="center"
+            android:text="@string/initialAmount"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="55dp"
+            android:layout_height="60dp"/>
+
+        <Button
+            android:textAlignment="center"
+            android:id="@+id/addButton"
+            android:theme="@style/buttonStyle"
+            android:text="@string/add"
+            android:gravity="center_vertical|clip_horizontal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="55dp"
+            android:layout_height="60dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:id="@+id/priceText"
+        android:layout_below="@+id/buttonHolder"
+        android:text="@string/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="25sp"
+        android:theme="@style/buttonStyle"
+        android:textSize="20sp"
+        android:text="@string/order"
+        android:layout_below="@+id/priceText"
+        android:id="@+id/orderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>
