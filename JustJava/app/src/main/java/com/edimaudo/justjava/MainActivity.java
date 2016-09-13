@@ -173,7 +173,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       intent.setData(Uri.parse("mailto:"));
       intent.putExtra(Intent.EXTRA_SUBJECT, subject);
       intent.putExtra(Intent.EXTRA_TEXT, emailBody.toString());
-      startActivity(Intent.createChooser(intent, "Send coffee order"));
+
+      if(intent.resolveActivity(getPackageManager()) != null){
+        startActivity(Intent.createChooser(intent, "Send coffee order"));
+      }
       emailBody = new StringBuilder();
       subject = "Just Java for ";
     }
