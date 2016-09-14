@@ -34,6 +34,22 @@ public class NumbersActivity extends AppCompatActivity {
             }
           };
 
+  private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener(){
+
+    @Override
+    public void onCompletion(MediaPlayer mediaPlayer) {
+      releaseMediaPlayer();
+    }
+  };
+
+  private void releaseMediaPlayer(){
+    if(mediaPlayer != null){
+      mediaPlayer.release();
+      mediaPlayer = null;
+      audioManager.abandonAudioFocus(afChangeListener);
+    }
+  }
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -76,21 +92,7 @@ public class NumbersActivity extends AppCompatActivity {
     });
   }
 
-  private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener(){
 
-    @Override
-    public void onCompletion(MediaPlayer mediaPlayer) {
-     releaseMediaPlayer();
-    }
-  };
-
-  private void releaseMediaPlayer(){
-    if(mediaPlayer != null){
-      mediaPlayer.release();
-      mediaPlayer = null;
-      audioManager.abandonAudioFocus(afChangeListener);
-    }
-  }
 
   @Override
   protected void onResume() {
