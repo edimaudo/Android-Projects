@@ -21,8 +21,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Intent intent;
@@ -46,10 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        ArrayList<String> test = new ArrayList<>();
-
         switch (view.getId()){
-
             case R.id.colors:
                 intent = new Intent(this,ColorsActivity.class);
                 startActivity(intent);

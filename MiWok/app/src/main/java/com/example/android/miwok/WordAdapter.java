@@ -5,9 +5,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
-/**
- * Created by edima on 2016-09-13.
- */
 public class WordAdapter extends ArrayAdapter<Word> {
   public WordAdapter(Context context, int resource, int textViewResourceId) {
     super(context, resource, textViewResourceId);
