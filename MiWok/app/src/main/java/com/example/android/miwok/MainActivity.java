@@ -19,18 +19,53 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TextView colors = (TextView) findViewById(R.id.colors);
+        TextView numbers = (TextView) findViewById(R.id.numbers);
+        TextView family = (TextView) findViewById(R.id.family);
+        TextView phrases = (TextView) findViewById(R.id.phrases);
+
+        colors.setOnClickListener(this);
+        numbers.setOnClickListener(this);
+        family.setOnClickListener(this);
+        phrases.setOnClickListener(this);
     }
 
-    public void openNumbersList(View view){
-        Intent intent = new Intent(this,NumbersActivity.class);
-        startActivity(intent);
+
+
+    @Override
+    public void onClick(View view) {
+        ArrayList<String> test = new ArrayList<>();
+
+        switch (view.getId()){
+
+            case R.id.colors:
+                intent = new Intent(this,ColorsActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.family:
+                intent = new Intent(this,FamilyActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.phrases:
+                intent = new Intent(this,PhrasesActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.numbers:
+                intent = new Intent(this,NumbersActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 }

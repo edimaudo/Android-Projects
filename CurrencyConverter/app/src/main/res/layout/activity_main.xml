@@ -11,4 +11,64 @@
     tools:context="com.edimaudo.currencyconverter.MainActivity">
 
 
+    <EditText
+        android:id="@+id/userInput"
+        android:inputType="number|numberDecimal"
+        android:textSize="25sp"
+        android:textColor="@color/colorPrimaryText"
+        android:hint="Enter your amount here"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="82dp"/>
+
+
+
+        <Spinner
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/userInput"
+            android:layout_weight="1"
+            android:id="@+id/fromCurrency"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"></Spinner>
+
+        <Spinner
+            android:layout_marginTop="40dp"
+            android:id="@+id/toCurrency"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/userOutput"
+            android:layout_alignEnd="@+id/userInput"></Spinner>
+
+
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        tools:text="sample"
+        android:textColor="@color/colorPrimaryText"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/fromCurrency"
+        android:id="@+id/userOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"
+        android:text="Convert"
+        android:textAllCaps="false"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/userOutput"
+        android:id="@+id/getConversion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 </RelativeLayout>
