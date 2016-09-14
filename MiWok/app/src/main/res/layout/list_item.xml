@@ -1,19 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools"
-              android:orientation="vertical"
+              android:orientation="horizontal"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:padding="16dp">
-            <TextView
+              android:minHeight="@dimen/list_item_height"
+              android:background="@color/tan_background">
 
-                android:id="@+id/miwokWord"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="lutti"/>
-            <TextView
-                android:id="@+id/englishWord"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="one"/>
+            <ImageView
+                android:id="@+id/image"
+                tools:src="@mipmap/ic_launcher"
+                android:layout_width="@dimen/list_item_height"
+                android:layout_height="@dimen/list_item_height"
+                android:contentDescription="miWokImage"/>
+
+            <LinearLayout
+                android:id="@+id/textContainer"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp">
+                <TextView
+                    android:id="@+id/miwokWord"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textColor="@android:color/white"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    tools:text="lutti"/>
+
+                <TextView
+                    android:textColor="@android:color/white"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:id="@+id/defaultWord"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    tools:text="one"/>
+            </LinearLayout>
+
+
+
 </LinearLayout>
