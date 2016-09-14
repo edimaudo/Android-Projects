@@ -1,5 +1,6 @@
 package com.example.android.miwok;
 
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +13,24 @@ import java.util.ArrayList;
 public class PhrasesActivity extends AppCompatActivity {
   ArrayList<Word> phrases = new ArrayList<Word>();
   MediaPlayer mediaPlayer;
+  AudioManager audioManager;
+  AudioManager.OnAudioFocusChangeListener afChangeListener =
+          new AudioManager.OnAudioFocusChangeListener() {
+            public void onAudioFocusChange(int focusChange) {
+              if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT
+                      || focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
+                // Pause playback
+                mediaPlayer.pause();
+                mediaPlayer.seekTo(0);
+              } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+                // Resume playback
+                mediaPlayer.start();
+              } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
+                // Stop playback
+                releaseMediaPlayer();
+              }
+            }
+          };
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -35,11 +54,20 @@ public class PhrasesActivity extends AppCompatActivity {
     list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
       @Override
       public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        Word word = phrases.get(i);
+        releaseMediaPlayer();
+        int result = audioManager.requestAudioFocus(afChangeListener,
+                AudioManager.STREAM_MUSIC,
+                //using transient since our audio files are short
+                AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
 
-        mediaPlayer = MediaPlayer.create(PhrasesActivity.this, word.getmAudioResourceID());
-        mediaPlayer.start();
-        mediaPlayer.setOnCompletionListener(mCompletionListener);
+        if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+          //audioManager.registerMediaButtonEventReceiver(RemoteControlReceiver);
+
+          Word word = phrases.get(i);
+          mediaPlayer = MediaPlayer.create(PhrasesActivity.this, word.getmAudioResourceID());
+          mediaPlayer.start();
+          mediaPlayer.setOnCompletionListener(mCompletionListener);
+        }
       }
 
 
@@ -57,6 +85,7 @@ public class PhrasesActivity extends AppCompatActivity {
     if(mediaPlayer != null){
       mediaPlayer.release();
       mediaPlayer = null;
+      audioManager.abandonAudioFocus(afChangeListener);
     }
   }
 
