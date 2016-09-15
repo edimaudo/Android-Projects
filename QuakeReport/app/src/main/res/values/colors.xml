@@ -9,4 +9,6 @@
 
     <!-- Accent color of the app -->
     <color name="colorAccent">#10CAC9</color>
+
+    <color name="colorGray">#2121</color>
 </resources>
