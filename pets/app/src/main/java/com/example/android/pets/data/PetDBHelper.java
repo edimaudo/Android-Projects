@@ -39,6 +39,12 @@ public class PetDBHelper extends SQLiteOpenHelper{
     sqLiteDatabase.execSQL(SQL_DELETE_ENTRIES);
     onCreate(sqLiteDatabase);
   }
+
+  /**
+   * Created by edima on 2016-09-17.
+   */
+  public static class PetProvider {
+  }
 }
 
 
