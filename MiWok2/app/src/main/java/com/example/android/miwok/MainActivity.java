@@ -17,75 +17,31 @@ package com.example.android.miwok;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.TextView;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
     Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // Set the content of the activity to use the activity_main.xml layout file
+        setContentView(R.layout.activity_main);
 
-        TextView colors = (TextView) findViewById(R.id.colors);
-        TextView numbers = (TextView) findViewById(R.id.numbers);
-        TextView family = (TextView) findViewById(R.id.family);
-        TextView phrases = (TextView) findViewById(R.id.phrases);
+        // Find the view pager that will allow the user to swipe between fragments
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
 
-        colors.setOnClickListener(this);
-        numbers.setOnClickListener(this);
-        family.setOnClickListener(this);
-        phrases.setOnClickListener(this);
+        // Create an adapter that knows which fragment should be shown on each page
+        CategoryAdapter adapter = new CategoryAdapter(this, getSupportFragmentManager());
+
+        // Set the adapter onto the view pager
+        viewPager.setAdapter(adapter);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(viewPager);
     }
 
-
-
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.colors:
-                intent = new Intent(this,ColorsActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.family:
-                intent = new Intent(this,FamilyActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.phrases:
-                intent = new Intent(this,PhrasesActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.numbers:
-                intent = new Intent(this,NumbersActivity.class);
-                startActivity(intent);
-                break;
-        }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
-
-    @Override
-    protected void onPostResume() {
-        super.onPostResume();
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-    }
 }
