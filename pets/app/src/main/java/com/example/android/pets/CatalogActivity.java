@@ -30,11 +30,13 @@ import android.widget.TextView;
 import com.example.android.pets.data.PetContract.PetEntry;
 import com.example.android.pets.data.PetDBHelper;
 
+import static com.example.android.pets.data.PetContract.PetEntry.*;
+
 /**
  * Displays list of pets that were entered and stored in the app.
  */
 public class CatalogActivity extends AppCompatActivity {
-
+    PetDBHelper mDbHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,36 +88,37 @@ public class CatalogActivity extends AppCompatActivity {
 
         // Create a new map of values, where column names are the keys
                 ContentValues values = new ContentValues();
-                values.put(PetEntry.COLUMN_PET_NAME, "John");
-                values.put(PetEntry.COLUMN_PET_BREED, "Terrier");
-                values.put(PetEntry.COLUMN_PET_GENDER, 1);
-                values.put(PetEntry.COLUMN_PET_WEIGHT, 12);
+                values.put(COLUMN_PET_NAME, "John");
+                values.put(COLUMN_PET_BREED, "Terrier");
+                values.put(COLUMN_PET_GENDER, 1);
+                values.put(COLUMN_PET_WEIGHT, 12);
 
         // Insert the new row, returning the primary key value of the new row
-                long newRowId = db.insert(PetEntry.TABLE_NAME, null, values);
+                long newRowId = db.insert(TABLE_NAME, null, values);
     }
 
     private void displayDatabaseInfo() {
         // To access our database, we instantiate our subclass of SQLiteOpenHelper
-        // and pass the context, which is the current activity.
-        PetDBHelper mDbHelper = new PetDBHelper(this);
 
         // Create and/or open a database to read from it
-        SQLiteDatabase db = mDbHelper.getReadableDatabase();
+        //SQLiteDatabase db = mDbHelper.getReadableDatabase();
 
-        // Perform this raw SQL query "SELECT * FROM pets"
-        // to get a Cursor that contains all rows from the pets table.
-        Cursor cursor = db.rawQuery("SELECT * FROM " + PetEntry.TABLE_NAME, null);
-        try {
-            // Display the number of rows in the Cursor (which reflects the number of rows in the
-            // pets table in the database).
-            TextView displayView = (TextView) findViewById(R.id.text_view_pet);
-            displayView.setText("Number of rows in pets database table: " + cursor.getCount());
-        } finally {
-            // Always close the cursor when you're done reading from it. This releases all its
-            // resources and makes it invalid.
-            cursor.close();
-        }
+        String[] projection = {
+                _ID,
+                COLUMN_PET_NAME,
+                COLUMN_PET_BREED,
+                COLUMN_PET_GENDER,
+                COLUMN_PET_WEIGHT
+        };
+
+
+        Cursor cursor = getContentResolver().query(PetEntry.CONTENT_URI,projection,null,null,null);
+
+
+        TextView displayView = (TextView) findViewById(R.id.text_view_pet);
+
+
+
     }
 
     @Override
