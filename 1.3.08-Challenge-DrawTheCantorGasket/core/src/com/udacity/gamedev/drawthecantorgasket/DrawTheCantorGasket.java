@@ -2,6 +2,7 @@ package com.udacity.gamedev.drawthecantorgasket;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.Rectangle;
@@ -18,6 +19,7 @@ public class DrawTheCantorGasket extends ApplicationAdapter {
 
     ShapeRenderer shapeRenderer;
     // TODO: Set a constant for how many recursions to draw. 5 is a good place to start
+    static final int max_recursion = 5;
 
     @Override
     public void create () {
@@ -34,11 +36,13 @@ public class DrawTheCantorGasket extends ApplicationAdapter {
         Rectangle bounds = findLargestSquare();
 
         // TODO: Begin a filled shapeRenderer batch
-
+        shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
         // TODO: Draw a white square matching the bounds
-
+        shapeRenderer.setColor(Color.BLUE);
+        shapeRenderer.rect(bounds.x, bounds.y, bounds.width, bounds.height);
         // TODO: Set the working color to black, and call punchCantorGasket with the bounds
-
+        shapeRenderer.setColor(Color.BLACK);
+        punchCantorGasket(bounds.x,bounds.y,bounds.width,max_recursion);
         // TODO: End the batch
         shapeRenderer.end();
     }
@@ -52,11 +56,30 @@ public class DrawTheCantorGasket extends ApplicationAdapter {
     private void punchCantorGasket(float x, float y, float size, int recursions){
         // Note that size means the height and width of the square
         // TODO: Base case, if recursions = 0, return
-
-        // TODO: Draw a black square in the middle square
+        if(recursions == 0){
+            return;
+        }
 
         // TODO: Call punchCantorGasket on all 8 other squares
+        float newSize = size / 3f;
+        float newSize2 = newSize * 2;
 
+        // TODO: Draw a black square in the middle square
+        shapeRenderer.rect(x + newSize, y + newSize, newSize, newSize);
+
+        recursions--;
+
+        // TODO: Call punchCantorGasket on all 8 other squares
+        punchCantorGasket(x, y, newSize, recursions); // 0,0
+        punchCantorGasket(x, y + newSize, newSize, recursions); // 0,1
+        punchCantorGasket(x, y + newSize2, newSize, recursions); // 0,2
+
+        punchCantorGasket(x + newSize, y, newSize, recursions); // 1,0
+        punchCantorGasket(x + newSize, y + newSize2, newSize, recursions); // 1, 2
+
+        punchCantorGasket(x + newSize2, y, newSize, recursions); // 2,0
+        punchCantorGasket(x + newSize2, y + newSize, newSize, recursions); // 2,1
+        punchCantorGasket(x + newSize2, y + newSize2, newSize, recursions); // 2,2
     }
 
     private Rectangle findLargestSquare(){
