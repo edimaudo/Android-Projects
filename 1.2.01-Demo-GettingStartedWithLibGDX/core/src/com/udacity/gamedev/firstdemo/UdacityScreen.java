@@ -40,7 +40,7 @@ public class UdacityScreen extends InputAdapter implements Screen {
     @Override
     public void render(float delta) {
         // TODO: Make this UDACITY_BLUE instead
-        clearScreen(UDACITY_ORANGE);
+        clearScreen(UDACITY_BLUE);
         batch.begin();
         batch.draw(logo,
                 (Gdx.graphics.getWidth() - LOGO_WIDTH)/2,
