@@ -19,6 +19,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -30,7 +31,11 @@ import android.widget.TextView;
 import com.example.android.pets.data.PetContract.PetEntry;
 import com.example.android.pets.data.PetDBHelper;
 
-import static com.example.android.pets.data.PetContract.PetEntry.*;
+import static com.example.android.pets.data.PetContract.PetEntry.COLUMN_PET_BREED;
+import static com.example.android.pets.data.PetContract.PetEntry.COLUMN_PET_GENDER;
+import static com.example.android.pets.data.PetContract.PetEntry.COLUMN_PET_NAME;
+import static com.example.android.pets.data.PetContract.PetEntry.COLUMN_PET_WEIGHT;
+import static com.example.android.pets.data.PetContract.PetEntry._ID;
 
 /**
  * Displays list of pets that were entered and stored in the app.
@@ -86,15 +91,16 @@ public class CatalogActivity extends AppCompatActivity {
         PetDBHelper mDbHelper = new PetDBHelper(this);
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
 
+        //meeds update
         // Create a new map of values, where column names are the keys
                 ContentValues values = new ContentValues();
-                values.put(COLUMN_PET_NAME, "John");
-                values.put(COLUMN_PET_BREED, "Terrier");
-                values.put(COLUMN_PET_GENDER, 1);
-                values.put(COLUMN_PET_WEIGHT, 12);
-
+                //values.put(COLUMN_PET_NAME, "John");
+                //values.put(COLUMN_PET_BREED, "Terrier");
+                //values.put(COLUMN_PET_GENDER, 1);
+                //values.put(COLUMN_PET_WEIGHT, 12);
+        Uri newUri = getContentResolver().insert(PetEntry.CONTENT_URI, values);
         // Insert the new row, returning the primary key value of the new row
-                long newRowId = db.insert(TABLE_NAME, null, values);
+        //long newRowId = db.insert(TABLE_NAME, null, values);
     }
 
     private void displayDatabaseInfo() {
@@ -117,6 +123,7 @@ public class CatalogActivity extends AppCompatActivity {
 
         TextView displayView = (TextView) findViewById(R.id.text_view_pet);
 
+        cursor.close();
 
 
     }

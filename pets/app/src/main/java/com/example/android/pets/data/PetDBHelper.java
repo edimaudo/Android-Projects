@@ -6,7 +6,7 @@ import com.example.android.pets.data.PetContract.PetEntry;
 
 public class PetDBHelper extends SQLiteOpenHelper{
   private static final String TEXT_TYPE = " TEXT";
-  private static final String TEXT_TYPE2 = " TEX NOT NULLT";
+  private static final String TEXT_TYPE2 = " TEXT NOT NULL";
   private static final String INTEGER_TYPE = " INTEGER";
   private static final String INTEGER_TYPE2 = " INTEGER NOT NULL";
   private static final String COMMA_SEP = ",";
