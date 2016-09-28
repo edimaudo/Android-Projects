@@ -1,3 +1,39 @@
 <resources>
     <string name="app_name">TOHispterQuiz</string>
+    <string name="submit">Submit</string>
+    <string name="retake">Retake Quiz?</string>
+
+    <string name="outcome1">You are not a hipster</string>
+    <string name="outcome2">You are a hipster</string>
+
+    <string name="question1">1. Are you a hipster?</string>
+    <string name="question2">2. How do you get around?</string>
+    <string name="question3">3. Did you go to art school?</string>
+    <string name="question4">4. How would you describe your style?</string>
+    <string name="question5">5. How often do you wear flannel?</string>
+
+    <string name="question1answerA">Yes</string>
+    <string name="question1answerB">No</string>
+    <string name="question1answerC">What is a hipster?</string>
+    <string name="question1answerD">I don\'t do labels</string>
+
+    <string name="question2answerA">TTC</string>
+    <string name="question2answerB">Walk</string>
+    <string name="question2answerC">Car</string>
+    <string name="question2answerD">Hybrid</string>
+
+    <string name="question3answerA">Yes</string>
+    <string name="question3answerB">No</string>
+    <string name="question3answerC">Who goes to art school</string>
+    <string name="question3answerD">I did but forgot</string>
+
+    <string name="question4answerA">Classically preppy</string>
+    <string name="question4answerB">I live in my designer hoodie</string>
+    <string name="question4answerC">Underweight lumberjack</string>
+    <string name="question4answerD">Lululemon addict</string>
+
+    <string name="question5answerA">Not since the 90s</string>
+    <string name="question5answerB">I have flannel pajamas</string>
+    <string name="question5answerC">I have a few items</string>
+    <string name="question5answerD">Flannel is my anthem</string>
 </resources>
