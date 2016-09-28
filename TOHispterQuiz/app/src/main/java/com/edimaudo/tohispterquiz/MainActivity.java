@@ -2,7 +2,9 @@ package com.edimaudo.tohispterquiz;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
@@ -13,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
           question3answer,question4answer,question5answer;
   private Button submitButton;
   public final static String  EXTRA_MESSAGE = "com.edimaudo.tohispterquiz.MESSAGE";
+  public String message = "";
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
       public void onClick(View view) {
         String result = generateScore();
         if (result.equals("issue")){
-
+          Snackbar
+                  .make(view, "Please fill the form.",Snackbar.LENGTH_SHORT)
+                  .show();
         } else {
           Intent selectOption = new Intent(getApplicationContext(),quiz_outcome.class);
           selectOption.putExtra(EXTRA_MESSAGE,result);
@@ -40,25 +45,33 @@ public class MainActivity extends AppCompatActivity {
         }
       }
     });
+
+    Intent in = getIntent();
+    if(in.getStringExtra(quiz_outcome.EXTRA_MESSAGE) == null){
+    } else {
+      message = in.getStringExtra(quiz_outcome.EXTRA_MESSAGE);
+      if (message.equals("reset")){
+        resetQuiz();
+      }
+
+    }
+
   }
 
   private String generateScore(){
     int total = 0;
-    String outcome = "";
-    int [] questionResult = {};
-    questionResult[0] = question1answer.getCheckedRadioButtonId();
-    questionResult[1] = question2answer.getCheckedRadioButtonId();
-    questionResult[2] = question3answer.getCheckedRadioButtonId();
-    questionResult[3] = question4answer.getCheckedRadioButtonId();
-    questionResult[4] = question5answer.getCheckedRadioButtonId();
+    String outcome = "issue";;
+    int [] questionResult = {question1answer.getCheckedRadioButtonId(),
+            question2answer.getCheckedRadioButtonId(),
+            question3answer.getCheckedRadioButtonId(),
+            question4answer.getCheckedRadioButtonId(),
+            question5answer.getCheckedRadioButtonId()};
 
     for (int i = 0; i < questionResult.length; i++){
       total+=questionResult[i];
     }
-
-    if (total == -1){
-      outcome = "issue";
-    } else if (total <  4){
+    Log.i("total",String.valueOf(total));
+    if (total > 10 && total < 15){
       outcome = getResources().getString(R.string.outcome1);
     } else {
       outcome = getResources().getString(R.string.outcome2);
@@ -66,5 +79,12 @@ public class MainActivity extends AppCompatActivity {
     return outcome;
   }
 
+  public void resetQuiz(){
+    question1answer.clearCheck();
+    question2answer.clearCheck();
+    question3answer.clearCheck();
+    question4answer.clearCheck();
+    question5answer.clearCheck();
+  }
 
 }
