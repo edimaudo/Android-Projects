@@ -3,4 +3,5 @@
     <string name="meal_header">Meal Name</string>
     <string name="hint">Enter meal name</string>
     <string name="photo_info">No photo selected</string>
+
 </resources>
