@@ -20,5 +20,4 @@
         <activity android:name=".quiz_outcome">
         </activity>
     </application>
-
 </manifest>
