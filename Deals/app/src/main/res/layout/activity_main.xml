@@ -12,7 +12,60 @@
     tools:context="com.edimaudo.deals.MainActivity">
 
     <TextView
+        android:id="@+id/dealInfo"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/deal_info"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/game_intro"
+        android:textStyle="normal"
+        android:textSize="25sp"
+        android:layout_below="@id/dealInfo"
+        android:id="@+id/gameInfo"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"/>
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/gameInfo"
+        android:weightSum="3"
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/blueDoor"
+            android:layout_marginLeft="15sp"
+            android:src="@drawable/blue_door"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/orangeDoor"
+            android:layout_marginLeft="15sp"
+            android:src="@drawable/orange_door"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/greenDoor"
+            android:layout_marginLeft="15sp"
+            android:src="@drawable/green_door"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 </RelativeLayout>

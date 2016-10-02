@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Deals</string>
+    <string name="game_intro">There are three doors. Behind two doors there are BAD THINGS.  Behind one door is an AWESOME THING.  Choose a door...</string>
+    <string name="deal_info">Wanna make a deal?</string>
+    <string name="bad_option">Ouch! Too bad. Here is your BAD THING!</string>
+    <string name="good_option">Booyah! Here is your AWESOME THING!</string>
+    <string name="play_again">Play Again?</string>
 </resources>
