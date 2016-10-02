@@ -3,6 +3,7 @@ package com.edimaudo.deals;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -21,10 +22,11 @@ public class outcome extends AppCompatActivity {
     outputText = (TextView) findViewById(R.id.gameEndText);
     restartButton = (Button) findViewById(R.id.gameResetButton);
 
-    Intent gameOverIntent = new Intent();
-    String gameInfo = gameOverIntent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-    outputText.setText(gameInfo);
-
+    String gameInfo = getIntent().getStringExtra(MainActivity.EXTRA_MESSAGE);
+    if(gameInfo != null) {
+      Log.i("gameInfo",String.valueOf(gameInfo));
+      outputText.setText(gameInfo);
+    }
     restartButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {

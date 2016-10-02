@@ -3,6 +3,7 @@ package com.edimaudo.deals;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Intent resetIntent = new Intent();
     if (resetIntent.getStringExtra(outcome.RESTART_MESSAGE) != null){
       resetGame();
+      Log.i("called","called");
     }
   }
 
@@ -59,21 +61,21 @@ public void checkOutcome(int blue, int orange, int green){
     }
     gameInfo.setText(outputString.toString());
   } else if (blue + orange + green == 2){
-
     String outputMessage = "";
     if(blue == 2 || orange == 2 || green == 2){
       outputMessage = "lost";
     } else if (blue + orange == 2 || blue + green == 2 || green + orange == 2){
-      outputMessage = "w0n";
+      outputMessage = "won";
     }
     Intent in = new Intent(this,outcome.class);
-    in.putExtra(outputMessage,EXTRA_MESSAGE);
+    in.putExtra(EXTRA_MESSAGE,outputMessage);
     startActivity(in);
   }
 }
 
   @Override
   public void onClick(View view) {
+
     switch (view.getId()){
       case R.id.blueDoor:
         blueCount++;
@@ -89,6 +91,7 @@ public void checkOutcome(int blue, int orange, int green){
         break;
     }
     checkOutcome(blueCount, orangeCount,greenCount);
+
   }
 
   public void resetGame(){
