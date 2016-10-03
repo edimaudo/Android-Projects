@@ -11,4 +11,6 @@ Goals is to create at least 200 Android projects using
 
 as inspiration
 
+December 31, 2016.
+
 
