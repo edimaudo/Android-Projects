@@ -4,7 +4,7 @@
     <string name="height_label">Height (Inches)</string>
     <string name="weight_label">Current Weight (Pounds)</string>
     <string name="weight_goal_label">Goal Weight</string>
-    <string name="diet_length">Length of diet (days)</string>
+    <string name="diet_length">Length of Diet (Days)</string>
     <string name="gender_label">Gender</string>
     <string name="male_label">Male</string>
     <string name="female_label">Female</string>
@@ -12,7 +12,7 @@
     <string name="reset">Back to form</string>
     <string name="reset_label">Your customized weight goals</string>
     <string name="date_label">Date</string>
-    <string name="goal_label">Goal Weight (pounds)</string>
+    <string name="goal_label">Goal Weight (Pounds)</string>
     <string name="weight_lost_label">Amount lost</string>
 </resources>
 

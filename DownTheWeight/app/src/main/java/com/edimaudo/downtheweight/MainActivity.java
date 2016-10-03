@@ -1,17 +1,17 @@
 package com.edimaudo.downtheweight;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
   private EditText heightInput, weightInput, goalInput, dietInput;
-  private RadioGroup genderOption;
   private Button submitButton;
+  public static final String EXTRA_MESSAGE = "com.edimaudo.downtheweight.MESSAGE";
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -22,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
     goalInput = (EditText) findViewById(R.id.goalInput);
     dietInput = (EditText) findViewById(R.id.dietInput);
 
-    genderOption = (RadioGroup) findViewById(R.id.genderOption);
-
     submitButton = (Button) findViewById(R.id.submitButton);
 
     submitButton.setOnClickListener(new View.OnClickListener() {
@@ -32,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
         if(heightInput.getText().toString().isEmpty() || weightInput.getText().toString().isEmpty() ||
                 goalInput.getText().toString().isEmpty() || dietInput.getText().toString().isEmpty()){
           Toast.makeText(getApplicationContext(), "Please fill in all options", Toast.LENGTH_LONG).show();
+        } else if (heightInput.getText().toString().equals("0") || weightInput.getText().toString().equals(0) ||
+                goalInput.getText().toString().equals(0) || dietInput.getText().toString().equals(0)) {
+          Toast.makeText(getApplicationContext(), "All values must have a value greater than 0", Toast.LENGTH_LONG).show();
+        }else {
+          Intent in = new Intent(getApplicationContext(),goal.class);
+          in.putExtra(EXTRA_MESSAGE,"");
+          startActivity(in);
         }
       }
     });

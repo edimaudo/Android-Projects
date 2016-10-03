@@ -134,15 +134,17 @@
             android:id="@+id/genderOption"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/female">
 
             <RadioButton
-                android:checked="true"
+                android:id="@+id/male"
                 android:text="@string/male_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
             <RadioButton
+                android:id="@+id/female"
                 android:text="@string/female_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
