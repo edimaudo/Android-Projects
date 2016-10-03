@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.edimaudo.downtheweight.MainActivity">
+
+
+    <LinearLayout
+        android:layout_marginTop="32dp"
+        android:id="@+id/heightHolder"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/height_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            android:inputType="number"
+            android:id="@+id/heightInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/currentWeightHolder"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginRight="5dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/weight_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            android:inputType="number"
+            android:id="@+id/weightInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/goalWeightHolder"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginRight="5dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/goal_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            android:inputType="number"
+            android:id="@+id/goalInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/dietHolder"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginRight="5dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/diet_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            android:inputType="number"
+            android:id="@+id/dietInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/genderHolder"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="5dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/gender_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioGroup
+            android:id="@+id/genderOption"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:checked="true"
+                android:text="@string/male_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:text="@string/female_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_marginTop="16dp"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:text="@string/submit_button"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+</LinearLayout>
