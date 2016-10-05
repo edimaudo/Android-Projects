@@ -22,14 +22,14 @@
 
         <TextView
             android:textStyle="bold"
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:textColor="@color/colorPrimary"
             android:text="@string/height_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <EditText
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:textColor="@color/colorPrimary"
             android:inputType="number"
             android:id="@+id/heightInput"
@@ -38,7 +38,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="32dp"
         android:id="@+id/currentWeightHolder"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -47,14 +47,14 @@
         <TextView
             android:layout_marginRight="5dp"
             android:textStyle="bold"
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:textColor="@color/colorPrimary"
             android:text="@string/weight_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <EditText
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:textColor="@color/colorPrimary"
             android:inputType="number"
             android:id="@+id/weightInput"
@@ -63,7 +63,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="32dp"
         android:id="@+id/goalWeightHolder"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -72,14 +72,14 @@
         <TextView
             android:layout_marginRight="5dp"
             android:textStyle="bold"
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:textColor="@color/colorPrimary"
             android:text="@string/goal_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <EditText
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:textColor="@color/colorPrimary"
             android:inputType="number"
             android:id="@+id/goalInput"
@@ -88,7 +88,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="32dp"
         android:id="@+id/dietHolder"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -97,14 +97,14 @@
         <TextView
             android:layout_marginRight="5dp"
             android:textStyle="bold"
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:textColor="@color/colorPrimary"
             android:text="@string/diet_length"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <EditText
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:textColor="@color/colorPrimary"
             android:inputType="number"
             android:id="@+id/dietInput"
@@ -112,48 +112,10 @@
             android:layout_height="wrap_content"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:id="@+id/genderHolder"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-        <TextView
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="5dp"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:textColor="@color/colorPrimary"
-            android:text="@string/gender_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <RadioGroup
-            android:id="@+id/genderOption"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checkedButton="@+id/female">
-
-            <RadioButton
-                android:id="@+id/male"
-                android:text="@string/male_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <RadioButton
-                android:id="@+id/female"
-                android:text="@string/female_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </RadioGroup>
-    </LinearLayout>
 
     <Button
         android:id="@+id/submitButton"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:textColor="#fff"
         android:textSize="20sp"
         android:text="@string/submit_button"

@@ -9,9 +9,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
   private EditText heightInput, weightInput, goalInput, dietInput;
   private Button submitButton;
   public static final String EXTRA_MESSAGE = "com.edimaudo.downtheweight.MESSAGE";
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -35,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
           Toast.makeText(getApplicationContext(), "All values must have a value greater than 0", Toast.LENGTH_LONG).show();
         }else {
           Intent in = new Intent(getApplicationContext(),goal.class);
-          in.putExtra(EXTRA_MESSAGE,"");
           startActivity(in);
         }
       }
