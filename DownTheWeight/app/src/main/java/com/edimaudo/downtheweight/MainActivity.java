@@ -9,9 +9,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
   private EditText heightInput, weightInput, goalInput, dietInput;
   private Button submitButton;
-  public static final String EXTRA_MESSAGE = "com.edimaudo.downtheweight.MESSAGE";
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +28,23 @@ public class MainActivity extends AppCompatActivity {
     submitButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        if(heightInput.getText().toString().isEmpty() || weightInput.getText().toString().isEmpty() ||
-                goalInput.getText().toString().isEmpty() || dietInput.getText().toString().isEmpty()){
-          Toast.makeText(getApplicationContext(), "Please fill in all options", Toast.LENGTH_LONG).show();
-        } else if (heightInput.getText().toString().equals("0") || weightInput.getText().toString().equals(0) ||
-                goalInput.getText().toString().equals(0) || dietInput.getText().toString().equals(0)) {
-          Toast.makeText(getApplicationContext(), "All values must have a value greater than 0", Toast.LENGTH_LONG).show();
+        if(heightInput.getText().toString().isEmpty()
+                || weightInput.getText().toString().isEmpty()
+                || goalInput.getText().toString().isEmpty()
+                || dietInput.getText().toString().isEmpty()){
+          Toast.makeText(getApplicationContext(),
+                  "Please fill in all options", Toast.LENGTH_LONG).show();
+        } else if (heightInput.getText().toString().equals("0")
+                || weightInput.getText().toString().equals(0)
+                || goalInput.getText().toString().equals(0)
+                || dietInput.getText().toString().equals(0)) {
+          Toast.makeText(getApplicationContext(),
+                  "All values must have a value greater than 0", Toast.LENGTH_LONG).show();
+        } else if(Integer.parseInt(goalInput.getText().toString())
+                >= Integer.parseInt(weightInput.getText().toString())) {
+          Toast.makeText(getApplicationContext(),
+                  "Target weight cannot be higher than or equal to current Weight",
+                  Toast.LENGTH_LONG).show();
         }else {
           Intent in = new Intent(getApplicationContext(),goal.class);
           Bundle extras = new Bundle();
