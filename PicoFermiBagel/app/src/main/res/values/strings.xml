@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Pico Fermi Bagel</string>
+    <string name="intro_blurb">Pico Fermi Bagel is a number guessing game.
+        Your goal is to guess a three digit number.
+        For each guess, you will be told.  \n
+        Fermi: a correct digit placed correctly.\n
+        Pico: a correct digit placed incorrectly.\n
+        Bagel: no digits are correct</string>
+    <string name="start">Start</string>
+    <string name="choice_prompt">Choose a number</string>
+    <string name="outcome">Outcome</string>
+    <string name="guess">Guess</string>
+    <string name="number_of_guesses">Number of guesses: 0</string>
+    <string-array name="spinnerItems">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+</resources>
