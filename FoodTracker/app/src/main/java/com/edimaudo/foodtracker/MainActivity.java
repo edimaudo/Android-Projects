@@ -11,10 +11,5 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
   }
 
-  /**
-   * Created by edima on 2016-09-30.
-   */
 
-  public static class Food {
-  }
 }

@@ -11,6 +11,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   image5,image6,image7,image8,image9,image10,image11,
   image12,image13,image14,image15,image16;
 
+  public int[] buttonArray = {};
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
