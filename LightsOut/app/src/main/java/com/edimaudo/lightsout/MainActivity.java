@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   image5,image6,image7,image8,image9,image10,image11,
   image12,image13,image14,image15,image16;
 
-  public int[] buttonArray = {};
+  int[] lightArray = new int[16];
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     while(!gameEnd){
 
     }
-    resetGame();
+
   }
 
   public void resetGame(){
@@ -114,4 +114,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         break;
     }
   }
+
+
 }
