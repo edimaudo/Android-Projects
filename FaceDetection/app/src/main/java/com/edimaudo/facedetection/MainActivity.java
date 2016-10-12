@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
                 options);
 
         Paint myRectPaint = new Paint();
-        myRectPaint.setStrokeWidth(4);
-        myRectPaint.setColor(Color.BLUE);
+        myRectPaint.setStrokeWidth(6);
+        myRectPaint.setColor(Color.RED);
         myRectPaint.setStyle(Paint.Style.STROKE);
 
         Bitmap tempBitmap = Bitmap.createBitmap(myBitmap.getWidth(),
