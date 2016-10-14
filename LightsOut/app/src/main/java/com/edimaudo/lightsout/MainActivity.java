@@ -1,6 +1,8 @@
 package com.edimaudo.lightsout;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
@@ -59,23 +61,56 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     image15.setOnClickListener(this);
     image16.setOnClickListener(this);
 
-    assignLight();
-    playGame();
+    gameInfo();
 
   }
 
   public void playGame(){
     boolean gameEnd = false;
     while(!gameEnd){
-      
+      if(arraySum(lightArray) == 0){
+        gameEnd = true;
+      } else {
+
+      }
+
+      }
+    AlertDialog.Builder winBuild = new AlertDialog.Builder(this);
+    winBuild.setTitle("Yay!");
+    winBuild.setMessage("Congrats! you won!");
+    winBuild.setPositiveButton("Play Again?",
+            new DialogInterface.OnClickListener() {
+              public void onClick(DialogInterface dialog, int id) {
+                resetGame();
+              }
+            });
+    winBuild.setNegativeButton("Exit",
+            new DialogInterface.OnClickListener() {
+              public void onClick(DialogInterface dialog, int id) {
+                MainActivity.this.finish();
+              }
+            });
+    winBuild.show();
     }
 
+  public void gameInfo(){
+    assignLight();
+    playGame();
   }
 
   public void resetGame(){
     for (int i = 0; i < lightArray.length; i++) {
       lightArray[i] = 0;
     }
+    gameInfo();
+  }
+
+  public int arraySum(int [] arrayInfo){
+    int output = 0;
+    for (int i = 0; i < arrayInfo.length; i++){
+      output+=arrayInfo[i];
+    }
+    return output;
   }
 
   public void assignLight(){
