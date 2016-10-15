@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -62,14 +63,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     image15.setOnClickListener(this);
     image16.setOnClickListener(this);
 
-    //assignLight();
-    //checkEndGame();
+    gameInfo();
 
   }
 
-  //check if the game should end
   public void checkEndGame(){
       if(arraySum(lightArray) == 0){
+
         AlertDialog.Builder winBuild = new AlertDialog.Builder(this);
         winBuild.setTitle("Yay!");
         winBuild.setMessage("Congrats! you won!");
@@ -89,18 +89,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       }
     }
 
+  public void gameInfo(){
+    assignLight();
+  }
 
-
-
-  //set all light array values to zero
   public void resetGame(){
     for (int i = 0; i < lightArray.length; i++) {
       lightArray[i] = 0;
     }
-    assignLight();
+    gameInfo();
   }
 
-  // sum light array
   public int arraySum(int [] arrayInfo){
     int output = 0;
     for (int i = 0; i < arrayInfo.length; i++){
@@ -109,7 +108,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     return output;
   }
 
-  //assign light colors randomly
   public void assignLight(){
     Random rand = new Random();
     for (int i = 0; i < lightArray.length; i++){
@@ -124,31 +122,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-  //list.indexOf('e')
+
   public void updateColor(ArrayList<Integer> arrayList){
     for (int i = 0; i < arrayList.size(); i++){
       ImageView imageView = (ImageView) findViewById(arrayList.get(i));
-
-      if(lightArray[i] == 0){
+      int position = getPosition(lightArray,arrayList.get(i));
+      if(lightArray[position] == 0){
         imageView.setImageResource(R.drawable.circle_change);
-        lightArray[i] = 1;
+        lightArray[position] = 1;
       } else {
         imageView.setImageResource(R.drawable.circle);
-        lightArray[i] = 0;
+        lightArray[position] = 0;
       }
     }
-
-
   }
 
 
 
   @Override
   public void onClick(View view) {
-
+    ArrayList<Integer> output = new ArrayList<Integer>();
     switch(view.getId()){
       case R.id.image1:
-
+        output.addAll(Arrays.asList(R.id.image1,R.id.image2,R.id.image5));
         break;
       case R.id.image2:
 
@@ -157,16 +153,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         break;
       case R.id.image4:
-
+        output.addAll(Arrays.asList(R.id.image1,R.id.image2,R.id.image5));
         break;
       case R.id.image5:
 
         break;
       case R.id.image6:
-
+        //output.addAll(Arrays.asList(R.id.image1,R.id.image2,R.id.image5));
         break;
       case R.id.image7:
-
+        //output.addAll(Arrays.asList(R.id.image1,R.id.image2,R.id.image5));
         break;
       case R.id.image8:
 
@@ -175,16 +171,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         break;
       case R.id.image10:
-
+        output.addAll(Arrays.asList(R.id.image1,R.id.image2,R.id.image5));
         break;
       case R.id.image11:
-
+        output.addAll(Arrays.asList(R.id.image1,R.id.image2,R.id.image5));
         break;
       case R.id.image12:
 
         break;
       case R.id.image13:
-
+        output.addAll(Arrays.asList(R.id.image13,R.id.image14,R.id.image9));
         break;
       case R.id.image14:
 
@@ -193,34 +189,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         break;
       case R.id.image16:
-
+        output.addAll(Arrays.asList(R.id.image16,R.id.image15,R.id.image12));
         break;
     }
 
-      //updateColor(output);
-    //changeColor(view.getId(),output,lightArray[output]);
+      updateColor(output);
+
   }
 
-  public int[] generateArray(int value){
-    int[] outputArray;
-    if (value == 1 || value == 4 || value == 13 || value == 16){
-      outputArray = new int[3];
-    } else if (value == 6 || value == 7 || value == 10 || value == 11) {
-      outputArray = new int[5];
-    } else {
-      outputArray = new int[4];
+  public int getPosition(int[] array, int value){
+    int output = -1;
+    for (int i = 0; i < array.length; i++){
+      if(array[i] == value){
+        output = i;
+      }
     }
-
-    switch (value){
-      case 1:
-        outputArray[0] = R.id.image1;
-        outputArray[1] = R.id.image2;
-        outputArray[2] = R.id.image5;
-        break;
-    }
-
-
-    return outputArray;
+    return output;
   }
 
 
