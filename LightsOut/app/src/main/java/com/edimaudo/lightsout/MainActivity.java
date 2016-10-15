@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     image16.setOnClickListener(this);
 
     gameInfo();
+    checkEndGame();
 
   }
 
@@ -108,6 +109,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     return output;
   }
 
+
   public void assignLight(){
     Random rand = new Random();
     for (int i = 0; i < lightArray.length; i++){
@@ -120,13 +122,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
   }
 
-
-
-
+  //update adjacent colors when clicked
   public void updateColor(ArrayList<Integer> arrayList){
+
     for (int i = 0; i < arrayList.size(); i++){
       ImageView imageView = (ImageView) findViewById(arrayList.get(i));
-      int position = getPosition(lightArray,arrayList.get(i));
+      int position = getPosition(imageViewArray,arrayList.get(i));
       if(lightArray[position] == 0){
         imageView.setImageResource(R.drawable.circle_change);
         lightArray[position] = 1;
@@ -135,6 +136,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         lightArray[position] = 0;
       }
     }
+    checkEndGame();
   }
 
 
@@ -147,46 +149,46 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         output.addAll(Arrays.asList(R.id.image1,R.id.image2,R.id.image5));
         break;
       case R.id.image2:
-
+        output.addAll(Arrays.asList(R.id.image1,R.id.image2,R.id.image3,R.id.image6));
         break;
       case R.id.image3:
-
+        output.addAll(Arrays.asList(R.id.image3,R.id.image2,R.id.image4,R.id.image7));
         break;
       case R.id.image4:
-        output.addAll(Arrays.asList(R.id.image1,R.id.image2,R.id.image5));
+        output.addAll(Arrays.asList(R.id.image4,R.id.image3,R.id.image8));
         break;
       case R.id.image5:
-
+        output.addAll(Arrays.asList(R.id.image5,R.id.image1,R.id.image9,R.id.image6));
         break;
       case R.id.image6:
-        //output.addAll(Arrays.asList(R.id.image1,R.id.image2,R.id.image5));
+        output.addAll(Arrays.asList(R.id.image2,R.id.image5,R.id.image7,R.id.image10,R.id.image6));
         break;
       case R.id.image7:
-        //output.addAll(Arrays.asList(R.id.image1,R.id.image2,R.id.image5));
+        output.addAll(Arrays.asList(R.id.image7,R.id.image8,R.id.image6,R.id.image3,R.id.image11));
         break;
       case R.id.image8:
-
+        output.addAll(Arrays.asList(R.id.image8,R.id.image4,R.id.image12,R.id.image7));
         break;
       case R.id.image9:
-
+        output.addAll(Arrays.asList(R.id.image9,R.id.image10,R.id.image5,R.id.image13));
         break;
       case R.id.image10:
-        output.addAll(Arrays.asList(R.id.image1,R.id.image2,R.id.image5));
+        output.addAll(Arrays.asList(R.id.image10,R.id.image11,R.id.image9,R.id.image6,R.id.image14));
         break;
       case R.id.image11:
-        output.addAll(Arrays.asList(R.id.image1,R.id.image2,R.id.image5));
+        output.addAll(Arrays.asList(R.id.image11,R.id.image12,R.id.image10,R.id.image15,R.id.image7));
         break;
       case R.id.image12:
-
+        output.addAll(Arrays.asList(R.id.image12,R.id.image11,R.id.image16,R.id.image8));
         break;
       case R.id.image13:
         output.addAll(Arrays.asList(R.id.image13,R.id.image14,R.id.image9));
         break;
       case R.id.image14:
-
+        output.addAll(Arrays.asList(R.id.image14,R.id.image13,R.id.image15,R.id.image10));
         break;
       case R.id.image15:
-
+        output.addAll(Arrays.asList(R.id.image15,R.id.image14,R.id.image16,R.id.image11));
         break;
       case R.id.image16:
         output.addAll(Arrays.asList(R.id.image16,R.id.image15,R.id.image12));
