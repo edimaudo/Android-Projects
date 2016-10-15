@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar.LayoutParams;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -36,16 +39,18 @@ public class MainActivity extends AppCompatActivity {
           Toast.makeText(MainActivity.this, "Please enter some text", Toast.LENGTH_SHORT).show();
         } else {
           Random rand = new Random();
-          final TextView value = new TextView(getApplicationContext());
-          value.setText(input.getText().toString());
-          value.setId(count);
-          value.setTextSize(15);
-          value.setTextColor(Color.parseColor(colorArray[rand.nextInt(colorArray.length)]));
-          value.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
-          output.addView(value);
+          final TextView name = new TextView(getApplicationContext());
+          name.setText(input.getText().toString());
+          name.setId(count);
+          name.setTextSize(15);
+          name.setTextColor(Color.parseColor(colorArray[rand.nextInt(colorArray.length)]));
+          name.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
+          output.addView(name);
           input.setText("");
-
-
+          AnimationSet anim = new AnimationSet(false);
+          final Animation slideIn = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_in_left);
+          anim.addAnimation(slideIn);
+          name.startAnimation(anim);
         }
       }
     });
