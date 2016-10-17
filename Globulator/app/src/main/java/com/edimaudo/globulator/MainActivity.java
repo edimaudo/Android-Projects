@@ -7,6 +7,7 @@ import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -55,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
       case MotionEvent.ACTION_DOWN:
         width = (int)event.getX();
         height = (int)event.getY();
+        Log.i("dim",String.valueOf(width));
+        Log.i("dim",String.valueOf(height));
         break;
     }
 
