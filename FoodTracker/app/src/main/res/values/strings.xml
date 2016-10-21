@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">FoodTracker</string>
-    <string name="meal_header">Meal Name</string>
-    <string name="hint">Enter meal name</string>
+    <string name="add_food">Add Food</string>
+    <string name="food_header">Food Name</string>
+    <string name="hint">Enter Food name</string>
     <string name="photo_info">No photo selected</string>
+    <string name="submit">Add Food</string>
 
 </resources>
