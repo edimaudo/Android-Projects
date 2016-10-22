@@ -12,7 +12,7 @@ import java.util.Random;
 
 public class game extends AppCompatActivity {
   private TextView textOutput;
-  private Button guessButton;
+  private Button submitGuess;
   private EditText userInput;
   int number1, number2, number3;
   int guessNum = 0;
@@ -25,11 +25,11 @@ public class game extends AppCompatActivity {
 
     textOutput = (TextView) findViewById(R.id.textOutput);
 
-    guessButton = (Button) findViewById(R.id.guessButton);
+    submitGuess = (Button) findViewById(R.id.guessButton);
 
     userInput = (EditText) findViewById(R.id.userInput);
 
-    guessButton.setOnClickListener(new View.OnClickListener() {
+    submitGuess.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
           if (userInput.getText().toString().isEmpty()){

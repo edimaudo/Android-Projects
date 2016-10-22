@@ -21,6 +21,7 @@
         android:layout_height="180dp"/>
 
     <EditText
+        android:layout_below="@id/textOutput"
         android:textStyle="bold"
         android:textColorHint="@color/colorPrimary"
         android:hint="Enter a number"
@@ -30,19 +31,20 @@
         android:inputType="number"
         android:id="@+id/userInput"
         android:layout_marginBottom="64dp"
-        android:layout_above="@id/guessButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
-        android:textStyle="bold"
+        android:id="@+id/submitGuess"
+        android:layout_marginTop="32dp"
+        android:padding="10dp"
         android:textColor="#fff"
-        android:background="@color/colorPrimaryDark"
         android:text="@string/guess"
-        android:id="@+id/guessButton"
+        android:textSize="25sp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_below="@id/userInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="117dp"/>
+        android:layout_height="wrap_content"/>
+
+
 </RelativeLayout>
