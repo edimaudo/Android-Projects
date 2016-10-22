@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "976729427332",
+    "firebase_url": "https://simplefirebase-9ebd7.firebaseio.com",
+    "project_id": "simplefirebase-9ebd7",
+    "storage_bucket": "simplefirebase-9ebd7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976729427332:android:7f0b28881378792c",
+        "android_client_info": {
+          "package_name": "com.edimaudo.simplefirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "976729427332-g1gi4otmo9pbgt81o9uu0fo8t5m199bv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATWtjPrr87hl1xPpDzQR4wGdZNi_NT_h8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
