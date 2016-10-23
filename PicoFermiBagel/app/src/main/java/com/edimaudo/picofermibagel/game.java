@@ -17,16 +17,15 @@ public class game extends AppCompatActivity {
   private TextView textOutput;
   private Button submitGuess;
   private EditText userInput;
-  int number1, number2, number3;
   int guessNum = generateGameNumber();
-
-
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_game);
+
     Log.i("guess",String.valueOf(guessNum));
+
     textOutput = (TextView) findViewById(R.id.textOutput);
 
     submitGuess = (Button) findViewById(R.id.submitGuess);
@@ -44,7 +43,7 @@ public class game extends AppCompatActivity {
             String userData = userInput.getText().toString();
             checkGameWin(userData);
           }
-        userInput.setText("");
+
       }
     });
 
@@ -81,6 +80,7 @@ public class game extends AppCompatActivity {
   public void resetGame(){
     guessNum = generateGameNumber();
     Log.i("guess",String.valueOf(guessNum));
+    userInput.setText("");
   }
 
   public String generateBagelOutcome(String userData){
@@ -88,20 +88,21 @@ public class game extends AppCompatActivity {
     StringBuilder stringInfo = new StringBuilder();
     String[] userDataArray = userData.split("");
     String[] guessDataArray = String.valueOf(guessNum).split("");
-    for (int i = 0; i < userDataArray.length;i++){
+    for (int i = 1; i < userDataArray.length;i++){
       stringInfo.append(checkOutcome(userDataArray[i], guessDataArray));
       stringInfo.append("\n");
     }
-    //Log.i("count", userData + String.valueOf(guessNum) + stringInfo.toString());
+    Log.i("count", userData + String.valueOf(userDataArray.toString()) + String.valueOf(guessDataArray.toString()));
+    userInput.setText("");
     return stringInfo.toString();
   }
 
   public String checkOutcome(String value, String[] arrayInfo){
     String outcome = "";
 
-    if (value.equals(arrayInfo[0])){
+    if (value.equals(arrayInfo[1])){
       outcome = "Fermi";
-    } else if (value.equals(arrayInfo[1]) || value.equals(arrayInfo[2])){
+    } else if (value.equals(arrayInfo[2]) || value.equals(arrayInfo[3])){
       outcome = "Pico";
     } else {
       outcome = "Bagel";
