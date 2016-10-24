@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.edimaudo.foodtracker.food_info">
+    tools:context="com.edimaudo.foodtracker.FoodItem">
 
 
     <EditText
@@ -25,17 +25,18 @@
         android:layout_height="wrap_content"/>
 
 
-        <ImageView
-            android:layout_marginTop="32dp"
-            android:layout_below="@+id/foodName"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_photo_library_black_48dp"
-            android:id="@+id/galleryOption"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"/>
+    <ImageView
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/foodName"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_photo_library_black_48dp"
+        android:id="@+id/galleryOption"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
 
 
     <RatingBar
+        android:max="5"
         android:layout_marginTop="32dp"
         android:layout_below="@+id/galleryOption"
         android:id="@+id/foodRating"

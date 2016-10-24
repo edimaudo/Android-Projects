@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.edimaudo.foodtracker">
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,10 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".food_info"
-                  android:label="@string/add_food"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity">
+        <activity
+            android:name=".FoodItem"
+            android:label="@string/title_activity_food_item"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 
