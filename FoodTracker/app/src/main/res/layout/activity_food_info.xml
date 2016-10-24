@@ -14,7 +14,7 @@
 
     <EditText
         android:id="@+id/foodName"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:inputType="text"
         android:textColor="@color/colorPrimaryDark"
         android:hint="@string/hint"
@@ -24,69 +24,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <LinearLayout
-        android:id="@+id/imageHolder"
-        android:background="#2121"
-        android:layout_marginTop="16dp"
-        android:layout_below="@+id/foodName"
-        android:weightSum="2"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="100dp">
 
         <ImageView
-            android:layout_gravity="center"
-            android:src="@drawable/ic_photo_camera_black_48dp"
-            android:id="@+id/cameraOption"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"/>
-
-        <ImageView
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/foodName"
             android:layout_gravity="center"
             android:src="@drawable/ic_photo_library_black_48dp"
             android:id="@+id/galleryOption"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"/>
-    </LinearLayout>
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
 
-    <LinearLayout
-        android:background="#2121"
-        android:weightSum="2"
-        android:layout_below="@id/imageHolder"
-        android:id="@+id/textHolder"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/cameraText"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#000"
-            android:textAlignment="center"
-            android:text="Use the camera"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:id="@+id/galleryText"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#000"
-            android:textAlignment="center"
-            android:text="Choose from gallery"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
-
-    </LinearLayout>
 
     <RatingBar
         android:layout_marginTop="32dp"
-        android:layout_below="@+id/textHolder"
+        android:layout_below="@+id/galleryOption"
         android:id="@+id/foodRating"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
