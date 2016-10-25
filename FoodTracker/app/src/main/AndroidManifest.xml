@@ -25,6 +25,8 @@
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
         </activity>
+        <activity android:name=".FoodItemDetails">
+        </activity>
     </application>
 
 </manifest>
