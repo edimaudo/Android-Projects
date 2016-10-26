@@ -5,16 +5,13 @@ package com.edimaudo.foodtracker.Data;
  */
 
 public class Constants {
+  public static final String DATABASE_NAME = "foodTrackerdb";
+  public static final int DATABASE_VERSION = 1;
+  public static final String TABLE_NAME = "food_tbl";
+  public static final String KEY_ID= "_ID";
+  public static final String FOOD_NAME = "name";
+  public static final String FOOD_IMAGE = "image";
+  public static final String FOOD_RATING = "rating";
 }
 
-/*
-public class Constants {
-    public static final String DATABASE_NAME="caloriesdb";
-    public static final int DATABASE_VERSION=1;
-    public static final String TABLE_NAME="food_tbl";
-    public static final String FOOD_NAME="name";
-    public static final String FOOD_CALORIES_NAME="calories";
-    public static final String DATE_NAME="recorddate";
-    public static final String KEY_ID="_ID";
-}
- */
+
