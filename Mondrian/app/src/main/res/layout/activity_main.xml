@@ -12,11 +12,58 @@
     tools:context="com.edimaudo.mondrian.MainActivity">
 
     <RelativeLayout
-        tools:background="@color/colorPrimary"
         android:id="@+id/mainLayout"
-        android:layout_marginTop="40dp"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="360dp"></RelativeLayout>
+        android:layout_height="390dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="180dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textBox1"
+                android:background="@color/colorBlue"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+            <TextView
+                android:background="@color/colorYellow"
+                android:id="@+id/textBox2"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+            <TextView
+                android:background="@color/colorRed"
+                android:id="@+id/textBox3"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:layout_width="180dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textBox4"
+                android:background="@color/colorPurple"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+            <TextView
+                android:background="@color/colorGreen"
+                android:id="@+id/textBox5"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
 
     <Button
         android:id="@+id/nextButton"
