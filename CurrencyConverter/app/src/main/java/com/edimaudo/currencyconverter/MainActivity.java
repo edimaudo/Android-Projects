@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +17,8 @@ import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.HashMap;
@@ -27,12 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
   private EditText userInput;
   private Spinner spinner, spinner2;
-  private TextView textView, textView2,textView3;
+  private TextView textView3;
   private Button convert;
   private CoordinatorLayout coordinatorLayout;
-
-
-
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +42,6 @@ public class MainActivity extends AppCompatActivity {
     userInput = (EditText) findViewById(R.id.userInput);
     spinner = (Spinner) findViewById(R.id.spinner);
     spinner2 = (Spinner) findViewById(R.id.spinner2);
-    textView = (TextView) findViewById(R.id.textView);
-    textView2 = (TextView) findViewById(R.id.textView2);
     textView3 = (TextView) findViewById(R.id.textView3);
     convert = (Button) findViewById(R.id.convert);
     coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);
@@ -81,6 +79,10 @@ public class MainActivity extends AppCompatActivity {
 
 
   public class currencyParse extends AsyncTask<Void, Void, String>{
+
+    String fromSpinner = getCurrencyKey(spinner.getSelectedItem().toString());
+    String toSpinner = getCurrencyKey(spinner2.getSelectedItem().toString());
+
     @Override
     protected void onPreExecute() {
       super.onPreExecute();
@@ -89,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPostExecute(String s) {
       super.onPostExecute(s);
+      textView3.setText(s);
+      
     }
 
     @Override
@@ -107,18 +111,47 @@ public class MainActivity extends AppCompatActivity {
       BufferedReader reader = null;
       String currencyJSONStr = null;
       try {
-        String fromSpinner = spinner.getSelectedItem().toString();
-        //https://openexchangerates.org/api/convert/19999.95/GBP/EUR?app_id=YOUR_APP_APP_ID
-        String urlString = getResources().getString(R.string.API_STRING) + userInput + "/" + getCurrencyKey() + "/" + getCurrencyKey()  + "/?app+id=" + getString(R.string.API_KEY);
+
+        String urlString = getResources().getString(R.string.API_STRING) + userInput +
+                "/" + fromSpinner + "/" + toSpinner  + "/?app+id=" + getString(R.string.API_KEY);
         URL url = new URL(urlString);
         urlConnection = (HttpURLConnection) url.openConnection();
         urlConnection.setRequestMethod("GET");
         urlConnection.connect();
 
-      } catch (IOException e){
+        InputStream inputStream = urlConnection.getInputStream();
+        StringBuffer buffer = new StringBuffer();
+        if (inputStream == null){
+          return null;
+        }
 
+        reader = new BufferedReader((new InputStreamReader(inputStream)));
+        String line;
+        while((line = reader.readLine()) != null){
+          buffer.append(line);
+        }
+
+        if (buffer.length() == 0){
+          return null;
+        }
+
+        currencyJSONStr = buffer.toString();
+        return currencyJSONStr;
+
+      } catch (IOException e){
+        return null;
+
+      } finally {
+        urlConnection.disconnect();
+        if (reader != null) {
+          try {
+            reader.close();
+          } catch (final IOException e) {
+            Log.e("PlaceholderFragment", "Error closing stream", e);
+          }
+        }
       }
-      return null;
+
     }
 
     @Override
