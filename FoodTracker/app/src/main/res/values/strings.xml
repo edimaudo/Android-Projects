@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Food Tracker</string>
+    <string name="add_food">Add Food</string>
+    <string name="food_header">Food Name</string>
+    <string name="hint">Enter Food name</string>
+    <string name="photo_info">No photo selected</string>
+    <string name="submit">Add Food</string>
+    <string name="title_activity_food_item">Add a Food Item</string>
+
+</resources>
