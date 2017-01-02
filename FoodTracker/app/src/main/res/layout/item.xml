@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:minHeight="88dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/imageView"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:contentDescription="foodImage"/>
+
+    <LinearLayout
+        android:layout_marginLeft="50dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView"
+        android:paddingLeft="16dp">
+
+        <TextView
+            tools:text="test"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_weight="1"
+            android:id="@+id/textView"
+            android:textSize="25sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="bottom"/>
+
+        <RatingBar
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:id="@+id/ratingBar2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
