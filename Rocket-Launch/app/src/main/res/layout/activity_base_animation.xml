@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/container"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/background_from">
+
+  <ImageView
+      android:id="@+id/rocket"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:background="@android:color/transparent"
+      android:layout_gravity="bottom|center_horizontal"
+      android:src="@drawable/rocket"/>
+
+  <ImageView
+      android:id="@+id/doge"
+      android:layout_marginBottom="53dp"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:scaleType="centerCrop"
+      android:background="@android:color/transparent"
+      android:src="@drawable/doge"
+      android:layout_gravity="bottom|center_horizontal"
+      />
+
+</FrameLayout>
