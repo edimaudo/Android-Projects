@@ -2,6 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:id="@+id/activity_add_item"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,12 +12,51 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.edimaudo.foodtracker.add_item">
 
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:errorEnabled="true">
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/foodText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    </android.support.design.widget.TextInputLayout>
+
     <TextView
         android:layout_centerInParent="true"
         android:id="@+id/foodImage"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="230dp"
         android:background="@color/colorDivider"
-        android:text="@string/photo_info"/>
+        android:text="@string/photo_info"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryText"
+        android:paddingTop="115dp"/>
+
+    <RatingBar
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/foodImage"
+        android:id="@+id/rating"
+        android:rating="0"
+        android:stepSize="1"
+        android:numStars="5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="5dp"
+        android:textSize="25sp"
+        android:textAllCaps="false"
+        android:text="@string/submit"
+        android:textColor="@color/colorText"
+        android:background="@color/colorPrimaryDark"
+        android:layout_below="@id/rating"
+        android:id="@+id/saveFood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>
