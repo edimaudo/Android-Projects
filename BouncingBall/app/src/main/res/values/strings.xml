@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Bouncing Ball</string>
+    <string name="game_info">Touch the ball to advance to the next level</string>
 </resources>
