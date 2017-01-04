@@ -1,5 +1,5 @@
 # Android-Projects
-Goals is to create at least 200 Android projects using 
+Goals is to create at least 200 Android apps using different websites as inspiration. 
 - 180 websites in 180 days
 - 100 days of Swift
 - book: exercises for programmers
@@ -8,7 +8,7 @@ Goals is to create at least 200 Android projects using
 - vintage basic
 
 
-as inspiration
+
 
 Completion date: TBD
 
