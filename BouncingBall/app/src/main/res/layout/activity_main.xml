@@ -12,6 +12,7 @@
     tools:context="com.edimaudo.bouncingball.MainActivity">
 
     <ImageView
+        android:layout_marginLeft="15dp"
         android:id="@+id/ball"
         android:src="@drawable/circle"
         android:layout_width="wrap_content"
