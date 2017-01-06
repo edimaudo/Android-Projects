@@ -31,7 +31,7 @@ public class add_item extends AppCompatActivity {
       public void onClick(View view) {
         //check if edit text is not
         if (foodText.getText().toString().isEmpty()){
-          inputLayout.setError("First name is required"); // show error
+          inputLayout.setError("Food name is required"); // show error
           //inputLayout.setError(null);
         }
 

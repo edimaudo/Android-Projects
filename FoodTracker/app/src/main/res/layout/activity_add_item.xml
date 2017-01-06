@@ -16,6 +16,7 @@
         android:id="@+id/inputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
         tools:errorEnabled="true">
     <EditText
         android:layout_marginTop="20dp"
@@ -46,6 +47,7 @@
         android:rating="0"
         android:stepSize="1"
         android:numStars="5"
+        android:theme="@style/RatingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
