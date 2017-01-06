@@ -57,7 +57,7 @@
         android:textColor="@color/colorText"
         android:background="@color/colorPrimaryDark"
         android:layout_below="@id/rating"
-        android:id="@+id/saveFood"
+        android:id="@+id/addFood"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
