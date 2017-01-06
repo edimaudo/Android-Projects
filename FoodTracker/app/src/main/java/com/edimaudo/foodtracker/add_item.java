@@ -11,3 +11,5 @@ public class add_item extends AppCompatActivity {
     setContentView(R.layout.activity_add_item);
   }
 }
+
+//add variables, fix UI, design food class and database helper + delete, updated + information show

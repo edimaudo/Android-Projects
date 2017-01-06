@@ -16,19 +16,21 @@
         android:id="@+id/inputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:errorEnabled="true">
+        tools:errorEnabled="true">
     <EditText
         android:layout_marginTop="20dp"
         android:id="@+id/foodText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:hint="@string/hint"
+        android:textColorHint="@color/colorPrimary"/>
     </android.support.design.widget.TextInputLayout>
 
     <TextView
         android:layout_centerInParent="true"
         android:id="@+id/foodImage"
         android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_height="250dp"
         android:background="@color/colorDivider"
         android:text="@string/photo_info"
         android:textSize="30sp"

@@ -9,7 +9,7 @@
     </style>
 
     <style name="MyFloatingButton" parent="Theme.AppCompat.Light">
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorPrimary</item>
     </style>
 
     <style name="RatingBar" parent="Theme.AppCompat">
