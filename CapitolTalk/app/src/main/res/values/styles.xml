@@ -25,7 +25,7 @@
 
     <!--Input field style-->
     <style name="MyEditText" parent="Theme.AppCompat.Light">
-        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/colorPrimaryDark</item>
         <item name="colorControlActivated">@color/colorAccent</item>
     </style>
 </resources>
