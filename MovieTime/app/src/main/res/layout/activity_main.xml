@@ -25,10 +25,7 @@
         android:layout_alignParentStart="true"/>
 
     <Button
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:textColor="@color/icons"
-        android:background="@color/colorPrimary"
+        android:theme="@style/MyButton"
         android:id="@+id/recommend"
         android:text="@string/recommendation"
         android:layout_width="match_parent"
@@ -38,10 +35,7 @@
         android:layout_alignParentStart="true"/>
 
     <Button
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:textColor="@color/icons"
-        android:background="@color/colorPrimary"
+        android:theme="@style/MyButton"
         android:id="@+id/userRecommend"
         android:text="@string/user_recommend"
         android:layout_width="match_parent"
