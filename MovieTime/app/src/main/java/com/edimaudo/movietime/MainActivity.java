@@ -26,12 +26,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int choice = view.getId();
     switch (choice){
       case R.id.recommend:
-        // do something
         Intent rec_intent = new Intent(MainActivity.this, recommend.class);
         startActivity(rec_intent);
         break;
       case R.id.userRecommend:
-        //do something
         Intent urec_intent = new Intent(MainActivity.this, user_recommend.class);
         startActivity(urec_intent);
         break;
