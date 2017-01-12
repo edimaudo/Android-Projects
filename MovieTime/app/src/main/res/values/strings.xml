@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">MovieTime</string>
+    <string name="user_recommend">User Recommendation</string>
+    <string name="recommendation">Recommendation</string>
+    <string name="info">The information is powered by</string>
 </resources>

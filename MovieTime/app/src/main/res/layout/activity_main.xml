@@ -12,7 +12,51 @@
     tools:context="com.edimaudo.movietime.MainActivity">
 
     <TextView
+        android:id="@+id/appinfo"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDarkMovieDB"
+        android:text="@string/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_above="@+id/imageView"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/icons"
+        android:background="@color/colorPrimary"
+        android:id="@+id/recommend"
+        android:text="@string/recommendation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_above="@+id/appinfo"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/icons"
+        android:background="@color/colorPrimary"
+        android:id="@+id/userRecommend"
+        android:text="@string/user_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/recommend"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="30dp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:src="@drawable/primary_green"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+
 </RelativeLayout>
