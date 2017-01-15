@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" 
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <com.android.volley.toolbox.NetworkImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/bandImage"/>
+    <TextView
+        android:id="@+id/headLinerText"
+        android:text="HeadLiner"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FF212121"
+        android:layout_below="@id/bandImage"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/venueText"
+        android:text="Venue"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:textColor="#FF2e2e2e"
+        android:layout_below="@id/headLinerText"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/whenText"
+        android:text="When"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:textColor="#FF2e2e2e"
+        android:layout_below="@id/venueText"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/whereText"
+        android:text="Where"
+        android:background="#FF2e2e2e"
+        android:textSize="13sp"
+        android:textStyle="italic"
+        android:textColor="#fff"
+        android:layout_below="@id/whenText"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"/>
+</RelativeLayout>

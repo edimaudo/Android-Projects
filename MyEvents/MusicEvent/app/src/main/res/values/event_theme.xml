@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CustomActionBarTheme"
+        parent="@style/AppTheme">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+
+        <item name="actionBarStyle">@style/MyActionBar</item>
+
+    </style>
+
+
+    <style name="MyActionBar"
+        parent="@style/AppTheme">
+        <item name="android:background">@drawable/ab_bottom_solid_example</item>
+
+        <item name="background">@drawable/ab_bottom_solid_example</item>
+
+    </style>
+
+
+</resources>

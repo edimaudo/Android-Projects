@@ -76,25 +76,26 @@ public class recommend extends AppCompatActivity {
         urlConnection.connect();
         InputStream inputStream = urlConnection.getInputStream();
         StringBuffer buffer = new StringBuffer();
-        if (inputStream == null){
+        if (inputStream == null) {
           return null;
         }
 
         reader = new BufferedReader((new InputStreamReader(inputStream)));
         String line;
-        while((line = reader.readLine()) != null){
+        while ((line = reader.readLine()) != null) {
           buffer.append(line);
         }
 
-        if (buffer.length() == 0){
+        if (buffer.length() == 0) {
           return null;
         }
 
         movieJSONStr = buffer.toString();
-        return  movieJSONStr;
+        Log.i("output",movieJSONStr);
+        return movieJSONStr;
 
 
-      } catch (Exception e){
+      } catch (Exception e) {
         return null;
       } finally {
         urlConnection.disconnect();
@@ -104,28 +105,29 @@ public class recommend extends AppCompatActivity {
           } catch (final IOException e) {
             Log.e("PlaceholderFragment", "Error closing stream", e);
           }
+        }
+
+
       }
-
-
     }
-  }
 
-  private void prepareMovieData() {
-    Movie movie = new Movie("Mad Max: Fury Road", "Action & Adventure", "2015");
-    movieList.add(movie);
-    mAdapter.notifyDataSetChanged();
-  }
+    private void prepareMovieData() {
+      Movie movie = new Movie("Mad Max: Fury Road", "Action & Adventure", "2015");
+      movieList.add(movie);
+      mAdapter.notifyDataSetChanged();
+    }
 
-  public void showInfo(){
-    recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-    mAdapter = new MovieAdapter(movieList);
-    recyclerView.setHasFixedSize(true);
-    RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-    recyclerView.setLayoutManager(mLayoutManager);
-    recyclerView.setItemAnimator(new DefaultItemAnimator());
-    recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+    public void showInfo() {
+      recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+      mAdapter = new MovieAdapter(movieList);
+      recyclerView.setHasFixedSize(true);
+      RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+      recyclerView.setLayoutManager(mLayoutManager);
+      recyclerView.setItemAnimator(new DefaultItemAnimator());
+      recyclerView.addItemDecoration(new DividerItemDecoration(getApplicationContext(), LinearLayoutManager.VERTICAL));
 
-    recyclerView.setAdapter(mAdapter);
-    //prepareMovieData();
+      recyclerView.setAdapter(mAdapter);
+      prepareMovieData();
+    }
   }
 }

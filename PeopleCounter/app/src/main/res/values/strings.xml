@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PeopleCounter</string>
+    <string name="hello_round">0</string>
+    <string name="hello_square">Hello Square World!</string>
+    <string name="counter_text"></string>
+    <string name="add1">+1</string>
+    <string name="reset">Reset</string>
+</resources>

@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#ff1ba1ee"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/cityText"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:text="City of Spokane, US"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/thumbnailIcon"
+        android:layout_below="@+id/cityText"
+        android:layout_marginTop="10dp"
+
+
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <TextView
+        android:id="@+id/tempText"
+        android:layout_marginTop="25dp"
+        android:text="12 deg"
+        android:textStyle="normal"
+        android:textSize="41sp"
+        android:textColor="#fff"
+        android:layout_below="@+id/cityText"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/rainText"
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:text=""
+        android:layout_below="@+id/thumbnailIcon"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/windText"
+        android:layout_below="@+id/rainText"
+        android:layout_marginTop="35dp"
+        android:textColor="#fff"
+        android:text="Wind"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/cloudText"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/windText"
+        android:textColor="#fff"
+        android:text="Cloudness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/pressureText"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:textColor="#fff"
+        android:text="Pressure"
+        android:layout_below="@+id/cloudText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/humidText"
+        android:textSize="16sp"
+        android:text="Humidity"
+        android:layout_marginTop="5dp"
+        android:textColor="#fff"
+        android:layout_below="@+id/pressureText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/riseText"
+        android:text="Sunrise"
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/humidText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/setText"
+        android:text="Sunrise"
+        android:layout_marginTop="5dp"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:layout_below="@+id/riseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/updateText"
+        android:text="Last update"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:layout_below="@+id/setText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+</RelativeLayout>

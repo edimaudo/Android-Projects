@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ffdd1032">
+
+
+    <ScrollView
+        android:background="#ffeeeade"
+        android:layout_marginTop="34dp"
+        android:layout_width="320dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_height="400dp"
+        android:id="@+id/scrollView">
+
+
+        <!-- change from vertical to horizontal -->
+         <LinearLayout
+             android:layout_gravity="center_horizontal"
+             android:layout_width="wrap_content"
+             android:orientation="vertical"
+             android:layout_height="wrap_content">
+
+             <TextView
+                 android:text="Are you afraid of canines?"
+                 android:padding="10dp"
+                 android:layout_width="wrap_content"
+                 android:paddingBottom="20dp"
+                 android:layout_height="wrap_content" />
+
+
+               <RadioGroup
+                   android:id="@+id/radioGroupCanine"
+                   android:layout_width="wrap_content"
+                   android:layout_centerHorizontal="false"
+                   android:layout_height="wrap_content">
+
+
+                     <RadioButton
+                         android:id="@+id/radioCanineNo"
+                         android:text="@string/no_text"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content" />
+
+
+                   <RadioButton
+                       android:id="@+id/radioCanineYes"
+                       android:text="@string/yes_text"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+
+
+                   </RadioGroup>
+
+               <TextView
+                   android:padding="10dp"
+                   android:text="@string/scale_text"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+                   <SeekBar
+                       android:id="@+id/seekBarFeline"
+                       android:max="10"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_width="230dp"
+                       android:layout_height="wrap_content" />
+
+
+              <TextView
+                  android:id="@+id/seekBarProgressTextView"
+                  android:text="@string/default_seekbar_text"
+                  android:paddingBottom="20dp"
+                  android:layout_gravity="center_horizontal"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" />
+
+
+             <TextView
+                 android:padding="10dp"
+                 android:text="@string/cutest_text"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content" />
+
+               <CheckBox
+                   android:id="@+id/checkboxCutestDog"
+                   android:text="@string/dog_title"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+             <CheckBox
+                 android:id="@+id/checkboxCutestCat"
+                 android:text="@string/cat_title"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content" />
+
+
+             <CheckBox
+                 android:id="@+id/checkboxCutestParrot"
+                 android:text="@string/parrot_title"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:paddingBottom="20dp"/>
+
+
+
+
+             <TextView
+                 android:text="@string/drool_text"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content" />
+
+              <RadioGroup
+                  android:id="@+id/radioGroupDrool"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content">
+
+                   <RadioButton
+                       android:id="@+id/radioButtonDroolNo"
+                       android:text="@string/no_text"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+
+                  <RadioButton
+                      android:id="@+id/radioButtonDroolYes"
+                      android:text="@string/yes_text"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content" />
+
+
+                  </RadioGroup>
+
+
+             </LinearLayout>
+
+
+
+        </ScrollView>
+
+    <Button
+        android:id="@+id/showResults"
+        android:text="@string/button_title"
+        android:layout_below="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content" />
+
+
+
+</RelativeLayout>

@@ -8,48 +8,102 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.edimaudo.weatherapp.MainActivity"
-    android:background="@color/material_grey_100">
-
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/cityName"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
-        android:hint="Enter a city"
-        android:textSize="28sp"
-        android:layout_marginTop="60dp"
-        android:inputType="text" />
-
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="What&apos;s the weather"
-        android:id="@+id/button"
-        android:layout_below="@+id/cityName"
-        android:layout_marginTop="56dp"
-        android:background="@android:color/darker_gray"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:onClick="findWeather" />
+    
+    android:background="@android:color/holo_blue_bright">
 
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/resultTextView"
-        android:layout_below="@+id/button"
-        android:layout_marginTop="68dp"
-        android:textSize="25sp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:textColor="@android:color/black"
-        android:textAlignment="center" />
+        android:text="Spokane US!!"
+        android:id="@+id/cityText"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:id="@+id/thumbnailIcon"
+        android:layout_below="@id/cityText"
+        android:layout_marginTop="10dp"
+        android:background="#fff"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+    <TextView
+        android:id="@+id/tempText"
+        android:text="12 Deg"
+        android:textStyle="normal"
+        android:textColor="#fff"
+        android:layout_below="@id/cityText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textSize="42sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/windText"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:text="Wind"
+        android:layout_below="@id/thumbnailIcon"
+        android:layout_marginTop="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/cloudText"
+        android:text="Cloud"
+        android:layout_below="@id/windText"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/pressureText"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:textColor="#fff"
+        android:text="Pressure"
+        android:layout_below="@id/cloudText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
+    <TextView
+        android:id="@+id/humidText"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:textColor="#fff"
+        android:text="Humidity"
+        android:layout_below="@id/pressureText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/riseText"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:textColor="#fff"
+        android:text="Sun rise"
+        android:layout_below="@id/humidText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/setText"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:textColor="#fff"
+        android:text="Sunset"
+        android:layout_below="@id/riseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/updateText"
+        android:text="Last updated"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:layout_below="@id/setText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </RelativeLayout>

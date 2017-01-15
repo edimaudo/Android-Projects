@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <item
+        android:drawable="@drawable/thumb_finger_prints"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/anim_one"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/anim_two"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/anim_three"
+        android:duration="100" />
+
+
+
+</animation-list>

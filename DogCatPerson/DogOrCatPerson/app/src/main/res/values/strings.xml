@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DogOrCatPerson</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="canine_text">Are you afraid of canines?</string>
+    <string name="no_text">No</string>
+    <string name="yes_text">Yes</string>
+    <string name="scale_text">On a scale of 1 to 10 how comfortable are you around felines?</string>
+    <string name="default_seekbar_text">Comfortableness: 0/10</string>
+    <string name="cutest_text">Which ones are the cutest?</string>
+    <string name="dog_title">Dog</string>
+    <string name="cat_title">Cat</string>
+    <string name="parrot_title">Parrot</string>
+    <string name="drool_text">Are you ok with creatures that drool?</string>
+    <string name="button_title">Show Results</string>
+    <string name="title_activity_result">ResultActivity</string>
+    <string name="title">You are a...</string>
+    <string name="result_text">dog or cat</string>
+
+</resources>

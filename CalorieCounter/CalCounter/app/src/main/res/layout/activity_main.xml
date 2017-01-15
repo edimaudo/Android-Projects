@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8BC34A"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:text="@string/title_text"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#ff3a382f"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_below="@+id/titleText"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/apple"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:orientation="vertical"
+        android:background="@drawable/row_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/logo"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/foodEditText"
+            android:padding="14dp"
+            android:layout_marginTop="18dp"
+            android:hint="@string/hint_food"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/caloriesEditText"
+            android:padding="14dp"
+            android:inputType="number"
+            android:hint="@string/hint_calories"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_marginTop="24dp"
+            android:text="@string/submit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+
+</RelativeLayout>

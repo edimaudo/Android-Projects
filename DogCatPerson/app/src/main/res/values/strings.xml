@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">DogCatPerson</string>
+    <string name="canine_text">Are you afraid of canines?</string>
+    <string name="no_text">No</string>
+    <string name="yes_text">Yes</string>
+    <string name="scale_text">On a scale of 1 to 10 how comfortable are you around felines?</string>
+    <string name="default_seekbar_text">Comfort: 0/10 </string>
+    <string name="cutest_text">Which ones are the cutests</string>
+    <string name="dog_title">Dog</string>
+    <string name="cat_title">Cat</string>
+    <string name="parrot_title">Parrot</string>
+    <string name="drool_text">Are you okay with creatures that drool?</string>
+    <string name="button_title">Show Results</string>
+
+</resources>

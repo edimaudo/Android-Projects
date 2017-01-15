@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="musicevent.magadistudio.com.musicevent.ActivityEventDetails">
+
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:background="@drawable/row_bg"
+        android:id="@+id/detsBandImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/detsHeadliner"
+        android:text="Headliner"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/detsBandImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/detsVenue"
+        android:text="Venue"
+        android:textColor="#fff"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/detsHeadliner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/detsWhere"
+        android:text="Where"
+        android:textColor="#fff"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/detsVenue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/detsWhen"
+        android:text="When"
+        android:textColor="#fff"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/detsWhere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+
+</RelativeLayout>

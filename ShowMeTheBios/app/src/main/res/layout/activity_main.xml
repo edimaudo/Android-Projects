@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.edimaudo.showmethebios.MainActivity">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/bachImage"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentCenter="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/mozartImage"
+        android:layout_alignStart="@+id/mozartImage"
+        android:src="@drawable/Bach"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/mozartImage"
+        android:layout_alignCenter="@+id/bachImage"
+        android:src="@drawable/Mozart"
+        android:scaleType="centerCrop"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="56dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bach"
+        android:id="@+id/bachTextView"
+        android:layout_below="@+id/bachImage"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mozart"
+
+        android:id="@+id/mozartTextView"
+        android:textSize="25sp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp" />
+</RelativeLayout>

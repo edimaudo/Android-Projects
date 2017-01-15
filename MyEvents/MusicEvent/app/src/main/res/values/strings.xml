@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Music Event</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="change_location">Change City</string>
+    <string name="go_website"></string>
+    <string name="title_activity_activity_event_details">ActivityEventDetails</string>
+</resources>

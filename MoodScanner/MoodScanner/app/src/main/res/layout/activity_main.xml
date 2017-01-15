@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/image_bg"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/titleText"
+        android:textSize="34dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:padding="20dp"
+        android:text="Mood Scanner"
+        android:textColor="#fabfab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textExplain"
+        android:textSize="15dp"
+        android:textColor="#ffff"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/titleText"
+        android:text="@string/text_explain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    
+    <ImageView
+        android:id="@+id/bgScanner"
+        android:src="@drawable/finger_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textExplain"
+        android:layout_marginTop="4dp"
+        android:layout_width="200dp"
+        android:layout_height="304dp" />
+
+    <ImageView
+        android:id="@+id/thumbPrint"
+        android:src="@drawable/thumb_finger_prints"
+        android:layout_below="@+id/textExplain"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:layout_height="304dp" />
+
+    <TextView
+        android:id="@+id/resultTitle"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        android:textColor="#beff"
+        android:layout_marginTop="6dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/thumbPrint"
+        android:text="Your Mood:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        android:textColor="#bbff1521"
+        android:layout_centerHorizontal="true"
+        android:text="Hello"
+        android:layout_below="@+id/resultTitle"
+        android:layout_marginTop="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+</RelativeLayout>

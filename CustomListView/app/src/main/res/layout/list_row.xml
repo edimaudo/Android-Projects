@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:padding="5dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:padding="3dp"
+        android:layout_alignParentLeft="true"
+        android:background="#ffeeeade"
+        android:layout_marginRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+
+
+            </ImageView>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/title"
+        android:layout_alignTop="@+id/thumbnail"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="The Alchemist"
+        android:textColor="#040404"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/author"
+        android:layout_below="@+id/title"
+        android:text="Super Ed is the best"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textColor="#040404"
+
+        />
+</RelativeLayout>
