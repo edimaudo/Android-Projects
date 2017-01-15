@@ -1,2 +1,10 @@
-# Android-Learning
-Learning Android development using Rob Percival's Android Course and complete-android-developer-course.
+# Android-Projects
+Android projects using 
+- Udemy Rob Percival's Android Course
+- Udemy complete-android-developer-course
+- 180 websites in 180 days
+- Hacking with swift
+- Treehouse
+- Ray Wenderlich
+- vintage basic
+
