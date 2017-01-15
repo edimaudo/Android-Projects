@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/coordinatorLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,6 +20,26 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.edimaudo.movietime.MainActivity">
 
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:src="@drawable/primary_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp"/>
+
+    <Button
+        android:theme="@style/MyButton"
+        android:id="@+id/recommend"
+        android:text="@string/recommendation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/appinfo"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="21dp"/>
+
     <TextView
         android:id="@+id/appinfo"
         android:textAlignment="center"
@@ -20,37 +49,10 @@
         android:text="@string/info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="28dp"
         android:layout_above="@+id/imageView"
         android:layout_alignParentStart="true"/>
 
-    <Button
-        android:theme="@style/MyButton"
-        android:id="@+id/recommend"
-        android:text="@string/recommendation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:layout_above="@+id/appinfo"
-        android:layout_alignParentStart="true"/>
-
-    <Button
-        android:theme="@style/MyButton"
-        android:id="@+id/userRecommend"
-        android:text="@string/user_recommend"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/recommend"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="30dp"/>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:src="@drawable/primary_green"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
-
 
 </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -2,5 +2,6 @@
     <string name="app_name">MovieTime</string>
     <string name="user_recommend">User Recommendation</string>
     <string name="recommendation">Recommendation</string>
-    <string name="info">The information is powered by</string>
+    <string name="info">Data provided by</string>
+    <string name="api_key">7487a5425a90ce247f260f133f1e27ff</string>
 </resources>
