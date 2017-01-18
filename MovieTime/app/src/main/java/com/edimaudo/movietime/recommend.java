@@ -8,6 +8,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -30,21 +33,31 @@ public class recommend extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_recommend);
-
     new MovieParse().execute();
-
   }
 
-  public class MovieParse extends AsyncTask<Void, Void, String> {
+  public class MovieParse extends AsyncTask<Void, Void, JSONObject> {
     @Override
     protected void onPreExecute() {
       super.onPreExecute();
     }
 
     @Override
-    protected void onPostExecute(String s) {
-      super.onPostExecute(s);
-      showInfo();
+    protected void onPostExecute(JSONObject json) {
+      //super.onPostExecute(json);
+      try {
+        String title = json.getString("original_title");
+        String genre = json.getJSONArray("genres").getJSONObject(1).toString();
+        String year = json.getString("release_date");
+        Movie movie = new Movie(title, genre, year);
+        movieList.add(movie);
+        mAdapter.notifyDataSetChanged();
+        showInfo();
+        Log.i("title",title + genre + year);
+      } catch (JSONException e){
+
+      }
+
     }
 
     @Override
@@ -53,8 +66,8 @@ public class recommend extends AppCompatActivity {
     }
 
     @Override
-    protected void onCancelled(String s) {
-      super.onCancelled(s);
+    protected void onCancelled(JSONObject json) {
+      super.onCancelled(json);
     }
 
     @Override
@@ -63,10 +76,11 @@ public class recommend extends AppCompatActivity {
     }
 
     @Override
-    protected String doInBackground(Void... params) {
+    protected JSONObject doInBackground(Void... params) {
       HttpURLConnection urlConnection = null;
       BufferedReader reader = null;
       String movieJSONStr = null;
+      JSONObject jObj = null;
 
       try {
         String urlString = API_URL + Integer.toString(550) + "?api_key=" + API_KEY;
@@ -90,10 +104,14 @@ public class recommend extends AppCompatActivity {
           return null;
         }
 
-        movieJSONStr = buffer.toString();
+        movieJSONStr =   buffer.toString();
         Log.i("output",movieJSONStr);
-        return movieJSONStr;
-
+          try {
+            jObj = new JSONObject(movieJSONStr);
+          } catch (Exception e){
+            Log.e("JSON Parser", "Error parsing data " + e.toString());
+          }
+          return jObj;
 
       } catch (Exception e) {
         return null;
@@ -111,11 +129,11 @@ public class recommend extends AppCompatActivity {
       }
     }
 
-    private void prepareMovieData() {
-      Movie movie = new Movie("Mad Max: Fury Road", "Action & Adventure", "2015");
-      movieList.add(movie);
-      mAdapter.notifyDataSetChanged();
-    }
+    //public void prepareMovieData() {
+    //  Movie movie = new Movie("Mad Max: Fury Road", "Action & Adventure", "2015");
+    //  movieList.add(movie);
+    //  mAdapter.notifyDataSetChanged();
+    //}
 
     public void showInfo() {
       recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -127,7 +145,7 @@ public class recommend extends AppCompatActivity {
       recyclerView.addItemDecoration(new DividerItemDecoration(getApplicationContext(), LinearLayoutManager.VERTICAL));
 
       recyclerView.setAdapter(mAdapter);
-      prepareMovieData();
+
     }
   }
 }
