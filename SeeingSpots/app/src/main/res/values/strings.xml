@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Seeing Spots</string>
-    <string name="game_blurb">How many spots you can see at the same time? Click the button that corresponds to the number of spots you see.</string>
-    <string name="start">Start</string>
-    <string name="round_info">Rounds remaining: 15</string>
-    <string name="average_info">Not enough data yet</string>
-</resources>
