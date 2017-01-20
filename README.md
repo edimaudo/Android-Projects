@@ -1,5 +1,5 @@
 # Android-Projects
-Android projects using 
+Goal create 200 Android complete projects using 
 - Udemy Rob Percival's Android Course
 - Udemy complete-android-developer-course
 - 180 websites in 180 days
@@ -8,3 +8,4 @@ Android projects using
 - Ray Wenderlich
 - vintage basic
 
+as inspiration
