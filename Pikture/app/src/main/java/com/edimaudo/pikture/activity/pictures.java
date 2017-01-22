@@ -74,17 +74,18 @@ public class pictures extends AppCompatActivity {
   }
 
 
-  private void fetchImages() {
+  public void fetchImages() {
     pDialog.setMessage("Downloading images...");
     pDialog.show();
     String requestBody = "";
-    JsonObjectRequest req = new JsonObjectRequest(Request.Method.GET,endpoint,requestBody,
+    JsonObjectRequest req = new JsonObjectRequest(Request.Method.GET,
+            endpoint,
+            requestBody,
             new Response.Listener<JSONObject>() {
               @Override
               public void onResponse(JSONObject response) {
                 try {
                   JSONArray itemArray = response.getJSONArray("Items");
-                  Log.i("output",itemArray.toString());
                   images.clear();
                   for (int i = 0; i < itemArray.length(); i++){
                       Image image = new Image();
@@ -94,12 +95,11 @@ public class pictures extends AppCompatActivity {
                       image.setMedia(url.getString("m"));
                       images.add(image);
                   }
-                  mAdapter.notifyDataSetChanged();
+
                 } catch (JSONException e){
                   Log.e(TAG, "Json parsing error: " + e.getMessage());
-
                 }
-
+                mAdapter.notifyDataSetChanged();
               }
 
             }, new Response.ErrorListener() {
