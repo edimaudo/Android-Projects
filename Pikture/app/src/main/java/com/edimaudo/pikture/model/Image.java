@@ -10,16 +10,23 @@ public class Image implements Serializable {
   private String name;
   private String small, medium, large;
   private String timestamp;
+  private String media;
 
   public Image() {
   }
 
-  public Image(String name, String small, String medium, String large, String timestamp) {
+  public Image(String name, String media) {
     this.name = name;
-    this.small = small;
-    this.medium = medium;
-    this.large = large;
-    this.timestamp = timestamp;
+    this.media = media;
+
+  }
+
+  public String getMedia() {
+    return media;
+  }
+
+  public void setMedia(String media) {
+    this.media = media;
   }
 
   public String getName() {
