@@ -10,6 +10,22 @@
         <item>7</item>
         <item>8</item>
     </string-array>
-    <string name="round">Rounds left: </string>
-    <string name="average">Average:</string>
+    <string name="round">Rounds left: 10</string>
+    <string name="average">Average: 0</string>
+    <string name="number_prompt">Choose</string>
+    <string name="Guess">Guess</string>
+    <string name="Start">Start Game</string>
+    <string name="gameIntro">How many spots you can see at the same time?
+        Click the button that corresponds to the number of spots you see.</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="ten">10</string>
+
 </resources>
