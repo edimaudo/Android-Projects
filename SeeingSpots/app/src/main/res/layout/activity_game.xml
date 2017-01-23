@@ -48,26 +48,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
+            android:id="@+id/button1"
+            android:text="@string/one"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:theme="@style/MyButton"/>
         <Button
+            android:id="@+id/button2"
+            android:text="@string/two"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:theme="@style/MyButton"/>
         <Button
+            android:id="@+id/button3"
+            android:text="@string/three"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:theme="@style/MyButton"/>
         <Button
+            android:id="@+id/button4"
+            android:text="@string/four"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:theme="@style/MyButton"/>
         <Button
+            android:id="@+id/button5"
+            android:text="@string/five"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -82,26 +92,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
+            android:id="@+id/button6"
+            android:text="@string/six"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:theme="@style/MyButton"/>
         <Button
+            android:id="@+id/button7"
+            android:text="@string/seven"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:theme="@style/MyButton"/>
         <Button
+            android:id="@+id/button8"
+            android:text="@string/eight"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:theme="@style/MyButton"/>
         <Button
+            android:id="@+id/button9"
+            android:text="@string/nine"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:theme="@style/MyButton"/>
         <Button
+            android:id="@+id/button10"
+            android:text="@string/ten"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

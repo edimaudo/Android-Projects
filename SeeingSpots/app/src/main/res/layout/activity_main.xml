@@ -11,4 +11,22 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.edimaudo.seeingspots.Game">
 
+    <Button android:layout_width="match_parent"
+            android:id="@+id/startButton"
+            android:textColor="@color/colorText"
+            android:text="@string/Start"
+            android:layout_height="wrap_content"
+            android:theme="@style/MyButton"
+            android:layout_alignParentBottom="true" android:layout_alignParentStart="true"
+            android:layout_marginBottom="115dp"/>
+    <TextView
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="@string/gameIntro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" android:layout_marginTop="147dp"/>
+
 </RelativeLayout>
