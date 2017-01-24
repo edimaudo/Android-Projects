@@ -1,16 +1,12 @@
 package com.edimaudo.seeingspots;
 
-import android.animation.ValueAnimator;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
-import java.util.Random;
 
 public class Game extends AppCompatActivity implements View.OnClickListener {
 
@@ -20,7 +16,7 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
   public int round = 10;
   public int average = 0;
   public int num = 0;
-  ValueAnimator animator;
+
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -115,20 +111,10 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
       round = round - 1;
     }
   }
-  public void generateAnimation(){
-    Random random = new Random();
-    int circle = random.nextInt(9) + 1;
 
-    DisplayMetrics displaymetrics = new DisplayMetrics();
-    getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-    int height = displaymetrics.heightPixels;
-    int width = displaymetrics.widthPixels;
-
-
-  }
   public void updateGameInfo(){
-    //averageScore,
-    //        roundInfo;
+    averageScore.setText("");
+    roundInfo.setText("");
   }
 
 }
