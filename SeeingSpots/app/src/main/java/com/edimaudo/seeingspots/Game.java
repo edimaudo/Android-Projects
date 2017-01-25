@@ -1,12 +1,18 @@
 package com.edimaudo.seeingspots;
 
 import android.content.DialogInterface;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.util.Random;
 
 public class Game extends AppCompatActivity implements View.OnClickListener {
 
@@ -16,7 +22,11 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
   public int round = 10;
   public int average = 0;
   public int num = 0;
-
+  Paint paint;
+  Canvas canvas;
+  Bitmap bg;
+  int width = 0;
+  int height = 0;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +58,13 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
     button9.setOnClickListener(this);
     button10.setOnClickListener(this);
 
+    //width = (int) motionEvent.getX();
+    //height = (int) motionEvent.getY();
+    bg = Bitmap.createBitmap(getWindowManager().getDefaultDisplay().getWidth(),
+            getWindowManager().getDefaultDisplay().getHeight(), Bitmap.Config.ARGB_8888);
+    canvas = new Canvas(bg);
+    paint = new Paint();
+    canvas.drawPaint(paint);
     playGame();
   }
 
@@ -117,4 +134,21 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
     roundInfo.setText("");
   }
 
+
+  public void generateCircle(){
+
+    Random random = new Random();
+
+    final int RADIUS = 145;
+    final String [] colorArray = {"#CD5C5C","#F22613","#BF55EC","#3498DB","#87D37C","#F89406",
+            "#F9BF3B","#D2527F"};
+
+    int radius = random.nextInt(RADIUS) + 100;
+
+    paint.setColor(Color.parseColor(colorArray[random.nextInt(colorArray.length)]));
+
+    canvas.drawCircle(width, height, radius, paint);
+
+    //relativeLayout.setBackground(new BitmapDrawable(bg));
+  }
 }
