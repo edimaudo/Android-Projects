@@ -7,7 +7,11 @@
     <color name="colorSecondaryText">#212121</color>
     <color name="colorWhite">#fff</color>
     <color name="colorGreen">#26A65B</color>
+    <color name="colorGreenHighlight">#00B16A</color>
     <color name="colorYellow">#F7CA18</color>
+    <color name="colorYellowHighlight">#E9D460</color>
     <color name="colorBlue">#4183D7</color>
+    <color name="colorBlueHighlight">#1F3A93</color>
     <color name="colorRed">#F22613</color>
+    <color name="colorRedHighlight">#CF000F</color>
 </resources>
