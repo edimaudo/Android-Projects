@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class game extends AppCompatActivity implements View.OnClickListener {
   private TextView yellowColor, blueColor, redColor, greenColor, level;
   int levelNo = 1;
+  boolean correctSequence = false;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
