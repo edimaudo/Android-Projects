@@ -14,4 +14,24 @@
         <item name="android:colorPressedHighlight">@color/colorAccent</item>
     </style>
 
+    <style name="MyRed" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/colorRedHighlight</item>
+        <item name="colorButtonNormal">@color/colorRed</item>
+    </style>
+
+    <style name="MyYellow" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/colorYellowHighlight</item>
+        <item name="colorButtonNormal">@color/colorYellow</item>
+    </style>
+
+    <style name="MyGreen" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/colorGreen</item>
+        <item name="colorButtonNormal">@color/colorGreenHighlight</item>
+    </style>
+
+    <style name="MyBlue" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/colorBlue</item>
+        <item name="colorButtonNormal">@color/colorBlueHighlight</item>
+    </style>
+
 </resources>

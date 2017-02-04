@@ -13,11 +13,12 @@
     
     <TextView
         android:layout_marginTop="30dp"
-        android:id="@+id/introBlurb"
+        android:id="@+id/level"
         android:textColor="@color/colorWhite"
         android:text="@string/game_intro"
         android:textAlignment="center"
         android:textSize="30sp"
+        android:textStyle="bold"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"/>
     
@@ -34,12 +35,14 @@
             android:id="@+id/greenColor"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@color/colorGreen"/>
+            android:background="@color/colorGreen"
+            android:theme="@style/MyGreen"/>
         <TextView
             android:id="@+id/redColor"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@color/colorRed"/>
+            android:background="@color/colorRed"
+            android:theme="@style/MyRed"/>
     </LinearLayout>
 
     <LinearLayout
@@ -54,11 +57,13 @@
             android:id="@+id/blueColor"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@color/colorBlue"/>
+            android:background="@color/colorBlue"
+            android:theme="@style/MyBlue"/>
         <TextView
             android:id="@+id/yellowColor"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@color/colorYellow"/>
+            android:background="@color/colorYellow"
+            android:theme="@style/MyYellow"/>
     </LinearLayout>
 </RelativeLayout>
