@@ -20,7 +20,7 @@
     android:textSize="25sp"
         android:textStyle="bold"
     android:textAlignment="center"
-    android:layout_above="@id/playButton"
+    android:layout_above="@+id/playButton"
     android:layout_marginBottom="32dp"/>
 
     <Button
