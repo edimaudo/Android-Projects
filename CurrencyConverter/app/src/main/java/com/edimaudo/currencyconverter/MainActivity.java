@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
           try {
             reader.close();
           } catch (final IOException e) {
-            Log.e("PlaceholderFragment", "Error closing stream", e);
+            Log.e("Error check", "Error closing stream", e);
           }
         }
       }
