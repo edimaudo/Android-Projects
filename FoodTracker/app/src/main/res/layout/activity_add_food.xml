@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/coordinatorLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.edimaudo.foodtracker.addFood">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+        <EditText
+            android:layout_marginTop="25dp"
+            android:id="@+id/editText"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/accent"
+            android:textColorHint="@color/accent"
+            android:hint="@string/food_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/primary"
+            android:src="@drawable/ic_photo_library_white_48dp"
+            android:layout_above="@+id/ratingBar"
+            android:layout_marginBottom="14dp"/>
+
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rating="0"
+            android:stepSize="1"
+            android:numStars="5"
+            android:theme="@style/RatingBar"
+            android:layout_marginBottom="16dp"
+            android:layout_above="@+id/button"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/MyButton"
+            android:textColor="@color/icons"
+            android:text="@string/add_food"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:layout_marginBottom="38dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+
