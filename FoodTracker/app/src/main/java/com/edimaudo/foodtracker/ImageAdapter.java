@@ -58,7 +58,7 @@ public class ImageAdapter extends ArrayAdapter<Image> {
     viewHolder.imgIcon.setImageBitmap(ThumbnailUtils
             .extractThumbnail(BitmapFactory.decodeFile(image.getImagePath()), THUMBSIZE, THUMBSIZE));
     //set rating Bar
-    viewHolder.ratingBar.setNumStars(image.getFoodRating());
+    viewHolder.ratingBar.setNumStars(Integer.parseInt(image.getFoodRating()));
     // Return the completed view to render on screen
     return convertView;
   }

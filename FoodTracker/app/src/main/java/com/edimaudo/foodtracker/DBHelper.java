@@ -20,11 +20,23 @@ public class DBHelper extends SQLiteOpenHelper {
 
   public static final String TABLE_NAME = "food";
 
+  public static final String COLUMN_PATH = "path";
+  public static final String COLUMN_FOOD_NAME = "name";
+  public static final String COLUMN_RATING_BAR = "rating";
+  public static final String PRIMARY_KEY = "PRIMARY KEY (" + COLUMN_PATH + "," + COLUMN_FOOD_NAME + ")";
+
+
 
   private static final String DELETE_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
-  private static final String CREATE_TABLE = "";
+  private static final String CREATE_TABLE =
+          COLUMN_PATH + TEXT_TYPE + COMMA_SEP + COLUMN_PATH + TEXT_TYPE + COMMA_SEP +
+                  COLUMN_FOOD_NAME + TEXT_TYPE + COMMA_SEP +
+                  COLUMN_RATING_BAR + NUMERIC_TYPE + COMMA_SEP +
+                  PRIMARY_KEY +
+                  " )";
 
-  public DBHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+
+  public DBHelper(Context context) {
     super(context, name, factory, version);
   }
 

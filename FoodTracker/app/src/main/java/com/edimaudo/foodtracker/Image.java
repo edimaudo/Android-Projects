@@ -6,7 +6,7 @@ package com.edimaudo.foodtracker;
 
 public class Image {
   String foodName, imagePath;
-  int foodRating;
+  String foodRating;
 
   public String getFoodName() {
     return foodName;
@@ -20,19 +20,23 @@ public class Image {
     return imagePath;
   }
 
+  public Image(){
+
+  }
+
   public void setImagePath(String imagePath) {
     this.imagePath = imagePath;
   }
 
-  public int getFoodRating() {
+  public String getFoodRating() {
     return foodRating;
   }
 
-  public void setFoodRating(int foodRating) {
+  public void setFoodRating(String foodRating) {
     this.foodRating = foodRating;
   }
 
-  public Image(String foodName, String imagePath, int foodRating) {
+  public Image(String foodName, String imagePath, String foodRating) {
     this.foodName = foodName;
     this.imagePath = imagePath;
     this.foodRating = foodRating;
