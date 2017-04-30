@@ -1,5 +1,5 @@
 # Android-Projects
-Goal create 200+ Android complete projects which covers majority of Android development using 
+Goal create Android complete projects which covers majority of Android development using 
 - Udemy Rob Percival's Android Course
 - Udemy complete-android-developer-course
 - 180 websites in 180 days
