@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">FoodTracker</string>
-    <string name="food_name">Please enter a food name</string>
-    <string name="add_food">Add Food</string>
-</resources>
