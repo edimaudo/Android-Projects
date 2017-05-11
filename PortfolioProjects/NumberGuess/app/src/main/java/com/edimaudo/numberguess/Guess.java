@@ -11,4 +11,10 @@ package com.edimaudo.numberguess;
   //Todo: create tests
 
 public class Guess {
+
+  public int guess;
+  public int userGuess;
+  public int numGuess;
+
+
 }
