@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.edimaudo.tapcounter.MainActivity"
+    android:background="#fff">
+
+
+   <TextView android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/begin_number"
+             android:textSize="80dp"
+             android:textStyle="bold"
+             android:textAlignment="center"
+             android:layout_centerInParent="true"
+             android:textColor="@color/colorText"
+             android:id="@+id/countText"
+   />
+
+   <LinearLayout android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:weightSum="3"
+                 android:layout_below="@id/countText"
+                 android:layout_marginTop="45dp">
+       <ImageButton android:layout_width="wrap_content"
+                    android:id="@+id/add"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add_black_36dp"
+                    android:layout_weight="1"
+                    android:theme="@style/MyButton"/>
+       <ImageButton android:layout_width="wrap_content"
+                    android:id="@+id/subtract"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_remove_black_36dp"
+                    android:theme="@style/MyButton"
+                    android:layout_weight="1"/>
+       <ImageButton android:layout_width="wrap_content"
+                    android:id="@+id/reset"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_clear_black_36dp"
+                    android:theme="@style/MyButton"
+                    android:layout_weight="1"/>
+
+
+   </LinearLayout>
+
+
+
+</RelativeLayout>
