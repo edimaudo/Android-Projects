@@ -12,5 +12,7 @@
         <item name="colorControlHighlight">@color/colorAccent</item>
         <item name="colorButtonNormal">@color/colorPrimary</item>
         <item name="android:textColorPrimary">@color/icons</item>
+
+        <item name="android:width">300dp</item>
     </style>
 </resources>

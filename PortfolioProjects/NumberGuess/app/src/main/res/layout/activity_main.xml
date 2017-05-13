@@ -12,34 +12,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorPrimary"
-        android:textSize="25sp"
+        android:textSize="35sp"
         android:textAlignment="center"
         android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
+        android:layout_marginTop="200dp"
         android:textStyle="bold"
         tools:text="@string/game_intro"/>
 
     <android.support.v7.widget.AppCompatButton
         android:layout_below="@id/gameIntro"
         android:id="@+id/gamePlay"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:theme="@style/MyButton"
         android:text="@string/play"
-        android:layout_marginTop="25dp"
-        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
         android:layout_centerHorizontal="true"
     />
 
     <android.support.v7.widget.AppCompatButton
         android:layout_below="@id/gamePlay"
         android:id="@+id/gameScore"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:theme="@style/MyButton"
         android:text="@string/score"
-        android:layout_marginTop="25dp"
-        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
         android:layout_centerHorizontal="true"
     />
 </RelativeLayout>
