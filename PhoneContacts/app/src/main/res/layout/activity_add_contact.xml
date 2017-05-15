@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.edimaudo.phonecontacts.AddContact">
+
+
+
+
+    <EditText
+        android:layout_marginTop="100dp"
+        android:id="@+id/name"
+        android:textSize="25sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/name_hint"/>
+
+    <EditText
+        android:layout_marginTop="25dp"
+        android:id="@+id/phone"
+        android:textSize="25sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:hint="@string/phone_hint"/>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:orientation="horizontal"
+    >
+
+      <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+      android:text="@string/button_back"
+      android:layout_weight="1"
+      android:id="@+id/backButton"/>
+
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/button_save"
+                android:layout_weight="1"
+                android:id="@+id/saveButton"/>
+    </android.support.v7.widget.LinearLayoutCompat>
+</LinearLayout>

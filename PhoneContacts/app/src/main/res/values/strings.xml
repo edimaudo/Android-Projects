@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PhoneContacts</string>
+    <string name="add">Add</string>
+    <string name="name_hint">Please enter your name</string>
+    <string name="phone_hint">Please enter your phone number</string>
+    <string name="button_save">Save</string>
+    <string name="button_back">Back</string>
+    <string name="phone">Phone</string>
+    <string name="name">Name</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+</resources>
