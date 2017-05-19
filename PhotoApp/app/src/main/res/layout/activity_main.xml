@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.edimaudo.photoapp.MainActivity">
+
+    <ListView
+        android:id="@+id/mainListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/colorPrimaryDark">
+    </ListView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addPhotoFab"
+        android:src="@drawable/ic_add_white_36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyFloatingButton"
+        app:rippleColor="@color/colorAccent"
+        app:fabSize="normal"
+        android:clickable="true"
+        android:elevation="8dp"
+        app:backgroundTint="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+
+    />
+
+
+</RelativeLayout>

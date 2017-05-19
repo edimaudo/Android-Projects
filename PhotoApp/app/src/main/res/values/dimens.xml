@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="my_dimen">10dip</dimen>
+    <dimen name="activity_horizontal_margin">32dip</dimen>
+    <dimen name="activity_vertical_margin">32dip</dimen>
+</resources>

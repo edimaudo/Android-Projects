@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">PhotoApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="add_image">Add Picture</string>
+    <string name="display_image">Display Picture</string>
+    <string name="image_information">Picture Information</string>
+    <string name="back">Back</string>
+    <string name="delete">Delete</string>
+    <string name="from_gallery">From Gallery</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="exit">Exit</string>
+</resources>
