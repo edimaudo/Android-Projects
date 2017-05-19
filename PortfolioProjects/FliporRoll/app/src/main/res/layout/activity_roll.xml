@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.edimaudo.fliporroll.Roll">
+
+    <TextView
+        android:layout_marginTop="100dp"
+        android:id="@+id/rollText"
+        android:textSize="55sp"
+        android:textColor="@color/colorOrangeBurnt"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        tools:text="@string/one"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:theme="@style/MyButton"
+        android:layout_marginBottom="128dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rollButton"
+        android:text="@string/Roll"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
