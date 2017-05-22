@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Food Tracker</string>
+    <string name="add">Add food</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="rating">Rating</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="edit_food">Edit Food</string>
+    <string name="food_name">Food Name</string>
+
+
+</resources>
