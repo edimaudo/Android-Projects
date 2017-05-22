@@ -24,7 +24,7 @@
         app:rippleColor="@color/colorAccent"
         app:fabSize="normal"
         android:clickable="true"
-        android:elevation="8dp"
+
         app:backgroundTint="@color/colorPrimary"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
