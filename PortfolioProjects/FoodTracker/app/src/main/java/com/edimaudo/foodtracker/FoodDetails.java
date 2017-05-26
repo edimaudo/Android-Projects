@@ -50,7 +50,7 @@ public class FoodDetails extends AppCompatActivity {
       @Override
       public void onClick(View view) {
         Intent editIntent = new Intent(FoodDetails.this, FoodEdit.class);
-        editIntent.putExtra("food",food);
+        editIntent.putExtra("foodEdit",food);
         startActivity(editIntent);
       }
     });

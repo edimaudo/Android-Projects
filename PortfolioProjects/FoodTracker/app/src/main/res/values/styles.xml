@@ -28,8 +28,11 @@
         <item name="colorControlActivated">@color/colorAccent</item>
     </style>
 
-    <style name="MyRatingBar" parent="Theme.AppCompat">
-        <item name="colorControlNormal">@color/colorPrimaryDark</item>
+    <style name="MyRatingBar" parent="Theme.AppCompat.Light">
+        <item name="android:fillColor">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
         <item name="colorControlActivated">@color/colorPrimaryDark</item>
     </style>
 

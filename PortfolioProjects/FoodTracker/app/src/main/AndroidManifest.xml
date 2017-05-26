@@ -15,7 +15,6 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
@@ -23,16 +22,13 @@
         android:parentActivityName=".MainActivity"
         android:screenOrientation="portrait">
         </activity>
-
         <activity android:name=".FoodDetails"
                   android:parentActivityName=".MainActivity"
                   android:screenOrientation="portrait">
         </activity>
         <activity android:name=".FoodEdit"
             android:parentActivityName=".FoodDetails"
-            android:screenOrientation="portrait"
-        >
-
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

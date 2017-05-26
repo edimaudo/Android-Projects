@@ -7,17 +7,12 @@
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 tools:context="com.edimaudo.foodtracker.FoodEdit">
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/textInputLayout"
-        android:layout_marginTop="32dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:hintTextAppearance="@style/MyHintText"
-        app:errorEnabled="true">
 
         <EditText
+            android:layout_marginTop="32dp"
+            android:textAlignment="center"
             android:id="@+id/foodTextEdit"
-            android:textSize="25sp"
+            android:textSize="30sp"
             android:textStyle="bold"
             android:textColor="@color/colorPrimary"
             android:inputType="text"
@@ -26,7 +21,7 @@
             android:textColorHint="@color/colorPrimary"
             android:hint="@string/food_name"
             android:theme="@style/MyEditText" />
-    </android.support.design.widget.TextInputLayout>
+
 
 
     <ImageView
@@ -34,19 +29,20 @@
         android:layout_width="match_parent"
         android:layout_height="230dp"
         android:layout_centerInParent="true"
-        android:padding="5dp"/>
+        />
 
     <RatingBar
-        android:theme="@style/MyRatingBar"
-        android:layout_marginTop="16dp"
-        android:layout_centerVertical="true"
-        android:layout_below="@id/foodImageViewEdit"
         android:id="@+id/foodRatingBarEdit"
-        android:numStars="5"
-        android:clickable="true"
-        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@id/foodImageViewEdit"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="16dp"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:stepSize="1"
+        android:theme="@style/MyRatingBar"/>
 
 
     <Button
@@ -55,7 +51,6 @@
             android:layout_height="50dp"
             android:theme="@style/MyButton"
             android:textColor="@color/icons"
-            android:layout_marginRight="1dp"
             android:textStyle="bold"
             android:id="@+id/btnfoodUpdate"
             android:text="@string/update"/>

@@ -10,7 +10,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -20,6 +19,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RatingBar;
+import android.widget.Toast;
 
 /**
  * Created by edima on 2017-05-26.
@@ -27,15 +27,16 @@ import android.widget.RatingBar;
 
 public class FoodEdit extends AppCompatActivity {
 
-  private TextInputLayout textInputLayout;
+
   private EditText foodTextEdit;
   private ImageView foodImageViewEdit;
   private RatingBar foodRatingBarEdit;
   private Button btnfoodUpdate;
 
   private final String TAG = "com.edimaudo";
-
   private static int RESULT_LOAD_IMAGE = 1;
+
+  private String name = "";
   private String imagePath = "";
   private int rating = 0;
 
@@ -58,19 +59,24 @@ public class FoodEdit extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_food_edit);
 
-    textInputLayout = (TextInputLayout) findViewById(R.id.textInputLayout);
     foodTextEdit = (EditText) findViewById(R.id.foodTextEdit);
     foodImageViewEdit = (ImageView) findViewById(R.id.foodImageViewEdit);
     foodRatingBarEdit = (RatingBar) findViewById(R.id.foodRatingBarEdit);
 
-    Intent foodIntent = getIntent();
-    final Food food = (Food) foodIntent.getSerializableExtra("food");
+    Intent foodEditIntent = getIntent();
+    final Food food = (Food) foodEditIntent.getSerializableExtra("foodEdit");
+
 
     foodTextEdit.setText(food.getFoodName());
     foodImageViewEdit.setImageURI(Uri.parse(food.getFoodImageName()));
     imagePath = food.getFoodImageName();
-    foodRatingBarEdit.setNumStars(food.getFoodRating());
+
+
+    foodRatingBarEdit.getNumStars();
+
+    //foodRatingBarEdit.setNumStars(food.getFoodRating());
     rating = food.getFoodRating();
 
 
@@ -84,8 +90,6 @@ public class FoodEdit extends AppCompatActivity {
         intent.setType("image/*");
         intent.putExtra("crop", "true");
         intent.putExtra("scale", true);
-        //intent.putExtra("outputX", 256);
-        //intent.putExtra("outputY", 256);
         intent.putExtra("aspectX", 1);
         intent.putExtra("aspectY", 1);
         intent.putExtra("return-data", true);
@@ -106,9 +110,9 @@ public class FoodEdit extends AppCompatActivity {
       @Override
       public void onClick(View view) {
         if (foodTextEdit.getText().toString().isEmpty()){
-          textInputLayout.setError(getResources().getResourceName(R.string.food_name_missing));
-          textInputLayout.setError(null);
+          Toast.makeText(getApplicationContext(), "Food name is missing", Toast.LENGTH_SHORT).show();
         } else {
+
           FoodDB foodDB = new FoodDB(getBaseContext());
           food.setFoodName(foodTextEdit.getText().toString());
           food.setFoodImageName(imagePath);
