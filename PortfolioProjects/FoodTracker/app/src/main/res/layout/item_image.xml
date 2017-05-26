@@ -3,9 +3,17 @@
                 android:orientation="horizontal"
                 android:minHeight="88dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:descendantFocusability="blocksDescendants"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+>
 
     <ImageView
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:layout_weight="1"
         android:id="@+id/item_img_icon"
         android:layout_width="88dp"
@@ -16,6 +24,9 @@
 
 
     <LinearLayout
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="88dp"
@@ -26,6 +37,9 @@
         android:paddingLeft="16dp">
 
         <TextView
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             android:layout_weight="1"
             android:id="@+id/item_img_infor"
             android:layout_width="match_parent"
@@ -40,6 +54,10 @@
         />
 
         <RatingBar
+            android:isIndicator="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             android:layout_gravity="top"
             android:id="@+id/item_img_rate"
             android:layout_weight="1"

@@ -32,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
     final FoodDB foodDB = new FoodDB(this);
     mainListView.setAdapter(new FoodListAdapter(this,foodDB.findAll()));
 
+
+
+
     mainListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
       @Override
       public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -39,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
         Intent detailIntent = new Intent(MainActivity.this, FoodDetails.class);
         detailIntent.putExtra("food",food);
         startActivity(detailIntent);
+
+
+
       }
     });
 
