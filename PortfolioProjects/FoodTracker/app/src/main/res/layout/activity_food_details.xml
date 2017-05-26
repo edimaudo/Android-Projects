@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context="com.edimaudo.foodtracker.FoodDetails">
+
+    <TextView
+        android:id="@+id/foodText"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/display_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_centerInParent="true"
+        android:padding="5dp"/>
+
+    <RatingBar
+        android:theme="@style/MyRatingBar"
+        android:layout_marginTop="16dp"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/display_image_view"
+        android:id="@+id/ratingBar"
+        android:clickable="false"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <TableRow
+        android:id="@+id/table_row"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true">
+
+        <Button
+
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:theme="@style/MyButton"
+            android:textColor="@color/icons"
+            android:layout_marginRight="1dp"
+            android:textStyle="bold"
+            android:id="@+id/btnEdit"
+            android:text="@string/edit"/>
+
+        <Button
+
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:theme="@style/MyButton"
+            android:textStyle="bold"
+            android:textColor="@color/icons"
+            android:layout_marginLeft="1dp"
+            android:id="@+id/btnDelete"
+            android:text="@string/delete"/>
+    </TableRow>
+</RelativeLayout>

@@ -21,13 +21,18 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 
-public class FoodAdd extends AppCompatActivity {
+/**
+ * Created by edima on 2017-05-26.
+ */
+
+public class FoodEdit extends AppCompatActivity {
 
   private TextInputLayout textInputLayout;
-  private EditText foodNameEdit;
-  private ImageView foodImage;
-  private RatingBar foodrating;
-  private Button foodButton;
+  private EditText foodTextEdit;
+  private ImageView foodImageViewEdit;
+  private RatingBar foodRatingBarEdit;
+  private Button btnfoodUpdate;
+
   private final String TAG = "com.edimaudo";
 
   private static int RESULT_LOAD_IMAGE = 1;
@@ -46,31 +51,30 @@ public class FoodAdd extends AppCompatActivity {
       String picturePath = cursor.getString(columnIndex);
       cursor.close();
       imagePath = picturePath;
-      foodImage.setImageBitmap(BitmapFactory.decodeFile(picturePath));
+      foodImageViewEdit.setImageBitmap(BitmapFactory.decodeFile(picturePath));
     }
   }
-
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_food_add);
 
     textInputLayout = (TextInputLayout) findViewById(R.id.textInputLayout);
-    foodNameEdit = (EditText) findViewById(R.id.foodNameEdit);
-    foodImage = (ImageView) findViewById(R.id.foodImage);
-    foodrating = (RatingBar) findViewById(R.id.foodrating);
-    foodButton = (Button) findViewById(R.id.foodButton);
+    foodTextEdit = (EditText) findViewById(R.id.foodTextEdit);
+    foodImageViewEdit = (ImageView) findViewById(R.id.foodImageViewEdit);
+    foodRatingBarEdit = (RatingBar) findViewById(R.id.foodRatingBarEdit);
+
+    Intent foodIntent = getIntent();
+    final Food food = (Food) foodIntent.getSerializableExtra("food");
+
+    foodTextEdit.setText(food.getFoodName());
+    foodImageViewEdit.setImageURI(Uri.parse(food.getFoodImageName()));
+    imagePath = food.getFoodImageName();
+    foodRatingBarEdit.setNumStars(food.getFoodRating());
+    rating = food.getFoodRating();
 
 
-    foodrating.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-      @Override
-      public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
-        rating = (int) v;
-      }
-    });
-
-    foodImage.setOnClickListener(new View.OnClickListener() {
+    foodImageViewEdit.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
         isStoragePermissionGranted();
@@ -86,49 +90,49 @@ public class FoodAdd extends AppCompatActivity {
         intent.putExtra("aspectY", 1);
         intent.putExtra("return-data", true);
         startActivityForResult(intent, RESULT_LOAD_IMAGE);
-
       }
     });
 
 
-    foodButton.setOnClickListener(new View.OnClickListener() {
+    foodRatingBarEdit.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+      @Override
+      public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
+        rating = (int) v;
+      }
+    });
+
+    btnfoodUpdate = (Button) findViewById(R.id.btnfoodUpdate);
+    btnfoodUpdate.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        //perform qc checks
-        if (foodNameEdit.getText().toString().isEmpty()){
-          textInputLayout.setError("Food name is missing");
-          //textInputLayout.setError(null);
-        } else {
+        if (foodTextEdit.getText().toString().isEmpty()){
+          textInputLayout.setError(getResources().getResourceName(R.string.food_name_missing));
           textInputLayout.setError(null);
-          //add to db then go to main activity
+        } else {
           FoodDB foodDB = new FoodDB(getBaseContext());
-          Food food = new Food();
-          food.setFoodName(foodNameEdit.getText().toString());
-          food.setFoodRating(rating);
+          food.setFoodName(foodTextEdit.getText().toString());
           food.setFoodImageName(imagePath);
-
-          if (foodDB.create(food)){
-            Intent mainListIntent = new Intent(FoodAdd.this, MainActivity.class);
-            startActivity(mainListIntent);
+          food.setFoodRating(rating);
+          if(foodDB.update(food)){
+            Intent editIntent = new Intent(FoodEdit.this, MainActivity.class);
+            startActivity(editIntent);
           } else {
             AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-            builder.setMessage("Fail");
+            builder.setMessage(getResources().getResourceName(R.string.fail_message));
             builder.setCancelable(false);
-            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            builder.setPositiveButton(getResources().getResourceName(R.string.okay_message), new DialogInterface.OnClickListener() {
               @Override
               public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.cancel();
+
               }
             });
             builder.create().show();
           }
-
         }
-
       }
     });
-  }
 
+  }
 
   public  boolean isStoragePermissionGranted() {
     if (Build.VERSION.SDK_INT >= 23) {

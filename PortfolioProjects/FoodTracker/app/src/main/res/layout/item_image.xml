@@ -1,25 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="horizontal"
-              android:background="@color/colorPrimaryDark"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:minHeight="88dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
     <ImageView
+        android:layout_weight="1"
         android:id="@+id/item_img_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
         android:src="@mipmap/ic_launcher"
-        android:padding="5dp"
-        android:layout_marginRight="10dp"/>
+        android:contentDescription="@string/food_name"
+    />
 
-    <TextView
-        android:id="@+id/item_img_infor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/food_name"
-        android:textColor="@color/icons"
-        android:padding="5dp"
-        android:layout_marginLeft="10dp"/>
-</LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/item_img_icon"
+        android:paddingLeft="16dp">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/item_img_infor"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/food_name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:textAppearance="?android:textAppearanceMedium"
+        />
+
+        <RatingBar
+            android:layout_gravity="top"
+            android:id="@+id/item_img_rate"
+            android:layout_weight="1"
+            android:theme="@style/MyRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+        />
+    </LinearLayout>
+
+</RelativeLayout>
 

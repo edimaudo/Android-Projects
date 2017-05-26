@@ -4,11 +4,19 @@
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
     <string name="save">Save</string>
+    <string name="update">Update</string>
     <string name="rating">Rating</string>
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
     <string name="edit_food">Edit Food</string>
     <string name="food_name">Food Name</string>
-
+    <string name="add_image">Add Picture</string>
+    <string name="delete_title">Confirm</string>
+    <string name="delete_message">Are you sure?</string>
+    <string name="fail_message">Failed to update</string>
+    <string name="positive_message">YES</string>
+    <string name="negative_message">NO</string>
+    <string name="okay_message">OK</string>
+    <string name="food_name_missing">Food name is missing</string>
 
 </resources>

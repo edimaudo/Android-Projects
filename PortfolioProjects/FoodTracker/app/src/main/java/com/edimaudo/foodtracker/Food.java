@@ -1,20 +1,22 @@
 package com.edimaudo.foodtracker;
 
+import java.io.Serializable;
+
 /**
  * Created by edima on 2017-05-22.
  */
 
-public class Food {
+public class Food implements Serializable{
 
   private int id;
-  private String foodImageName;
-  private int foodRating;
   private String foodName;
+  private int foodRating;
+  private String foodImageName;
 
   public Food() {
   }
 
-  public Food(int id, String foodImageName, int foodRating, String foodName) {
+  public Food(int id, String foodName, int foodRating, String foodImageName) {
     this.id = id;
     this.foodImageName = foodImageName;
     this.foodRating = foodRating;

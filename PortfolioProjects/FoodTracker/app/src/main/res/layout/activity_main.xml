@@ -8,6 +8,7 @@
     tools:context="com.edimaudo.foodtracker.MainActivity">
 
     <ListView
+        android:scrollbars="vertical"
         android:id="@+id/mainListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></ListView>
@@ -25,7 +26,6 @@
         android:background="@color/colorPrimary"
         app:backgroundTint="@color/colorPrimary"
         android:src="@drawable/ic_add_white_36dp"
-
         app:rippleColor="@color/colorAccent"
     />
 
