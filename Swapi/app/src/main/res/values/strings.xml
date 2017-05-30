@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Swapi</string>
+    <string name="search">Search</string>
+    <string name="search_hint">Search for your Star Wars Info.</string>
+    <string name="search_term_empty">Please enter a search text</string>
+    <string name="no_internet_connection">No network connection.</string>
+    <string name="api_url">http://swapi.co/api/</string>
+    <string name="search_info">Search Category</string>
+    <string-array name="search_array">
+        <item>people</item>
+        <item>planets</item>
+        <item>species</item>
+        <item>starships</item>
+        <item>vehicles</item>
+    </string-array>
+</resources>

@@ -1,0 +1,16 @@
+
+
+2)
+set up volley code as well as prelimiary JSON code
+
+3)
+set up code to read json
+set up ui for different results
+set up ui for no result
+test with api
+fix errors
+run tests
+4)
+set up layout to read data for the different data types
+run test
+
