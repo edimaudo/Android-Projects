@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MovieNight</string>
+    <string name="api_key">7e8f60e325cd06e164799af1e317d7a7</string>
+    <string name="movie_recommend">Recommend Movie</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="check_api_key">Please check the API key</string>
+    <string name="num_movies_received">Number of movies received</string>
+    <string name="rating_holder">5</string>
+</resources>
