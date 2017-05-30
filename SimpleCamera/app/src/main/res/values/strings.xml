@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SimpleCamera</string>
+    <string name="camera_btn">Take Picture</string>
+</resources>
