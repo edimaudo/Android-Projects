@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "68374623527",
+    "firebase_url": "https://artistwork-b7467.firebaseio.com",
+    "project_id": "artistwork-b7467",
+    "storage_bucket": "artistwork-b7467.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68374623527:android:7dd1ea907983a382",
+        "android_client_info": {
+          "package_name": "com.edimaudo.artistwork"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68374623527-b97vu9ov78uv3005qc2lo14g907rc7og.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBbQAfq7CtOnLj8oy_TcVQWtyidMyyOmQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

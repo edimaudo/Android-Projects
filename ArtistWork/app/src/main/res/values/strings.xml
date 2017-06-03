@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ArtistWork</string>
+    <string name="no_network">No network connection</string>
+    <string name="enter_email">Enter email</string>
+    <string name="enter_password">Enter password</string>
+    <string name="user_registration">User Registration</string>
+    <string name="signup">Sign Up</string>
+    <string name="already_signed">Already Registered? Sign-in</string>
 </resources>
