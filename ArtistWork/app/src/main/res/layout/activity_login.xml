@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout
     android:id="@+id/coordinatorLayout"
-
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.edimaudo.artistwork.MainActivity">
+    tools:context="com.edimaudo.artistwork.LoginActivity">
 
     <android.support.design.widget.TextInputLayout
         android:layout_marginTop="150dp"
@@ -59,13 +58,13 @@
     </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:id="@+id/signupButton"
+        android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="400dp"
         android:background="@color/colorPrimary"
         android:elevation="8dp"
-        android:text="@string/signup"
+        android:text="@string/login"
         android:textColor="@color/colorText"
         android:textSize="25sp"
         android:layout_marginLeft="8dp"
@@ -76,11 +75,11 @@
         android:layout_marginTop="470dp"
         android:textSize="20sp"
         android:textColor="@color/colorPrimary"
-        android:text="@string/already_signed"
+        android:text="@string/no_account"
         android:textAlignment="center"
         android:textStyle="bold"
         android:clickable="true"
-        android:id="@+id/alreadySignUp"
+        android:id="@+id/noAccount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

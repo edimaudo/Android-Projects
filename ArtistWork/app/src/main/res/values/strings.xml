@@ -5,5 +5,14 @@
     <string name="enter_password">Enter password</string>
     <string name="user_registration">User Registration</string>
     <string name="signup">Sign Up</string>
+    <string name="login">Login</string>
     <string name="already_signed">Already Registered? Sign-in</string>
+    <string name="no_account">Don\'t have an account! Sign up</string>
+    <string name="email_error">PLease enter your email</string>
+    <string name="password_error">Please enter your password</string>
+    <string name="registration_message">Registering Please wait..</string>
+    <string name="registration_success">Registration successful</string>
+    <string name="registration_failure">Registration failed</string>
+    <item name="visible" type="id"/>
+    <item name="masked" type="id"/>
 </resources>
