@@ -1,0 +1,9 @@
+Create database
+Create database helper
+create add reminder view
+add date and time pickers
+add string texts
+add notifications and info for notifications
+add animations
+add onclick action
+test system

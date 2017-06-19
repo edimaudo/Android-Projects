@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Reminders</string>
     <string name="action_settings">Settings</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="location">Location</string>
+    <string name="time">Time</string>
 </resources>
