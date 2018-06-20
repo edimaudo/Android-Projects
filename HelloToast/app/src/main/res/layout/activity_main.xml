@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.LinearLayoutCompatLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".MainActivity" android:orientation="vertical">
 
 
-
-
-
+    <Button android:id="@+id/toast_button"
+            android:text="@string/button_toast"
+            android:layout_width="match_parent"
+            android:textSize="16sp"
+            android:layout_height="wrap_content" android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" android:layout_marginTop="16dp"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/count_text"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_weight="2"
+        android:textSize="128sp"
+        android:textAlignment="center"
+        android:background="@color/colorAccent"
+        android:gravity="center" android:text="@string/count_text"
+        android:textColor="@android:color/white"/>
 
 
-    <Button android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-        android:id="@+id/count_button"/>
-</android.support.v7.widget.LinearLayoutCompatLayout>
+    <Button android:id="@+id/count_button"
+            android:layout_width="match_parent"
+            android:text="@string/button_count"
+            android:layout_height="wrap_content" android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp" android:layout_marginRight="16dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:paddingBottom="16dp"/>
+</LinearLayout>
