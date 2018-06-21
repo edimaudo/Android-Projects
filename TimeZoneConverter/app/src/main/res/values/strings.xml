@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Time Zone Converter</string>
+    <string name="date">Date</string>
+    <string name="button">Button</string>
+</resources>
