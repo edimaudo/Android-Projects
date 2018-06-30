@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FaceDetection</string>
+    <string name="camera_text">Get Image from camera</string>
+</resources>
