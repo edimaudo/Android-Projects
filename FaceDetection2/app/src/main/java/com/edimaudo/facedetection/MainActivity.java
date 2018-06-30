@@ -52,6 +52,15 @@ public class MainActivity extends AppCompatActivity {
     }
   }
 
+  @Override
+  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+      Intent intent = new Intent(this, FaceDetectionActivity.class);
+      intent.putExtra("mCurrentPhotoPath", mCurrentPhotoPath);
+      startActivity(intent);
+    }
+  }
+
   private File createImageFile() throws IOException {
     if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
       // permission not granted, initiate request
