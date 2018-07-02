@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "755342114321",
+    "firebase_url": "https://likeagram-c29e9.firebaseio.com",
+    "project_id": "likeagram-c29e9",
+    "storage_bucket": "likeagram-c29e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755342114321:android:9514404cf3d3144e",
+        "android_client_info": {
+          "package_name": "com.edimaudo.likeagram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755342114321-oue5qrdcu9p3mtcemeb9jhs12n4um21u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcD0sP7tykzvtXUsh0lHkzNcDYZb2xKXY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
