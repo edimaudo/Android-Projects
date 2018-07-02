@@ -5,9 +5,9 @@ import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
@@ -15,14 +15,14 @@ import static java.lang.StrictMath.abs;
 
 public class MainActivity extends AppCompatActivity {
 
-  ArrayList<Bitmap> pieces;
+  ArrayList<PuzzlePiece> pieces;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    final ConstraintLayout layout = findViewById(R.id.layout);
+    final RelativeLayout layout = findViewById(R.id.layout);
     ImageView imageView = findViewById(R.id.imageView);
 
     // run image related code after the view was laid out
@@ -31,22 +31,24 @@ public class MainActivity extends AppCompatActivity {
       @Override
       public void run() {
         pieces = splitImage();
-        for(Bitmap piece : pieces) {
+        TouchListener touchListener = new TouchListener();
+        for(PuzzlePiece piece : pieces) {
           ImageView iv = new ImageView(getApplicationContext());
-          iv.setImageBitmap(piece);
-          layout.addView(iv);
+          //iv.setImageBitmap(piece);
+          piece.setOnTouchListener(touchListener);
+          layout.addView(piece);
         }
       }
     });
   }
 
-  private ArrayList<Bitmap> splitImage() {
+  private ArrayList<PuzzlePiece> splitImage() {
     int piecesNumber = 12;
     int rows = 4;
     int cols = 3;
 
     ImageView imageView = findViewById(R.id.imageView);
-    ArrayList<Bitmap> pieces = new ArrayList<>(piecesNumber);
+    ArrayList<PuzzlePiece> pieces = new ArrayList<>(piecesNumber);
 
     // Get the bitmap of the source image
     BitmapDrawable drawable = (BitmapDrawable) imageView.getDrawable();
@@ -74,7 +76,17 @@ public class MainActivity extends AppCompatActivity {
     for (int row = 0; row < rows; row++) {
       int xCoord = 0;
       for (int col = 0; col < cols; col++) {
-        pieces.add(Bitmap.createBitmap(croppedBitmap, xCoord, yCoord, pieceWidth, pieceHeight));
+        Bitmap pieceBitmap = Bitmap.createBitmap(croppedBitmap, xCoord, yCoord, pieceWidth, pieceHeight);
+        PuzzlePiece piece = new PuzzlePiece(getApplicationContext());
+        piece.setImageBitmap(pieceBitmap);
+        //piece.xCoord = xCoord;
+        //piece.yCoord = yCoord;
+        piece.xCoord = xCoord + imageView.getLeft();
+        piece.yCoord = yCoord + imageView.getTop();
+        piece.pieceWidth = pieceWidth;
+        piece.pieceHeight = pieceHeight;
+        pieces.add(piece);
+        //pieces.add(Bitmap.createBitmap(croppedBitmap, xCoord, yCoord, pieceWidth, pieceHeight));
         xCoord += pieceWidth;
       }
       yCoord += pieceHeight;
