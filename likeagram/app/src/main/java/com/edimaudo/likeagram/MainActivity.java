@@ -23,4 +23,6 @@ public class MainActivity extends AppCompatActivity {
             AuthUI.getInstance().createSignInIntentBuilder().build(),
             RC_SIGN_IN);
   }
+
+  
 }
