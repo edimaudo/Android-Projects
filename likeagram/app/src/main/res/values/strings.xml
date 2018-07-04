@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">likeagram</string>
     <string name="sign_in">sign in</string>
+    <string name="plus">+</string>
 </resources>
