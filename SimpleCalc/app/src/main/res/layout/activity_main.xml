@@ -76,7 +76,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/pow_operation_text"
                 android:layout_below="@id/operation_div_btn"
-
                 android:onClick="onPow"/>
 
     </RelativeLayout>
