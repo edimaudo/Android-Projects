@@ -96,11 +96,18 @@ public class MainActivity extends Activity {
 
 
     private void compute(Calculator.Operator operator) {
+        if (mOperandOneEditText.getText().toString().isEmpty() ||
+                mOperandTwoEditText.getText().toString().isEmpty()){
+
+            mResultTextView.setText(getString(R.string.computationError));
+            return;
+        }
         double operandOne;
         double operandTwo;
         try {
             operandOne = getOperand(mOperandOneEditText);
             operandTwo = getOperand(mOperandTwoEditText);
+
         } catch (NumberFormatException nfe) {
             Log.e(TAG, "NumberFormatException", nfe);
             mResultTextView.setText(getString(R.string.computationError));
