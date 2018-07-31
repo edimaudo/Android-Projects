@@ -71,6 +71,14 @@
             android:layout_toEndOf="@id/operation_add_btn"
             android:onClick="onMul"/>
 
+        <Button android:id="@+id/operation_pow_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pow_operation_text"
+                android:layout_below="@id/operation_div_btn"
+
+                android:onClick="onPow"/>
+
     </RelativeLayout>
 
     <TextView android:id="@+id/operation_result_text_view"
