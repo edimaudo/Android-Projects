@@ -131,6 +131,8 @@ public class MainActivity extends Activity {
             case MUL:
                 result = String.valueOf(mCalculator.mul(operandOne, operandTwo));
                 break;
+            case POW:
+                result = String.valueOf(mCalculator.pow(operandOne,operandTwo));
             default:
                 result = getString(R.string.computationError);
                 break;
