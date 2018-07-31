@@ -15,6 +15,7 @@
  */
 
 package com.example.android.SimpleCalc;
+import java.lang.Math;
 
 /**
  * Utility class for SimpleCalc to perform the actual calculations.
@@ -22,7 +23,7 @@ package com.example.android.SimpleCalc;
 public class Calculator {
 
     // Available operations
-    public enum Operator {ADD, SUB, DIV, MUL}
+    public enum Operator {ADD, SUB, DIV, MUL, POW}
 
     /**
      * Addition operation
@@ -50,5 +51,10 @@ public class Calculator {
      */
     public double mul(double firstOperand, double secondOperand) {
         return firstOperand * secondOperand;
+    }
+
+    public double pow(double firstOperand, double secondOperand) {
+        //return firstOperand
+        return Math.pow(firstOperand,secondOperand);
     }
 }
