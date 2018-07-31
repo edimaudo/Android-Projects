@@ -87,6 +87,9 @@ public class MainActivity extends Activity {
         }
     }
 
+    public void onPow(View view) {
+    }
+
     /**
      * OnClick method that is called when the multiply {@link Button} is pressed.
      */
@@ -149,4 +152,6 @@ public class MainActivity extends Activity {
     private static String getOperandText(EditText operandEditText) {
         return operandEditText.getText().toString();
     }
+
+
 }
