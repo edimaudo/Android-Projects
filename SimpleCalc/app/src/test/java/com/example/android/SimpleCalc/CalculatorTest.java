@@ -112,4 +112,58 @@ public class CalculatorTest {
     double resultDiv = mCalculator.div(0,0);
     assertThat(resultDiv, is(equalTo(Double.NaN)));
   }
+
+  @Test
+  public void powPostInt() {
+    double resultPow = mCalculator.pow(3d,2d);
+    assertThat(resultPow, is(equalTo(9d)));
+    }
+
+    //A test with a negative integer as the first operand
+  @Test
+  public void powNegFirstOpsEvenSecondOps() {
+    double resultPow = mCalculator.pow(-3d,2d);
+    assertThat(resultPow, is(equalTo(9d)));
+  }
+
+  @Test
+  public void powNegFirstOpsOddSecondOps() {
+    double resultPow = mCalculator.pow(-3d,3d);
+    assertThat(resultPow, is(equalTo(-27d)));
+  }
+
+  //A test with a negative integer as the second operand.
+  @Test
+  public void powNegSecondOps() {
+    double resultPow = mCalculator.pow(3d,-3d);
+    assertThat(resultPow, is(equalTo(1/27d)));
+  }
+
+  //A test with 0 as the first operand and a positive integer as the second operand.
+  @Test
+  public void powFirstZeroPosSecondOps() {
+    double resultPow = mCalculator.pow(0,2d);
+    assertThat(resultPow, is(equalTo(0d)));
+  }
+
+  //A test with 0 as the second operand.
+  @Test
+  public void powZeroSecondOps() {
+    double resultPow = mCalculator.pow(1d,0);
+    assertThat(resultPow, is(equalTo(1d)));
+  }
+
+  //A test with 0 as the first operand and -1 as the second operand
+  @Test
+  public void powZeroFirstNegativeOneSecondOps() {
+    double resultPow = mCalculator.pow(0,-1d);
+    assertThat(resultPow, is(equalTo(Double.POSITIVE_INFINITY)));
+  }
+
+  //A test with -0 as the first operand and any negative number as the second operand
+  @Test
+  public void powZeroFirstNegativeSecondOps() {
+    double resultPow = mCalculator.pow(-0,-2d);
+    assertThat(resultPow, is(equalTo(Double.POSITIVE_INFINITY)));
+  }
 }

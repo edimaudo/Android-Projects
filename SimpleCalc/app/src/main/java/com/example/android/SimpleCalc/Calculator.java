@@ -52,7 +52,9 @@ public class Calculator {
     public double mul(double firstOperand, double secondOperand) {
         return firstOperand * secondOperand;
     }
-
+    /**
+     * Power operation
+     */
     public double pow(double firstOperand, double secondOperand) {
         //return firstOperand
         return Math.pow(firstOperand,secondOperand);
