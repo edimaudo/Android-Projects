@@ -8,7 +8,27 @@
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
                 tools:context=".MainActivity">
-    
+
+    <TextView
+        android:id="@+id/text_header_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_header_reply"
+        android:visibility="invisible"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/text_message_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_header_reply"
+        android:visibility="invisible"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,4 +38,13 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:onClick="launchSecondActivity"/>
+
+    <EditText
+        android:id="@+id/editText_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/button_main"
+        android:layout_toStartOf="@+id/button_main"
+        android:hint="@string/editText_main" />
 </RelativeLayout>
