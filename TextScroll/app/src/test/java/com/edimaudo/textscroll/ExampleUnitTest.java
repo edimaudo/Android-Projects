@@ -1,4 +1,4 @@
-package com.edimaudo.hellotoast;
+package com.edimaudo.textscroll;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.edimaudo.hellotoast;
+package com.edimaudo.textscroll;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     // Context of the app under test.
     Context appContext = InstrumentationRegistry.getTargetContext();
 
-    assertEquals("com.edimaudo.hellotoast", appContext.getPackageName());
+    assertEquals("com.edimaudo.textscroll", appContext.getPackageName());
   }
 }
