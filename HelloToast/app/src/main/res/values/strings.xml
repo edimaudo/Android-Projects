@@ -20,5 +20,5 @@ limitations under the License. -->
     <string name="count_initial_value">0</string>
     <string name="toast_button_toast">Hello Toast!</string>
     <string name="say_hello">Say Hello!</string>
-    <string name="hello">Hello!</string>
+    <string name="hello">Hello</string>
 </resources>

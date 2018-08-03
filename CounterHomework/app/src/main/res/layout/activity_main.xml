@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/extra_margin_top"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_right"
+        android:layout_marginStart="@dimen/margin_left"
+        android:text="@string/initial_value"
+        android:textSize="@dimen/text_size"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/margin_top"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_right"
+        android:layout_marginStart="@dimen/margin_left"
+        android:text="@string/count"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_below="@+id/textView"
+    android:onClick="buttonClick"/>
+
+    <EditText android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/editText"
+              android:layout_below="@id/button"
+              android:layout_marginTop="@dimen/margin_top"
+              android:hint="@string/edit_text"
+              android:inputType="text"
+              android:textAlignment="center"
+              android:layout_marginStart="@dimen/margin_left"
+              android:layout_marginEnd="@dimen/margin_right"
+
+    />
+</RelativeLayout>

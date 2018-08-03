@@ -1,23 +1,25 @@
-package com.example.android.hellotoast;
+package com.edimaudo.textscroll;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-public class HelloActivity extends AppCompatActivity {
+public class ScrollActivity extends AppCompatActivity {
 
-  private TextView mText;
+  TextView textView;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_hello);
+    setContentView(R.layout.activity_scroll);
 
-    mText = (TextView) findViewById(R.id.second_hello_text);
+    textView = (TextView) findViewById(R.id.textInfo);
+
     Intent intent = getIntent();
     String message =
             intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-    mText.setText(message);
+    textView.setText(message);
+
   }
 }
