@@ -25,12 +25,12 @@ limitations under the License. -->
     tools:context="com.example.android.hellotoast.MainActivity">
 
     <Button
-        android:id="@+id/button_hello"
+        android:id="@+id/button_toast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        android:onClick="showHello"
-        android:text="@string/say_hello"
+        android:onClick="showToast"
+        android:text="@string/button_label_toast"
         android:textColor="@android:color/white"
         />
 

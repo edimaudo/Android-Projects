@@ -15,7 +15,6 @@ package com.example.android.hellotoast;
  * limitations under the License.
  */
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -34,8 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
     private int mCount = 0;
     private TextView mShowCount;
-  public static final String EXTRA_MESSAGE = "helloActivity.extra.MESSAGE";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,16 +62,5 @@ public class MainActivity extends AppCompatActivity {
     public void showToast(View view) {
         Toast toast = Toast.makeText(this, R.string.toast_button_toast, Toast.LENGTH_LONG);
         toast.show();
-    }
-
-    public void showHello(View view) {
-
-      Intent newIntent = new Intent(this, HelloActivity.class);
-      String message = mShowCount.getText().toString();
-
-      newIntent.putExtra(EXTRA_MESSAGE, message);
-      startActivity(newIntent);
-
-
     }
 }
