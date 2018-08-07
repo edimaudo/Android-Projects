@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+android:weightSum="4"
+android:orientation="vertical">
+
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_left"
+    android:layout_marginEnd="@dimen/margin_right"
+    android:layout_marginTop="@dimen/margin_top"
+    android:layout_marginBottom="@dimen/margin_bottom"
+    android:textSize="@dimen/text_size"
+    android:textAlignment="center"
+    android:id="@+id/button1"
+    android:text="@string/apple"
+    android:layout_weight="1"
+    android:onClick="appleClick"/>
+
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_left"
+            android:layout_marginEnd="@dimen/margin_right"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:textSize="@dimen/text_size"
+            android:textAlignment="center"
+            android:id="@+id/button2"
+            android:text="@string/celery"
+            android:layout_weight="1"
+    android:onClick="celeryClick"/>
+
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_left"
+            android:layout_marginEnd="@dimen/margin_right"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:textSize="@dimen/text_size"
+            android:textAlignment="center"
+            android:id="@+id/button3"
+            android:text="@string/cheese"
+            android:layout_weight="1"
+    android:onClick="cheeseClick"/>
+
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_left"
+            android:layout_marginEnd="@dimen/margin_right"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:textSize="@dimen/text_size"
+            android:textAlignment="center"
+            android:id="@+id/button4"
+            android:text="@string/orange"
+            android:layout_weight="1"
+    android:onClick="orangeClick"/>
+    
+</LinearLayout>
