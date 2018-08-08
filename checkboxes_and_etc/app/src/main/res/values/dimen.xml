@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_begin">24dp</dimen>
+    <dimen name="margin_end">24dp</dimen>
+    <dimen name="margin_top">24dp</dimen>
+    <dimen name="margin_bottom">24dp</dimen>
+    <dimen name="text_size">24sp</dimen>
+</resources>
