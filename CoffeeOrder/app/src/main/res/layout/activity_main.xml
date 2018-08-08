@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+android:weightSum="3">
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+    android:id="@+id/textView"
+              android:layout_marginTop="@dimen/margin_top"
+              android:layout_marginStart="@dimen/margiin_left"
+              android:layout_marginEnd="@dimen/margin_right"
+    android:textAlignment="center"
+    android:textSize="@dimen/big_text_size"
+    android:text="@string/initial_value"
+    android:textColor="@color/colorPrimaryDark"
+    android:layout_weight="2"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="@dimen/margiin_left"
+                  android:layout_marginEnd="@dimen/margin_right"
+    android:orientation="horizontal"
+    android:weightSum="2">
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:id="@+id/addButton"
+                android:textColor="@color/textColor"
+                android:background="@color/colorPrimary"
+                android:textColorHint="@color/colorAccent"
+                android:text="@string/add_item"
+                android:textSize="@dimen/text_size"
+                android:layout_marginRight="@dimen/margin_right"
+                android:layout_marginLeft="@dimen/margiin_left"
+        android:layout_weight="1"
+        android:onClick="addClick"/>
+
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:id="@+id/delButton"
+                android:textColor="@color/textColor"
+                android:background="@color/colorPrimary"
+                android:textColorHint="@color/colorAccent"
+                android:text="@string/delete_item"
+                android:textSize="@dimen/text_size"
+                android:layout_marginRight="@dimen/margin_right"
+                android:layout_marginLeft="@dimen/margiin_left"
+                android:layout_weight="1"
+        android:onClick="reduceClick"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>
