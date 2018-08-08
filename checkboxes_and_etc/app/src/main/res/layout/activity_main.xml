@@ -1,19 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:layout_marginLeft="@dimen/margin_begin"
+android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+    <CheckBox android:id="@+id/checkbox_cherries"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/cherries"
+              android:onClick="onCheckboxClicked"/>
+    <CheckBox android:id="@+id/checkbox_cheese"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/chocolate_syrup"
+              android:onClick="onCheckboxClicked"/>
+    <CheckBox android:id="@+id/checkbox_chocolate"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/chocolate_syrup"
+              android:onClick="onCheckboxClicked"/>
+    <CheckBox android:id="@+id/checkbox_crushednut"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/crushed_nuts"
+              android:onClick="onCheckboxClicked"/>
+    <CheckBox android:id="@+id/checkbox_sprinkle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/sprinkles"
+              android:onClick="onCheckboxClicked"/>
+    <CheckBox android:id="@+id/checkbox_oreo"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/oreo_cookie_crumble"
+              android:onClick="onCheckboxClicked"/>
 
-</android.support.constraint.ConstraintLayout>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/margin_begin"
+    android:layout_marginEnd="@dimen/margin_end"
+            android:layout_marginTop="@dimen/margin_top"
+            android:paddingEnd="@dimen/margin_end"
+            android:paddingStart="@dimen/margin_begin"
+    android:id="@+id/buttonText"
+    android:textSize="@dimen/text_size"
+    android:text="@string/show_toast"
+    android:textAlignment="center"
+    android:textColor="@color/textColor"
+    android:background="@color/colorPrimary"
+    android:onClick="buttonClick"/>
+
+</LinearLayout>
