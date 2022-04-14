@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,7 +13,7 @@
         android:id="@+id/playButton"
         android:layout_width="128dp"
         android:layout_height="56dp"
-        android:text="Play"
+        android:text="@string/play_button_name"
         android:textAlignment="center"
         android:textColor="@android:color/holo_green_dark"
         android:textSize="25sp"
@@ -26,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/background_light"
-        android:text="About"
+        android:text="@string/about_button_name"
         android:textAlignment="center"
         android:textColor="@android:color/holo_green_dark"
         android:textSize="25sp"
