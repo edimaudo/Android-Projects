@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Cyberardy</string>
+    <string name="play_button_name">Play</string>
+    <string name="about_button_name">About</string>
 </resources>
