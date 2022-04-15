@@ -10,11 +10,13 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import java.util.Random;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
   private Button aboutButton;
   private Button playButton;
+  public final static String  EXTRA_MESSAGE = "com.example.cyberardy.MESSAGE";
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +35,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   public void onClick(View view) {
     switch (view.getId()){
       case R.id.playButton:
-
-
-        //break;
+        Intent playOption = new Intent(getApplicationContext(),GameActivity.class);
+        startActivity(playOption);
+        break;
       case R.id.aboutButton:
-
-        //break;
+        Intent aboutOption = new Intent(getApplicationContext(),AboutActivity.class);
+        startActivity(aboutOption);
+        break;
     }
   }
 }
