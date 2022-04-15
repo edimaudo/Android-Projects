@@ -6,4 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".GameActivity">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="56dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:layout_width="148dp"
+        android:layout_height="404dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="-7dp"
+        tools:layout_editor_absoluteY="326dp"></LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
