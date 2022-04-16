@@ -7,174 +7,188 @@
     tools:context=".GameActivity">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
         tools:srcCompat="@tools:sample/avatars" />
 
     <LinearLayout
-        android:layout_width="395dp"
-        android:layout_height="83dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="390dp"
+        android:layout_height="77dp"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="206dp">
-
-        <EditText
-            android:id="@+id/editTextTextPersonName2"
-            android:layout_width="149dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="212dp">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/scoreName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="@string/score_text_name" />
+
+        <TextView
+            android:id="@+id/Score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/begin_score_text_name" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="113dp"
-        android:layout_height="425dp"
+        android:layout_width="100dp"
+        android:layout_height="300dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="305dp">
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="308dp">
 
-        <EditText
-            android:id="@+id/editTextTextPersonName3"
+        <TextView
+            android:id="@+id/cyberSection"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="36dp"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="@string/cyber_attack_text_name" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/cyber_section_200"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/$200_text_name" />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/cyber_section_400"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/$400_text_name" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/cyber_section_600"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/$600_text_name" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/cyber_section_800"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/$800_text_name" />
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/cyber_section_1000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/$1000_text_name" />
+
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="117dp"
-        android:layout_height="410dp"
+        android:layout_width="100dp"
+        android:layout_height="300dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="172dp"
-        tools:layout_editor_absoluteY="305dp">
+        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteY="308dp">
 
-        <EditText
-            android:id="@+id/editTextTextPersonName4"
+        <TextView
+            android:id="@+id/cryptoSection"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="@string/crypto_text_name" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/crypto_section_200"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/$200_text_name" />
 
         <Button
-            android:id="@+id/button11"
+            android:id="@+id/crypto_section_400"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/$400_text_name" />
 
         <Button
-            android:id="@+id/button12"
+            android:id="@+id/crypto_section_600"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/$600_text_name" />
 
         <Button
-            android:id="@+id/button13"
+            android:id="@+id/crypto_section_800"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/$800_text_name" />
 
         <Button
-            android:id="@+id/button14"
+            android:id="@+id/crypto_section_1000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/$1000_text_name" />
+
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="79dp"
-        android:layout_height="414dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="331dp"
-        tools:layout_editor_absoluteY="316dp">
+        tools:layout_editor_absoluteX="330dp"
+        tools:layout_editor_absoluteY="350dp">
 
-        <EditText
-            android:id="@+id/editTextTextPersonName5"
+        <TextView
+            android:id="@+id/phishing_section"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="@string/phishing_text_name" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/phishing_section_200"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/$200_text_name" />
 
         <Button
-            android:id="@+id/button15"
+            android:id="@+id/phishing_section_400"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/$400_text_name" />
 
         <Button
-            android:id="@+id/button16"
+            android:id="@+id/phishing_section_600"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/$600_text_name" />
 
         <Button
-            android:id="@+id/button17"
+            android:id="@+id/phishing_section_800"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/$800_text_name" />
 
         <Button
-            android:id="@+id/button18"
+            android:id="@+id/phishing_section_1000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/$1000_text_name" />
 
     </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
