@@ -57,31 +57,31 @@
             android:id="@+id/cyber_section_200"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/$200_text_name" />
+            android:text="@string/text_name_200" />
 
         <Button
             android:id="@+id/cyber_section_400"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/$400_text_name" />
+            android:text="@string/text_name_400" />
 
         <Button
             android:id="@+id/cyber_section_600"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/$600_text_name" />
+            android:text="@string/text_name_600" />
 
         <Button
             android:id="@+id/cyber_section_800"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/$800_text_name" />
+            android:text="@string/text_name_800" />
 
         <Button
             android:id="@+id/cyber_section_1000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/$1000_text_name" />
+            android:text="@string/text_name_1000" />
 
     </LinearLayout>
 
@@ -103,31 +103,31 @@
             android:id="@+id/crypto_section_200"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/$200_text_name" />
+            android:text="@string/text_name_200" />
 
         <Button
             android:id="@+id/crypto_section_400"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/$400_text_name" />
+            android:text="@string/text_name_400" />
 
         <Button
             android:id="@+id/crypto_section_600"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/$600_text_name" />
+            android:text="@string/text_name_600" />
 
         <Button
             android:id="@+id/crypto_section_800"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/$800_text_name" />
+            android:text="@string/text_name_800" />
 
         <Button
             android:id="@+id/crypto_section_1000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/$1000_text_name" />
+            android:text="@string/text_name_1000" />
 
     </LinearLayout>
 
@@ -149,31 +149,31 @@
             android:id="@+id/phishing_section_200"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/$200_text_name" />
+            android:text="@string/text_name_200" />
 
         <Button
             android:id="@+id/phishing_section_400"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/$400_text_name" />
+            android:text="@string/text_name_400" />
 
         <Button
             android:id="@+id/phishing_section_600"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/$600_text_name" />
+            android:text="@string/text_name_600" />
 
         <Button
             android:id="@+id/phishing_section_800"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/$800_text_name" />
+            android:text="@string/text_name_800" />
 
         <Button
             android:id="@+id/phishing_section_1000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/$1000_text_name" />
+            android:text="@string/text_name_1000" />
 
     </LinearLayout>
 
