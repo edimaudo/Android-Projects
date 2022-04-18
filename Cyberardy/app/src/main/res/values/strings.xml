@@ -6,11 +6,11 @@
     <string name="cyber_attack_text_name">Cyber Attack</string>
     <string name="crypto_text_name">Crypto</string>
     <string name="phishing_text_name">Phishing</string>
-    <string name="$200_text_name">$200</string>
-    <string name="$400_text_name">$400</string>
-    <string name="$600_text_name">$600</string>
-    <string name="$800_text_name">$800</string>
-    <string name="$1000_text_name">$1000</string>
+    <string name="text_name_200">$200</string>
+    <string name="text_name_400">$400</string>
+    <string name="text_name_600">$600</string>
+    <string name="text_name_800">$800</string>
+    <string name="text_name_1000">$1000</string>
     <string name="begin_score_text_name">$0</string>
 
 </resources>
