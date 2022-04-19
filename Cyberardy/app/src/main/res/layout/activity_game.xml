@@ -10,185 +10,40 @@
         android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="390dp"
+        android:layout_width="414dp"
         android:layout_height="77dp"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="212dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/scoreName"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/score_text_name" />
 
         <TextView
             android:id="@+id/Score"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/begin_score_text_name" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="100dp"
-        android:layout_height="300dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="308dp">
+    
 
-        <TextView
-            android:id="@+id/cyberSection"
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:ems="10"
-            android:text="@string/cyber_attack_text_name" />
 
-        <Button
-            android:id="@+id/cyber_section_200"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_name_200" />
-
-        <Button
-            android:id="@+id/cyber_section_400"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_name_400" />
-
-        <Button
-            android:id="@+id/cyber_section_600"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_name_600" />
-
-        <Button
-            android:id="@+id/cyber_section_800"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_name_800" />
-
-        <Button
-            android:id="@+id/cyber_section_1000"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_name_1000" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="100dp"
-        android:layout_height="300dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="308dp">
-
-        <TextView
-            android:id="@+id/cryptoSection"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:text="@string/crypto_text_name" />
-
-        <Button
-            android:id="@+id/crypto_section_200"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_name_200" />
-
-        <Button
-            android:id="@+id/crypto_section_400"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_name_400" />
-
-        <Button
-            android:id="@+id/crypto_section_600"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_name_600" />
-
-        <Button
-            android:id="@+id/crypto_section_800"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_name_800" />
-
-        <Button
-            android:id="@+id/crypto_section_1000"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_name_1000" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="330dp"
-        tools:layout_editor_absoluteY="350dp">
-
-        <TextView
-            android:id="@+id/phishing_section"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:text="@string/phishing_text_name" />
-
-        <Button
-            android:id="@+id/phishing_section_200"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_name_200" />
-
-        <Button
-            android:id="@+id/phishing_section_400"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_name_400" />
-
-        <Button
-            android:id="@+id/phishing_section_600"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_name_600" />
-
-        <Button
-            android:id="@+id/phishing_section_800"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_name_800" />
-
-        <Button
-            android:id="@+id/phishing_section_1000"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_name_1000" />
-
-    </LinearLayout>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
