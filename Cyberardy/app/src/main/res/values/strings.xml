@@ -3,7 +3,7 @@
     <string name="play_button_name">Play</string>
     <string name="about_button_name">About</string>
     <string name="score_text_name">Score</string>
-    <string name="cyber_attack_text_name">Cyber Attack</string>
+    <string name="cyber_attack_text_name">Attack</string>
     <string name="crypto_text_name">Crypto</string>
     <string name="phishing_text_name">Phishing</string>
     <string name="text_name_200">$200</string>
