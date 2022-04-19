@@ -32,6 +32,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="40dp"
+            android:textStyle="bold"
             android:text="@string/score_text_name" />
 
         <TextView
@@ -39,10 +41,183 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="40dp"
             android:text="@string/begin_score_text_name" />
     </LinearLayout>
 
-    
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="100dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:orientation="vertical"
+        android:textSize="20dp"
+        android:layout_marginRight="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/cyberSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="@string/cyber_attack_text_name" />
+
+        <Button
+            android:id="@+id/cyber_section_200"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="@string/text_name_200" />
+
+
+        <Button
+            android:id="@+id/cyber_section_400"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_name_400" />
+
+
+        <Button
+            android:id="@+id/cyber_section_600"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_name_600" />
+
+        <Button
+            android:id="@+id/cyber_section_800"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_name_800" />
+
+        <Button
+            android:id="@+id/cyber_section_1000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_name_1000" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="100dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/cryptoSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="@string/crypto_text_name" />
+
+        <Button
+            android:id="@+id/crypto_section_200"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_name_200" />
+
+        <Button
+            android:id="@+id/crypto_section_400"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_name_400" />
+
+        <Button
+            android:id="@+id/crypto_section_600"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_name_600" />
+
+        <Button
+            android:id="@+id/crypto_section_800"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_name_800" />
+
+        <Button
+            android:id="@+id/crypto_section_1000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_name_1000" />
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="100dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        >
+
+        <TextView
+            android:id="@+id/phishing_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="@string/phishing_text_name" />
+
+        <Button
+            android:id="@+id/phishing_section_200"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_name_200" />
+
+        <Button
+            android:id="@+id/phishing_section_400"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_name_400" />
+
+        <Button
+            android:id="@+id/phishing_section_600"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_name_600" />
+
+        <Button
+            android:id="@+id/phishing_section_800"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_name_800" />
+
+        <Button
+            android:id="@+id/phishing_section_1000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_name_1000" />
+
+
+
+    </LinearLayout>
 
 
 
