@@ -13,13 +13,14 @@ import android.content.Intent;
 public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
   // Unique tag for the intent reply
-  public int TEXT_REQUEST = 1;
+  public int TEXT_REQUEST = 0;
   // Unique tag required for the intent extra
   public static final String EXTRA_MESSAGE = "com.example.cyberardy.extra.MESSAGE";
 
   // Questions
-  final String[] data = {"Q1","Q2","Q3","Q4","Q5","Q6"};
-  String question = "";
+  final int[] data = {1,2,3,4,5,6};
+  int question = 1;
+  String questionType = "";
 
   // Score
   private TextView ScoreText;
@@ -31,17 +32,17 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
           phishing600Button,phishing800Button,phishing1000Button;
 
   // Function to create question to be asked
-  public String generateQuestion(){
-    String question = "";
+  public int generateQuestion(){
     Random rand = new Random();
     int num = rand.nextInt(data.length);
-    question = data[num];
-    return question;
+    return data[num];
   }
 
   // Function to update the Score
 
   // Function to end the game
+
+  // Function to update button attribute
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -91,93 +92,106 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
       case R.id.cyber_section_200:
         intent = new Intent(getApplicationContext(), QuestionActivity.class);
         question = generateQuestion();
-        intent.putExtra(EXTRA_MESSAGE, question);
+        questionType = String.valueOf(cyber200Button);
+        intent.putExtra(EXTRA_MESSAGE, new String[]{String.valueOf(question),questionType});
         startActivityForResult(intent, TEXT_REQUEST);
         break;
       case R.id.cyber_section_400:
         intent = new Intent(getApplicationContext(), QuestionActivity.class);
         question = generateQuestion();
-        intent.putExtra(EXTRA_MESSAGE, question);
+        questionType = String.valueOf(cyber400Button);
+        intent.putExtra(EXTRA_MESSAGE, new String[]{String.valueOf(question),questionType});
         startActivityForResult(intent, TEXT_REQUEST);
         break;
       case R.id.cyber_section_600:
         intent = new Intent(getApplicationContext(), QuestionActivity.class);
         question = generateQuestion();
-        intent.putExtra(EXTRA_MESSAGE, question);
+        questionType = String.valueOf(cyber600Button);
+        intent.putExtra(EXTRA_MESSAGE, new String[]{String.valueOf(question),questionType});
         startActivityForResult(intent, TEXT_REQUEST);
         break;
       case R.id.cyber_section_800:
         intent = new Intent(getApplicationContext(), QuestionActivity.class);
         question = generateQuestion();
-        intent.putExtra(EXTRA_MESSAGE, question);
+        questionType = String.valueOf(cyber800Button);
+        intent.putExtra(EXTRA_MESSAGE, new String[]{String.valueOf(question),questionType});
         startActivityForResult(intent, TEXT_REQUEST);
         break;
       case R.id.cyber_section_1000:
         intent = new Intent(getApplicationContext(), QuestionActivity.class);
         question = generateQuestion();
-        intent.putExtra(EXTRA_MESSAGE, question);
+        questionType = String.valueOf(cyber200Button);
+        intent.putExtra(EXTRA_MESSAGE, new String[]{String.valueOf(question),questionType});
         startActivityForResult(intent, TEXT_REQUEST);
         break;
       case R.id.crypto_section_200:
         intent = new Intent(getApplicationContext(), QuestionActivity.class);
         question = generateQuestion();
-        intent = new Intent(getApplicationContext(), QuestionActivity.class);
-        intent.putExtra(EXTRA_MESSAGE, question);
+        questionType = String.valueOf(cyber200Button);
+        intent.putExtra(EXTRA_MESSAGE, new String[]{String.valueOf(question),questionType});
         startActivityForResult(intent, TEXT_REQUEST);
         break;
       case R.id.crypto_section_400:
         intent = new Intent(getApplicationContext(), QuestionActivity.class);
         question = generateQuestion();
-        intent = new Intent(getApplicationContext(), QuestionActivity.class);
-        intent.putExtra(EXTRA_MESSAGE, question);
+        questionType = String.valueOf(cyber200Button);
+        intent.putExtra(EXTRA_MESSAGE, new String[]{String.valueOf(question),questionType});
         startActivityForResult(intent, TEXT_REQUEST);
         break;
       case R.id.crypto_section_600:
         intent = new Intent(getApplicationContext(), QuestionActivity.class);
         question = generateQuestion();
-        intent.putExtra(EXTRA_MESSAGE, question);
+        questionType = String.valueOf(cyber200Button);
+        intent.putExtra(EXTRA_MESSAGE, new String[]{String.valueOf(question),questionType});
         startActivityForResult(intent, TEXT_REQUEST);
         break;
       case R.id.crypto_section_800:
         intent = new Intent(getApplicationContext(), QuestionActivity.class);
         question = generateQuestion();
-        intent.putExtra(EXTRA_MESSAGE, question);
+        questionType = String.valueOf(cyber200Button);
+        intent.putExtra(EXTRA_MESSAGE, new String[]{String.valueOf(question),questionType});;
         startActivityForResult(intent, TEXT_REQUEST);
         break;
       case R.id.crypto_section_1000:
         intent = new Intent(getApplicationContext(), QuestionActivity.class);
         question = generateQuestion();
-        intent.putExtra(EXTRA_MESSAGE, question);
+        questionType = String.valueOf(cyber200Button);
+        intent.putExtra(EXTRA_MESSAGE, new String[]{String.valueOf(question),questionType});
         startActivityForResult(intent, TEXT_REQUEST);
         break;
       case R.id.phishing_section_200:
         intent = new Intent(getApplicationContext(), QuestionActivity.class);
         question = generateQuestion();
-        intent.putExtra(EXTRA_MESSAGE, question);
+        questionType = String.valueOf(cyber200Button);
+        intent.putExtra(EXTRA_MESSAGE, new String[]{String.valueOf(question),questionType});
         startActivityForResult(intent, TEXT_REQUEST);
         break;
       case R.id.phishing_section_400:
         intent = new Intent(getApplicationContext(), QuestionActivity.class);
         question = generateQuestion();
-        intent.putExtra(EXTRA_MESSAGE, question);
+        questionType = String.valueOf(cyber200Button);
+        intent.putExtra(EXTRA_MESSAGE, new String[]{String.valueOf(question),questionType});
         startActivityForResult(intent, TEXT_REQUEST);
         break;
       case R.id.phishing_section_600:
         intent = new Intent(getApplicationContext(), QuestionActivity.class);
         question = generateQuestion();
-        intent.putExtra(EXTRA_MESSAGE, question);
+        questionType = String.valueOf(cyber200Button);
+        intent.putExtra(EXTRA_MESSAGE, new String[]{String.valueOf(question),questionType});
         startActivityForResult(intent, TEXT_REQUEST);
         break;
       case R.id.phishing_section_800:
-        question = generateQuestion();
         intent = new Intent(getApplicationContext(), QuestionActivity.class);
-        intent.putExtra(EXTRA_MESSAGE, question);
+        question = generateQuestion();
+        questionType = String.valueOf(cyber200Button);
+        intent.putExtra(EXTRA_MESSAGE, new String[]{String.valueOf(question),questionType});
         startActivityForResult(intent, TEXT_REQUEST);
         break;
       case R.id.phishing_section_1000:
-        question = generateQuestion();
         intent = new Intent(getApplicationContext(), QuestionActivity.class);
-        intent.putExtra(EXTRA_MESSAGE, question);
+        question = generateQuestion();
+        questionType = String.valueOf(cyber200Button);
+        intent.putExtra(EXTRA_MESSAGE, new String[]{String.valueOf(question),questionType});
         startActivityForResult(intent, TEXT_REQUEST);
         break;
 
