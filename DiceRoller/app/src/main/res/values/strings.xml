@@ -2,4 +2,7 @@
     <string name="app_name">DiceRoller</string>
     <string name="inital_header">Hey you! Give us a roll</string>
     <string name="shake">Shake \'em\'</string>
+    <string name="shake_3">"Shake! Shake! Shake!"</string>
+    <string name="dice1">"dice 1"</string>
+    <string name="dice2">"dice 2"</string>
 </resources>
