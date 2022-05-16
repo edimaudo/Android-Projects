@@ -26,11 +26,14 @@ public class MainActivity extends AppCompatActivity {
   // Default the squeezeCount to -1
   private int squeezeCount = -1;
 
+  private ImageView lemonImage;
 
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
+
   }
 }
