@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
     lemonImage.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        lemonSize++;
         clickLemonImage();
         setViewElements();
 
@@ -108,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private void clickLemonImage() {
+    lemonSize++;
    if(lemonSize == -1){
     lemonImage.setImageResource(R.drawable.lemon_tree);
    } else if (lemonSize == randomLemonPick){
@@ -120,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private void setViewElements() {
+
     if(lemonSize == -1){
       lemonText.setText(getResources().getString(R.string.lemon_select));
     } else if (lemonSize == randomLemonPick){
