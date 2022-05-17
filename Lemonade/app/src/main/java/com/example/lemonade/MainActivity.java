@@ -35,12 +35,14 @@ public class MainActivity extends AppCompatActivity {
   private ImageView lemonImage;
   private TextView lemonText;
 
+  private int randomLemonPick;
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-    
+
     if (savedInstanceState != null) {
       lemonadeState = savedInstanceState.getString(LEMONADE_STATE, "select");
       lemonSize = savedInstanceState.getInt(LEMON_SIZE, -1);
@@ -48,11 +50,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     lemonImage = (ImageView) findViewById(R.id.image_lemon_state);
+    lemonText = (TextView) findViewById(R.id.text_action);
 
+    randomLemonPick = pickLemonTree();
 
     lemonImage.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
+        lemonSize++;
+        clickLemonImage();
+        setViewElements();
 
       }
     });
@@ -60,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     lemonImage.setOnLongClickListener(new View.OnLongClickListener() {
       @Override
       public boolean onLongClick(View view) {
-        return false;
+        return showSnackbar();
       }
     });
   }
@@ -72,15 +79,7 @@ public class MainActivity extends AppCompatActivity {
     super.onSaveInstanceState(outState);
   }
 
-  private void clickLemonImage(){
-
-  }
-
-  private void setViewElements(){
-    lemonText = (TextView) findViewById(R.id.text_action);
-  }
-
-  private boolean showSnackbar(){
+  private boolean showSnackbar() {
     if (lemonadeState != SQUEEZE) {
       return false;
     }
@@ -93,18 +92,46 @@ public class MainActivity extends AppCompatActivity {
     return true;
   }
 
-  public int pickLemonTree(){
+  public int pickLemonTree() {
     int output = 1;
     Random rand = new Random();
     boolean complete = false;
-    output = rand.nextInt(6);
-    while(!complete){
-      if (output == 0){
-        output = rand.nextInt(6);
-      } else{
+    output = rand.nextInt(4);
+    while (!complete) {
+      if (output == 0) {
+        output = rand.nextInt(4);
+      } else {
         complete = true;
       }
     }
     return output;
   }
+
+  private void clickLemonImage() {
+   if(lemonSize == -1){
+    lemonImage.setImageResource(R.drawable.lemon_tree);
+   } else if (lemonSize == randomLemonPick){
+     lemonImage.setImageResource(R.drawable.lemon_drink);
+   } else if (lemonSize > randomLemonPick){
+     lemonImage.setImageResource(R.drawable.lemon_restart);
+   } else {
+     lemonImage.setImageResource(R.drawable.lemon_squeeze);
+   }
+  }
+
+  private void setViewElements() {
+    if(lemonSize == -1){
+      lemonText.setText(getResources().getString(R.string.lemon_select));
+    } else if (lemonSize == randomLemonPick){
+      lemonText.setText(getResources().getString(R.string.lemon_drink));
+    } else if (lemonSize > randomLemonPick){
+      lemonText.setText(getResources().getString(R.string.lemon_empty_glass));
+      lemonSize = -2;
+      squeezeCount = -1;
+    } else {
+      lemonText.setText(getResources().getString(R.string.lemon_squeeze));
+      squeezeCount++;
+    }
+  }
+
 }
