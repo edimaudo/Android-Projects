@@ -5,6 +5,12 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.google.android.material.snackbar.Snackbar;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import java.util.Random;
+import android.content.pm.ActivityInfo;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,13 +33,78 @@ public class MainActivity extends AppCompatActivity {
   private int squeezeCount = -1;
 
   private ImageView lemonImage;
-
+  private TextView lemonText;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+    
+    if (savedInstanceState != null) {
+      lemonadeState = savedInstanceState.getString(LEMONADE_STATE, "select");
+      lemonSize = savedInstanceState.getInt(LEMON_SIZE, -1);
+      squeezeCount = savedInstanceState.getInt(SQUEEZE_COUNT, -1);
+    }
+
+    lemonImage = (ImageView) findViewById(R.id.image_lemon_state);
 
 
+    lemonImage.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+
+      }
+    });
+
+    lemonImage.setOnLongClickListener(new View.OnLongClickListener() {
+      @Override
+      public boolean onLongClick(View view) {
+        return false;
+      }
+    });
+  }
+
+  protected void onSaveInstanceState(Bundle outState) {
+    outState.putString(LEMONADE_STATE, lemonadeState);
+    outState.putInt(LEMON_SIZE, lemonSize);
+    outState.putInt(SQUEEZE_COUNT, squeezeCount);
+    super.onSaveInstanceState(outState);
+  }
+
+  private void clickLemonImage(){
+
+  }
+
+  private void setViewElements(){
+    lemonText = (TextView) findViewById(R.id.text_action);
+  }
+
+  private boolean showSnackbar(){
+    if (lemonadeState != SQUEEZE) {
+      return false;
+    }
+    String squeezeText = getString(R.string.squeeze_count, squeezeCount);
+    Snackbar.make(
+            findViewById(R.id.constraint_Layout),
+            squeezeText,
+            Snackbar.LENGTH_SHORT
+    ).show();
+    return true;
+  }
+
+  public int pickLemonTree(){
+    int output = 1;
+    Random rand = new Random();
+    boolean complete = false;
+    output = rand.nextInt(6);
+    while(!complete){
+      if (output == 0){
+        output = rand.nextInt(6);
+      } else{
+        complete = true;
+      }
+    }
+    return output;
   }
 }
