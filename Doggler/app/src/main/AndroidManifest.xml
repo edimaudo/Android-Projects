@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.doggler">
 
@@ -9,22 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Dogglers">
-        <activity android:name=".VerticalListActivity">
+        <activity
+            android:name=".VerticalListActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".HorizontalListActivity">
+        <activity
+            android:name=".HorizontalListActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.example.doggler.MainActivity" />
         </activity>
-        <activity android:name=".GridListActivity">
+        <activity
+            android:name="com.example.doggler.GridListActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.example.doggler.MainActivity" />
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.doggler.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
