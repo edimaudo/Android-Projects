@@ -1,4 +1,3 @@
-
 <resources>
     <string name="app_name">Doggler</string>
     <string name="dog_age">Age: %1$s</string>
