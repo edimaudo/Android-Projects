@@ -12,6 +12,7 @@ import com.google.android.material.tabs.TabLayoutMediator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.content.Intent;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -32,21 +33,38 @@ public class MainActivity extends AppCompatActivity {
     gridBtn.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
+        launchGrid();
+      }
+    });
 
+    verticalBtn.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        launchVertical();
+      }
+    });
+
+    horizontalBtn.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        launchHorizontal();
       }
     });
 
   }
 
   private void launchVertical(){
-
+    listIntent = new Intent(this, VerticalListActivity.class);
+    startActivity(listIntent);
   }
 
   private void launchGrid(){
-
+    listIntent = new Intent(this, GridListActivity.class);
+    startActivity(listIntent);
   }
 
-  private void launchHorizaontal(){
-    
+  private void launchHorizontal(){
+    listIntent = new Intent(this, HorizontalListActivity.class);
+    startActivity(listIntent);
   }
 }
