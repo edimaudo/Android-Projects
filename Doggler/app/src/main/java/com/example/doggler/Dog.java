@@ -4,14 +4,14 @@ import androidx.annotation.DrawableRes;
 
 public class Dog {
 
-  private DrawableRes imageResourceId;
+  private int imageResourceId;
   private String name, age, hobbies;
 
   public Dog(){
 
   }
 
-  public Dog(DrawableRes imageResourceId, String name,
+  public Dog(int imageResourceId, String name,
              String age, String hobbies){
     this.imageResourceId = imageResourceId;
     this.name = name;
@@ -20,11 +20,11 @@ public class Dog {
 
   }
 
-  public DrawableRes getImageResourceId() {
+  public int getImageResourceId() {
     return imageResourceId;
   }
 
-  public void setImageResourceId(DrawableRes imageResourceId) {
+  public void setImageResourceId(int imageResourceId) {
     this.imageResourceId = imageResourceId;
   }
 
@@ -51,19 +51,6 @@ public class Dog {
   public void setHobbies(String hobbies) {
     this.hobbies = hobbies;
   }
-
-
-
-
-
-
-
-
-//  public int @DrawableRes imageResourceId;
-//  public String name;
-//  public String age;
-//  public String hobbies;
-
 
 
 }
