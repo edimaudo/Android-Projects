@@ -13,7 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
-
+import com.example.doggler.DataSource;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
+    new DataSource();
 
     gridBtn = (Button) findViewById(R.id.grid_btn);
     verticalBtn = (Button) findViewById(R.id.vertical_btn);
