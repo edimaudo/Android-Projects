@@ -41,7 +41,6 @@
                 The dog's name
                 The dog's age
                 The dog's hobbies-->
-
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
@@ -59,9 +58,8 @@
             android:id="@+id/TextViewName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/imageView"
+            app:layout_constraintStart_toStartOf="@id/imageView"
             app:layout_constraintTop_toTopOf="@id/imageView" />
 
         <TextView
@@ -69,9 +67,8 @@
             android:id="@+id/TextViewAge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/imageView"
+            app:layout_constraintStart_toStartOf="@id/imageView"
             app:layout_constraintTop_toTopOf="@id/TextViewName" />
 
         <TextView
@@ -79,9 +76,8 @@
             android:id="@+id/TextViewHobbies"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/imageView"
+            app:layout_constraintStart_toStartOf="@id/imageView"
             app:layout_constraintTop_toTopOf="@id/TextViewAge" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
