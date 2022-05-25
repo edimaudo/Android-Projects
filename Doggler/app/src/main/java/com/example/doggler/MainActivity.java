@@ -20,14 +20,13 @@ public class MainActivity extends AppCompatActivity {
 
   private Intent listIntent;
   private Button gridBtn, verticalBtn, horizontalBtn;
-  public List<Dog> dogList = new ArrayList<>();
+
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    prepareData();
 
     gridBtn = (Button) findViewById(R.id.grid_btn);
     verticalBtn = (Button) findViewById(R.id.vertical_btn);
@@ -71,19 +70,5 @@ public class MainActivity extends AppCompatActivity {
     startActivity(listIntent);
   }
 
-  // Load information
-  private void prepareData(){
-    Dog dog= new Dog(R.drawable.tzeitel, "Tzeitel","7", "sunbathing");
-    dogList.add(dog);
-    dog= new Dog(R.drawable.leroy, "Leroy","4", "sleeping in dangerous places");
-    dogList.add(dog);
-    dog= new Dog(R.drawable.frankie, "Frankie","2", "stealing socks");
-    dogList.add(dog);
-    dog= new Dog(R.drawable.nox, "Nox","8", "meeting new animals");
-    dogList.add(dog);
-    dog= new Dog(R.drawable.faye, "Faye","8", "Digging in the garden");
-    dogList.add(dog);
-    dog= new Dog(R.drawable.bella, "Bella","14", "Chasing sea foam");
-    dogList.add(dog);
-  }
+
 }
