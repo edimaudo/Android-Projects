@@ -4,9 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import com.example.doggler.DogAdapter;
-import com.example.doggler.Layout;
-import com.example.doggler.Dog;
+
 import java.util.ArrayList;
 import java.util.List;
 import androidx.recyclerview.widget.LinearLayoutManager;
