@@ -7,11 +7,13 @@ import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.List;
-
+import com.example.doggler.Layout;
 public class DogAdapter extends RecyclerView.Adapter<DogAdapter.DogCardViewHolder> {
 
   // TODO: Initialize the data using the List found in data/DataSource
   private List<Dog> dogList;
+  Layout layout = new Layout();
+
 
   /**
    * Initialize view elements
@@ -22,10 +24,10 @@ public class DogAdapter extends RecyclerView.Adapter<DogAdapter.DogCardViewHolde
     public ImageView dogImage;
     public DogCardViewHolder(@NonNull View itemView) {
       super(itemView);
-      dogImage = (ImageView) itemView.findViewById(R.id.imageView);
-      name = (TextView) itemView.findViewById(R.id.TextViewName);
-      age = (TextView) itemView.findViewById(R.id.TextViewAge);
-      hobbies = (TextView) itemView.findViewById(R.id.TextViewHobbies);
+      dogImage = (ImageView) itemView.findViewById(R.id.dog_image);
+      name = (TextView) itemView.findViewById(R.id.dog_name);
+      age = (TextView) itemView.findViewById(R.id.dog_age);
+      hobbies = (TextView) itemView.findViewById(R.id.dog_hobbies);
 
     }
   }
@@ -40,14 +42,14 @@ public class DogAdapter extends RecyclerView.Adapter<DogAdapter.DogCardViewHolde
     // TODO: Use a conditional to determine the layout type and set it accordingly.
     //  if the layout variable is Layout.GRID the grid list item should be used. Otherwise the
     //  the vertical/horizontal list item should be used.
+    View itemView = null;
+    if (viewType == layout.getGRID()){
+      itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.grid_list_item, parent, false);
+    }  else {
+      itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.vertical_horizontal_list_item, parent, false);
+    }
 
-    // TODO Inflate the layout
-    View itemView = LayoutInflater.from(parent.getContext())
-            .inflate(R.layout.grid_list_item, parent, false);
 
-
-    // TODO: Null should not be passed into the view holder. This should be updated to reflect
-    //  the inflated layout.
     return new DogCardViewHolder(itemView);
   }
 
