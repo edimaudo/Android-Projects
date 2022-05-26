@@ -36,7 +36,7 @@ public class StartOrderFragment extends Fragment {
                            Bundle savedInstanceState) {
 
     // Inflate the layout for this fragment
-    return inflater.inflate(R.layout.fragment_start_order, container, false);
+    //return inflater.inflate(R.layout.fragment_start_order, container, false);
 
   }
 
@@ -44,15 +44,7 @@ public class StartOrderFragment extends Fragment {
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
 
-    OrderButton = (Button) view.findViewById(R.id.start_order_btn);
-    OrderButton.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        //OrderIntent = new Intent(this,EntreeMenuFragment.class);
-        //startActivity(OrderIntent);
 
-
-      }
     });
   }
 
