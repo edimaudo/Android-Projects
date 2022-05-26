@@ -5,6 +5,9 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.fragment.app.FragmentManager;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,8 +25,6 @@ public class StartOrderFragment extends Fragment {
     // Required empty public constructor
   }
 
-
-
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -40,20 +41,23 @@ public class StartOrderFragment extends Fragment {
       @Override
       public void onClick(View view) {
         FragmentTransaction fr = getFragmentManager().beginTransaction();
+        //fr.replace(R.id.,new NotificationFragment());
+        //fr.commit();
+
+//        Fragment fragment = new yourfragment();
+//        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//        fragmentTransaction.replace(R.id., fragment);
+//        fragmentTransaction.addToBackStack(null);
+//        fragmentTransaction.commit();
       }
     });
     // Inflate the layout for this fragment
     //return inflater.inflate(R.layout.fragment_start_order, container, false);
-
+  return v;
   }
 
-  @Override
-  public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-    super.onViewCreated(view, savedInstanceState);
 
-
-    });
-  }
 
 
 }
