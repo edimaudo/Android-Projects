@@ -34,7 +34,14 @@ public class StartOrderFragment extends Fragment {
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
-
+    View v = inflater.inflate(R.layout.fragment_start_order, container, false);
+    OrderButton = (Button)v.findViewById(R.id.start_order_btn);
+    OrderButton.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        FragmentTransaction fr = getFragmentManager().beginTransaction();
+      }
+    });
     // Inflate the layout for this fragment
     //return inflater.inflate(R.layout.fragment_start_order, container, false);
 
