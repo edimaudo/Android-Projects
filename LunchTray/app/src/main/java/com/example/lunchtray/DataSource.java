@@ -5,6 +5,6 @@ import com.example.lunchtray.MenuItem;
 
 class DataSource {
 
-
+  Map<String, List<String>> hm = new HashMap<String, List<String>>();
 
 }
