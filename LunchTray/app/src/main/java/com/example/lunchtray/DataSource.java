@@ -17,55 +17,53 @@ class DataSource {
   int accompaniment = itemType.getACCOMPANIMENT();
 
 
-  Map<String, List<Object>> menuItems = Map.of(
-          "cauliflower",List.of("Cauliflower",
+  Map<String, MenuItem> menuItems = Map.of(
+          "cauliflower", new MenuItem("Cauliflower",
                   "Whole cauliflower, brined, roasted, and deep fried", 7.00, entree),
-          "chili",List.of("Three Bean Chili",
+          "chili", new MenuItem("Three Bean Chili",
                   "Black beans, red beans, kidney beans, slow cooked, topped with onion",
-                  4.00,entree),
-          "pasta",List.of("Mushroom Pasta",
+                  4.00, entree),
+          "pasta", new MenuItem("Mushroom Pasta",
                   "Penne pasta, mushrooms, basil, with plum tomatoes cooked in garlic and " +
-                          "olive oil",
-                  5.50, entree),
-          "salad",List.of(
+                          "olive oil", 5.50, entree),
+          "salad", new MenuItem(
                   "Summer Salad",
                   "Heirloom tomatoes, butter lettuce, peaches, avocado, balsamic dressing",
                   2.50,
                   sidedish),
-          "soup", List.of(
+          "soup", new MenuItem(
                   "Butternut Squash Soup",
                   "Roasted butternut squash, roasted peppers, chili oil",
-                  3.00,
-                  sidedish
-          ),
-          "potatoes", List.of(
+                  3.00,sidedish),
+          "potatoes", new MenuItem(
                   "Spicy Potatoes",
                   "Marble potatoes, roasted, and fried in house spice blend",
                   2.00,
                   sidedish
           ),
-          "rice", List.of(
+          "rice", new MenuItem(
                   "Coconut Rice",
                   "Rice, coconut milk, lime, and sugar",
                   1.50,
                   sidedish
           ),
-          "bread", List.of(
+          "bread", new MenuItem(
                   "Lunch Roll",
                   "Fresh baked roll made in house",
                   0.50,
                   accompaniment
           ),
-          "berries", List.of(
+          "berries", new MenuItem(
                   "Mixed Berries",
                   "Strawberries, blueberries, raspberries, and huckleberries",
                   1.00,
                   accompaniment
           ),
-          "pickles", List.of(
+          "pickles", new MenuItem(
                   "Pickled Veggies",
                   "Pickled cucumbers and carrots, made in house",
                   0.50,
                   accompaniment)
-          );
+
+  );
 }
