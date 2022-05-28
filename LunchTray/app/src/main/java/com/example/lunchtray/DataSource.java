@@ -14,6 +14,19 @@ class DataSource {
   ItemType itemType = new ItemType();
 
   int entree = itemType.getENTREE();
+
+  public int getEntree() {
+    return entree;
+  }
+
+  public int getSidedish() {
+    return sidedish;
+  }
+
+  public int getAccompaniment() {
+    return accompaniment;
+  }
+
   int sidedish = itemType.getSIDE_DISH();
   int accompaniment = itemType.getACCOMPANIMENT();
 
