@@ -23,7 +23,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.lunchtray.model.OrderViewModel" />
+            type="com.example.lunchtray.OrderViewModel" />
 
         <!-- TODO: Add the data binding variable for the EntreeMenuFragment -->
     </data>
