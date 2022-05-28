@@ -12,9 +12,18 @@ import java.util.Map;
 
 class DataSource {
   ItemType itemType = new ItemType();
+
   int entree = itemType.getENTREE();
   int sidedish = itemType.getSIDE_DISH();
   int accompaniment = itemType.getACCOMPANIMENT();
+
+  public Map<String, MenuItem> getMenuItems() {
+    return menuItems;
+  }
+
+  public void setMenuItems(Map<String, MenuItem> menuItems) {
+    this.menuItems = menuItems;
+  }
 
 
   Map<String, MenuItem> menuItems = Map.of(
