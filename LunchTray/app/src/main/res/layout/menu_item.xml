@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2021 The Android Open Source Project.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<com.google.android.material.card.MaterialCardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="4dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/side_margin"
+            android:paddingEnd="@dimen/side_margin"
+            android:paddingBottom="@dimen/side_margin">
+
+                <!-- TODO: set the entree in the view model when the RadioButton is clicked -->
+
+            <TextView
+                android:id="@+id/entree_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=''
+                android:textAppearance="?attr/textAppearanceBody1"
+                app:layout_constraintBottom_toTopOf="@+id/entree_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.484"
+                tools:text="Entree " />
+
+            <TextView
+                android:id="@+id/entree_description"
+                style="@style/Widget.MenuItem.TextView.Info"
+                android:text=''
+                app:layout_constraintBottom_toTopOf="@+id/entree_price"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.788"
+                tools:text="Entree description" />
+
+            <TextView
+                android:id="@+id/entree_price"
+                style="@style/Widget.MenuItem.TextView.Info"
+                android:layout_marginTop="84dp"
+                android:paddingTop="@dimen/base_margin"
+                android:text=''
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="$0.00" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
