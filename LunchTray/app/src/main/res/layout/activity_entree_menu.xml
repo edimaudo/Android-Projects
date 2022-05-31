@@ -1,0 +1,60 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".EntreeMenu">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/entreemenu_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtotal"
+        style="@style/Widget.LunchTray.TextView.Subtotal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/entreemenu_recycler_view"
+        tools:text="Subtotal $5.00"/>
+
+    <!-- TODO: cancel the order when clicked -->
+
+    <!-- TODO: go to the next screen when clicked -->
+
+    <Button
+        android:id="@+id/cancel_button"
+        style="@style/Widget.Order.Button.Cancel"
+        android:layout_width="144dp"
+        android:text='@string/cancel'
+        android:layout_height="match_parent"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtotal"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/next_button"
+        style="@style/Widget.Order.Button.Next"
+        android:layout_width="144dp"
+        android:background="@color/purple_500"
+        android:text='@string/next'
+        android:layout_height="match_parent"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.885"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtotal"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
