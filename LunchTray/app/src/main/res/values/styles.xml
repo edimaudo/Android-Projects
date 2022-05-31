@@ -101,5 +101,5 @@
         <item name="android:layout_marginTop">@dimen/base_margin</item>
     </style>
 
-    <string name="cancel">Cancel</string>
+
 </resources>
