@@ -22,8 +22,10 @@ public class MainActivity extends AppCompatActivity {
       public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
         if (compoundButton.isChecked()){
           AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+          themeSwitch.setText("Dark Mode");
         } else {
           AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+          themeSwitch.setText("Light Mode");
         }
       }
     });
