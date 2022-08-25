@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">FocusedFM</string>
-    <string name="light_dark_mode">Light/Dark Mode</string>
+    <string name="light_mode">Light Mode</string>
 </resources>
