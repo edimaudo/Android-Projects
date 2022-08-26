@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
   Switch themeSwitch;
   Button channelButton;
   String[] channels = {"electronic", "downtempo", "classic", "rain"};
-  AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     Switch themeSwitch = (Switch) findViewById(R.id.themeSwitch);
     Button channelButton = (Button) findViewById(R.id.channelButton);
-
+    AlertDialog.Builder builder = new AlertDialog.Builder(this);
     themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
       @Override
       public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
@@ -50,20 +50,17 @@ public class MainActivity extends AppCompatActivity {
   channelButton.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-      builder.setMessage(R.string.choose_channel)
-              .setCancelable(false)
-              .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
 
-                }
-              })
-              .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
+      builder.setMessage(R.string.choose_channel);
+      builder.setItems(channels, new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialogInterface, int i) {
 
-                }
-              });
+        }
+      });
+      builder.show();
+
+
 
 
     }
