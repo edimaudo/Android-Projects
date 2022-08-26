@@ -4,4 +4,5 @@
     <string name="night_mode">Night Mode</string>
     <string name="theme">Theme</string>
     <string name="channel">Channels</string>
+    <string name="choose_channel">Choose a channel</string>
 </resources>
