@@ -3,32 +3,46 @@ package com.example.focusedfm;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.view.View;
+import android.widget.Button;
+
 import android.os.Bundle;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+
+
 public class MainActivity extends AppCompatActivity {
 
   Switch themeSwitch;
+  Button modeButton;
+  Boolean ischecked = Boolean.FALSE;
+
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    Switch themeSwitch = (Switch) findViewById(R.id.themeSwitch);
+    Button modeButton = (Button) findViewById(R.id.modeButton);
 
-    themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+    modeButton.setOnClickListener(new View.OnClickListener() {
       @Override
-      public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-        if (compoundButton.isChecked()){
-          AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-          themeSwitch.setText("Dark Mode");
-        } else {
+      public void onClick(View view) {
+        if (ischecked){
           AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-          themeSwitch.setText("Light Mode");
+          modeButton.setText(getResources().getString(R.string.night_mode));
+          ischecked = Boolean.FALSE;
+        } else {
+
+          AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+          modeButton.setText(getResources().getString(R.string.light_mode));
+          ischecked = Boolean.TRUE;
+
         }
       }
     });
+
+
 
   }
 }
