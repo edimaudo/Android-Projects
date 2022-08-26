@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
 
   Switch themeSwitch;
+  Button channelButton;
 
 
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
 
     Switch themeSwitch = (Switch) findViewById(R.id.themeSwitch);
+    Button channelButton = (Button) findViewById(R.id.channelButton);
 
     themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
       @Override
@@ -43,9 +45,14 @@ public class MainActivity extends AppCompatActivity {
       }
     });
 
+  channelButton.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
 
+    }
+  });
 
-
+  //channelInfo
 
 
   }
