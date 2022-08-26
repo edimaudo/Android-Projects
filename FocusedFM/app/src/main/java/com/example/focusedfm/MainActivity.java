@@ -1,8 +1,10 @@
 package com.example.focusedfm;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.DialogInterface;
 import android.view.View;
 import android.widget.Button;
 
@@ -16,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
   Switch themeSwitch;
   Button channelButton;
-
-
+  String[] channels = {"electronic", "downtempo", "classic", "rain"};
+  AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,21 @@ public class MainActivity extends AppCompatActivity {
   channelButton.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
+      builder.setMessage(R.string.choose_channel)
+              .setCancelable(false)
+              .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                }
+              })
+              .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                }
+              });
+
 
     }
   });
