@@ -5,4 +5,6 @@
     <string name="theme">Theme</string>
     <string name="channel">Channels</string>
     <string name="choose_channel">Choose a channel</string>
+    <string name="track_info">Track Info</string>
+    <string name="current_track">Current Track</string>
 </resources>
