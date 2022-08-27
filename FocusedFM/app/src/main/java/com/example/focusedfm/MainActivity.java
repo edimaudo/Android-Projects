@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.os.Bundle;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -19,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
   Switch themeSwitch;
   Button channelButton;
   String[] channels = {"electronic", "downtempo", "classic", "rain"};
-
+  AlertDialog.Builder builder;
+  String selectedChannel = "";
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     Switch themeSwitch = (Switch) findViewById(R.id.themeSwitch);
     Button channelButton = (Button) findViewById(R.id.channelButton);
-    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+     builder = new AlertDialog.Builder(this);
     themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
       @Override
       public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
@@ -50,23 +52,21 @@ public class MainActivity extends AppCompatActivity {
   channelButton.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-
-      builder.setMessage(R.string.choose_channel);
+      builder.setTitle(R.string.choose_channel);
       builder.setItems(channels, new DialogInterface.OnClickListener() {
         @Override
         public void onClick(DialogInterface dialogInterface, int i) {
-
+          selectedChannel = channels[i];
+          //Toast.makeText(MainActivity.this, selectedChannel,Toast.LENGTH_SHORT).show();
         }
       });
       builder.show();
-
-
-
-
     }
   });
 
   //channelInfo
+
+  // Play,Pause, next, rewind
 
 
   }
