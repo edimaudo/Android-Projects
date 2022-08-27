@@ -18,10 +18,12 @@ public class MainActivity extends AppCompatActivity {
 
 
   Switch themeSwitch;
-  Button channelButton;
+  Button channelButton, trackButton;
   String[] channels = {"electronic", "downtempo", "classic", "rain"};
-  AlertDialog.Builder builder;
+  AlertDialog.Builder builder, track;
   String selectedChannel = "";
+  String defaultChannel = "electronic";
+  String currentTrack = "";
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +37,10 @@ public class MainActivity extends AppCompatActivity {
 
     Switch themeSwitch = (Switch) findViewById(R.id.themeSwitch);
     Button channelButton = (Button) findViewById(R.id.channelButton);
+    Button trackButton = (Button) findViewById(R.id.trackButton);
+
      builder = new AlertDialog.Builder(this);
+     track = new AlertDialog.Builder(this);
     themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
       @Override
       public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
@@ -64,7 +69,16 @@ public class MainActivity extends AppCompatActivity {
     }
   });
 
-  //channelInfo
+  //track Info
+    trackButton.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        track.setTitle(R.string.current_track);
+        track.setMessage("test message");
+        track.show();
+
+      }
+    });
 
   // Play,Pause, next, rewind
 
