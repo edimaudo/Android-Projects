@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import android.os.Bundle;
 import android.widget.CompoundButton;
+import android.widget.ImageButton;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
   String selectedChannel = "";
   String defaultChannel = "electronic";
   String currentTrack = "";
+  ImageButton playPauseButton;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
       }
     });
 
+  // select channel
   channelButton.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
