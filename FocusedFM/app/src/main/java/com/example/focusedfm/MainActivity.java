@@ -5,15 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.DialogInterface;
+import android.content.pm.ActivityInfo;
 import android.view.View;
 import android.widget.Button;
 
 import android.os.Bundle;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.Toast;
-
+import android.media.MediaPlayer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
   String selectedChannel = "";
   String defaultChannel = "electronic";
   String currentTrack = "";
-  ImageButton playPauseButton;
+  ImageView playPauseImageView, previousImageView, nextImageView;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +38,18 @@ public class MainActivity extends AppCompatActivity {
     }
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    //set to portrait view only
+    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
     Switch themeSwitch = (Switch) findViewById(R.id.themeSwitch);
     Button channelButton = (Button) findViewById(R.id.channelButton);
     Button trackButton = (Button) findViewById(R.id.trackButton);
+    ImageView playPauseImageView = (ImageView) findViewById(R.id.playPauseImageView);
+    ImageView nextImageView = (ImageView) findViewById(R.id.nextImageView);
+    ImageView previousImageView = (ImageView) findViewById(R.id.previousImageView);
 
-     builder = new AlertDialog.Builder(this);
-     track = new AlertDialog.Builder(this);
+    builder = new AlertDialog.Builder(this);
+    track = new AlertDialog.Builder(this);
     themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
       @Override
       public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
@@ -83,7 +90,12 @@ public class MainActivity extends AppCompatActivity {
       }
     });
 
-  // Play,Pause, next, rewind
+    // Play/Pause
+    
+    // next
+
+    // previous
+
 
 
   }
