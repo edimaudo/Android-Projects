@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
   Switch themeSwitch;
   Button channelButton, trackButton;
-  String[] channels = {"electronic", "downtempo", "classic", "rain"};
+  String[] channels = {"electronic", "downtempo", "rain"}; //removed classical
   AlertDialog.Builder builder, track;
   String selectedChannel = "";
   String defaultChannel = "electronic";
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    //set to portrait view only
+    // Set to portrait view only
     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
     Switch themeSwitch = (Switch) findViewById(R.id.themeSwitch);
@@ -58,10 +58,8 @@ public class MainActivity extends AppCompatActivity {
       public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
         if (isChecked){
           AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-
         } else {
           AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-
         }
       }
     });
@@ -75,14 +73,13 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(DialogInterface dialogInterface, int i) {
           selectedChannel = channels[i];
-          //Toast.makeText(MainActivity.this, selectedChannel,Toast.LENGTH_SHORT).show();
         }
       });
       builder.show();
     }
   });
 
-  //track Info
+  // track Info
     trackButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
@@ -126,14 +123,15 @@ public class MainActivity extends AppCompatActivity {
       }
     });
 
-    // next
+    // set up mediaplayer
 
-    // previous
-
+    // generate song information
 
     // call channel info
 
-    // generate song information
+    // get 6 songs oer genre + 4 rain track
+
+
 
   }
 
