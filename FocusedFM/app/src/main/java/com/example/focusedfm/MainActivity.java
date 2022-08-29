@@ -11,12 +11,11 @@ import android.widget.Button;
 
 import android.os.Bundle;
 import android.widget.CompoundButton;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.Toast;
 import android.media.MediaPlayer;
-
+import android.view.View;
 public class MainActivity extends AppCompatActivity {
 
 
@@ -28,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
   String defaultChannel = "electronic";
   String currentTrack = "";
   ImageView playPauseImageView, previousImageView, nextImageView;
+  MediaPlayer mp;
+  int playState = 0;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +48,11 @@ public class MainActivity extends AppCompatActivity {
     ImageView playPauseImageView = (ImageView) findViewById(R.id.playPauseImageView);
     ImageView nextImageView = (ImageView) findViewById(R.id.nextImageView);
     ImageView previousImageView = (ImageView) findViewById(R.id.previousImageView);
-
     builder = new AlertDialog.Builder(this);
     track = new AlertDialog.Builder(this);
+    final MediaPlayer mp=new MediaPlayer();
+
+
     themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
       @Override
       public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
@@ -90,13 +93,49 @@ public class MainActivity extends AppCompatActivity {
       }
     });
 
+    // set up music player
+    //music = MediaPlayer.create(this, R.raw.sound);
+    try{
+      //you can change the path, here path is external directory(e.g. sdcard) /Music/maine.mp3
+      //mp.setDataSource(Environment.getExternalStorageDirectory().getPath()+"/Music/maine.mp3");
+
+      mp.prepare();
+    }catch(Exception e){e.printStackTrace();}
+
     // Play/Pause
-    
+    playPauseImageView.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+
+
+        if (playState == 0){
+          // change image to pause
+
+          // play music
+          mp.start();
+          playState = 1;
+        } else {
+          // change image to play
+
+          // pause music
+          mp.pause();
+
+        }
+
+
+      }
+    });
+
     // next
 
     // previous
 
 
+    // call channel info
+
+    // generate song information
 
   }
+
+
 }
