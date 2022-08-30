@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.DialogInterface;
 import android.content.pm.ActivityInfo;
+import android.net.Uri;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 
@@ -20,7 +22,6 @@ import java.util.*;
 import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
-
   Switch themeSwitch;
   Button channelButton, trackButton;
   String[] channels = {"electronic", "downtempo", "rain"}; //removed classical
@@ -29,9 +30,8 @@ public class MainActivity extends AppCompatActivity {
   String defaultChannel = "downtempo";
   String currentTrack = "";
   ImageView playPauseImageView, previousImageView, nextImageView;
-  MediaPlayer mp;
   int playState = 0;
-  String songLocation = "";
+  MediaPlayer mp;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +53,10 @@ public class MainActivity extends AppCompatActivity {
     ImageView previousImageView = (ImageView) findViewById(R.id.previousImageView);
     builder = new AlertDialog.Builder(this);
     track = new AlertDialog.Builder(this);
-    final MediaPlayer mp=new MediaPlayer();
 
+    // set up music player
+    getSong();
+    mp = MediaPlayer.create(this, R.raw.downtempo_1);
 
     themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
       @Override
@@ -82,25 +84,17 @@ public class MainActivity extends AppCompatActivity {
     }
   });
 
-  // track Info
+  // Track Information
     trackButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
         track.setTitle(R.string.current_track);
         track.setMessage(getSong());
         track.show();
-
       }
     });
 
-    // set up music player
-    //music = MediaPlayer.create(this, R.raw.sound);
-    try{
-      //you can change the path, here path is external directory(e.g. sdcard) /Music/maine.mp3
-      //mp.setDataSource(Environment.getExternalStorageDirectory().getPath()+"/Music/maine.mp3");
 
-      mp.prepare();
-    }catch(Exception e){e.printStackTrace();}
 
     // Play/Pause
     playPauseImageView.setOnClickListener(new View.OnClickListener() {
@@ -108,23 +102,17 @@ public class MainActivity extends AppCompatActivity {
       public void onClick(View view) {
         if (playState == 0){
           // change image to pause
+          playPauseImageView.setImageResource(R.mipmap.ic_pause_circle_filled);
           mp.start();// play music
           playState = 1;
         } else {
           // change image to play
+          playPauseImageView.setImageResource(R.mipmap.ic_play_circle_filled);
           mp.pause();// pause music
+          playState = 0;
         }
       }
     });
-
-
-
-
-
-
-
-
-
   }
 
   // generate song information
@@ -141,6 +129,12 @@ public class MainActivity extends AppCompatActivity {
       currentTrack =   "rain_" + String.valueOf(number);
     }
     return "track:" + currentTrack;
+  }
+
+  @Override
+  public void onDestroy() {
+    super.onDestroy();
+    if (mp != null) mp.release();
   }
 
 }
