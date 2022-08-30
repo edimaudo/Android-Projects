@@ -16,6 +16,8 @@ import android.widget.Switch;
 import android.widget.Toast;
 import android.media.MediaPlayer;
 import android.view.View;
+import java.util.*;
+import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
 
@@ -24,11 +26,12 @@ public class MainActivity extends AppCompatActivity {
   String[] channels = {"electronic", "downtempo", "rain"}; //removed classical
   AlertDialog.Builder builder, track;
   String selectedChannel = "";
-  String defaultChannel = "electronic";
+  String defaultChannel = "downtempo";
   String currentTrack = "";
   ImageView playPauseImageView, previousImageView, nextImageView;
   MediaPlayer mp;
   int playState = 0;
+  String songLocation = "";
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -84,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
       @Override
       public void onClick(View view) {
         track.setTitle(R.string.current_track);
-        track.setMessage("test message");
+        track.setMessage(getSong());
         track.show();
 
       }
@@ -103,37 +106,41 @@ public class MainActivity extends AppCompatActivity {
     playPauseImageView.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-
-
         if (playState == 0){
           // change image to pause
-
-          // play music
-          mp.start();
+          mp.start();// play music
           playState = 1;
         } else {
           // change image to play
-
-          // pause music
-          mp.pause();
-
+          mp.pause();// pause music
         }
-
-
       }
     });
 
-    // set up mediaplayer
 
-    // generate song information
 
-    // call channel info
 
-    // get 6 songs oer genre + 4 rain track
+
+
 
 
 
   }
 
+  // generate song information
+  public String getSong(){
+    Random ran = new Random();
+    if (selectedChannel == "downtempo"){
+      int number = ran.nextInt(7) +1;
+      currentTrack = "downtempo_" + String.valueOf(number);
+    } else if (selectedChannel == "electronic"){
+      int number = ran.nextInt(4) +1;
+      currentTrack =   "electronic_" + String.valueOf(number);
+    } else {
+      int number = ran.nextInt(4) +1;
+      currentTrack =   "rain_" + String.valueOf(number);
+    }
+    return "track:" + currentTrack;
+  }
 
 }
