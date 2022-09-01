@@ -3,25 +3,17 @@ package com.example.focusedfm;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-
 import android.content.DialogInterface;
 import android.content.pm.ActivityInfo;
-
-import android.net.Uri;
 import android.view.View;
 import android.widget.Button;
-
 import android.os.Bundle;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Switch;
-
 import android.media.MediaPlayer;
-
 import java.util.Random;
 import java.lang.*;
-
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,14 +21,17 @@ public class MainActivity extends AppCompatActivity {
   Button channelButton, trackButton;
   String[] channels = {"electronic", "downtempo", "rain"};
   AlertDialog.Builder builder, track;
-  String selectedChannel = "";
-  String currentTrack = "downtempo_1";
-  int rawTrack; 
+  String selectedChannel = "downtempo";
+  String currentTrack = "";
+  int rawTrack,number;
   ImageView playPauseImageView, previousImageView, nextImageView;
   int playState = 0;
   MediaPlayer mp;
-  String uri1 = "android.resource://" + getPackageName() + "/raw/";
-  String uri2;
+  int [] downtempo_tracks = {R.raw.downtempo_1,R.raw.downtempo_2,R.raw.downtempo_3,
+          R.raw.downtempo_4,R.raw.downtempo_5,R.raw.downtempo_6,R.raw.downtempo_7};
+  int [] rain_tracks = {R.raw.rain_1,R.raw.rain_2,R.raw.rain_3,R.raw.rain_4};
+  int [] electronic_tracks = {R.raw.electronic_1,R.raw.electronic_2,R.raw.electronic_3,
+          R.raw.electronic_4};
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +42,7 @@ public class MainActivity extends AppCompatActivity {
     }
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    // Set to portrait view only
-    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);// Set to portrait view only
 
     themeSwitch = (Switch) findViewById(R.id.themeSwitch);
     channelButton = (Button) findViewById(R.id.channelButton);
@@ -59,9 +53,7 @@ public class MainActivity extends AppCompatActivity {
     builder = new AlertDialog.Builder(this);
     track = new AlertDialog.Builder(this);
 
-    // set up music player
-    generateTrack();
-    //uri2 = uri1 + currentTrack + ".mp3";
+    generateTrack(); // set up music player
     mp = MediaPlayer.create(this, rawTrack);
 
     themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -100,8 +92,6 @@ public class MainActivity extends AppCompatActivity {
       }
     });
 
-
-
     // Play/Pause
     playPauseImageView.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -121,26 +111,21 @@ public class MainActivity extends AppCompatActivity {
     });
   }
 
-  // generate song information
+  // generate track information
   public void generateTrack(){
     Random ran = new Random();
-    if (selectedChannel == "downtempo"){
-      int number = ran.nextInt(7) +1;
-      int [] dowtempo_tracks = {R.raw.downtempo_1,R.raw.downtempo_2,R.raw.downtempo_3,
-              R.raw.downtempo_4,R.raw.downtempo_5,R.raw.downtempo_6,R.raw.downtempo_7};
+    if (selectedChannel.equals("downtempo")){
+      number = ran.nextInt(7) +1;
       currentTrack = "downtempo_" + String.valueOf(number);
-      rawTrack = dowtempo_tracks[number];
-    } else if (selectedChannel == "electronic"){
+      rawTrack = downtempo_tracks[number];
+    } else if (selectedChannel.equals("electronic")){
       int number = ran.nextInt(4) +1;
-      int [] electronic_tracks = {R.raw.electronic_1,R.raw.electronic_2,R.raw.electronic_3,
-              R.raw.electronic_4};
       currentTrack =   "electronic_" + String.valueOf(number);
-      rawTrack = electronic_tracks [number];
+      rawTrack = electronic_tracks[number];
     } else {
       int number = ran.nextInt(4) +1;
       currentTrack =   "rain_" + String.valueOf(number);
-      int [] rain_tracks = {R.raw.rain_1,R.raw.rain_2,R.raw.rain_3,R.raw.rain_4};
-      rawTrack = rain_tracks [number];
+      rawTrack = rain_tracks[number];
     }
   }
 
