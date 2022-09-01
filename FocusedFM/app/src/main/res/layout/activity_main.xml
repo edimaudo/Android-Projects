@@ -11,14 +11,14 @@
         android:id="@+id/channelButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="144dp"
-
         android:layout_marginStart="8dp"
         android:text="@string/channel"
         android:textSize="12dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playPauseImageView"
+        app:layout_constraintVertical_bias="0.339" />
 
     <Button
         android:id="@+id/trackButton"
