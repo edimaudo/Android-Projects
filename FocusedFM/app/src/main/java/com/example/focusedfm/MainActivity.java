@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
   String[] channels = {"electronic", "downtempo", "rain"};
   AlertDialog.Builder builder, track;
   String selectedChannel = "downtempo";
-  String currentTrack = "";
-  int rawTrack,number;
+  String currentTrack, previousTrack = "";
+  int rawTrack, previousRawTrack,number;
   ImageView playPauseImageView, previousImageView, nextImageView;
   int playState = 0;
   MediaPlayer mp;
@@ -53,17 +53,15 @@ public class MainActivity extends AppCompatActivity {
     builder = new AlertDialog.Builder(this);
     track = new AlertDialog.Builder(this);
 
-    generateTrack(); // set up music player
-    mp = MediaPlayer.create(this, rawTrack);
 
-    themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+    // next Track
+    nextImageView.setOnClickListener(new View.OnClickListener() {
       @Override
-      public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-        if (isChecked){
-          AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
-          AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
+      public void onClick(View view) {
+        onDestroy();
+        generateTrack();
+        playTrack();
       }
     });
 
@@ -76,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(DialogInterface dialogInterface, int i) {
           selectedChannel = channels[i];
+          onDestroy();
+          generateTrack();
+          playTrack();
         }
       });
       builder.show();
@@ -96,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
     playPauseImageView.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
+        generateTrack();
+        playTrack();
         if (playState == 0){
           // change image to pause
           playPauseImageView.setImageResource(R.mipmap.ic_pause_circle_filled);
@@ -129,10 +132,18 @@ public class MainActivity extends AppCompatActivity {
     }
   }
 
+
   @Override
   public void onDestroy() {
     super.onDestroy();
     if (mp != null) mp.release();
   }
+
+
+  public void playTrack(){
+     // set up music player
+    mp = MediaPlayer.create(this, rawTrack);
+  }
+
 
 }
