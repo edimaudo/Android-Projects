@@ -53,15 +53,16 @@ public class MainActivity extends AppCompatActivity {
     builder = new AlertDialog.Builder(this);
     track = new AlertDialog.Builder(this);
 
-
-
     // next Track
     nextImageView.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        onDestroy();
-        generateTrack();
-        playTrack();
+        if (!currentTrack.equals("")){
+          onDestroy();
+          generateTrack();
+          playTrack();
+        }
+
       }
     });
 
@@ -69,7 +70,12 @@ public class MainActivity extends AppCompatActivity {
     previousImageView.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        
+        if (!currentTrack.equals("")){
+          onDestroy();
+          previousRawTrack = rawTrack;
+          restartTrack();
+        }
+
       }
     });
 
@@ -151,6 +157,10 @@ public class MainActivity extends AppCompatActivity {
   public void playTrack(){
      // set up music player
     mp = MediaPlayer.create(this, rawTrack);
+  }
+
+  public void restartTrack(){
+    mp = MediaPlayer.create(this, previousRawTrack);
   }
 
 
