@@ -65,6 +65,14 @@ public class MainActivity extends AppCompatActivity {
       }
     });
 
+    // restart Track
+    previousImageView.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        
+      }
+    });
+
   // select channel
   channelButton.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -144,6 +152,8 @@ public class MainActivity extends AppCompatActivity {
      // set up music player
     mp = MediaPlayer.create(this, rawTrack);
   }
+
+
 
 
 }
